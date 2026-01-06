@@ -124,7 +124,7 @@ npm test
 6. **Network Testing**: Throttle to test slow connections
 
 ### Pre-Commit Checklist
-- [ ] No console.log() statements left in code
+- [ ] No debug console.log() statements left in production code
 - [ ] No commented-out code blocks
 - [ ] PropTypes/TypeScript errors resolved
 - [ ] Linting passes (ESLint)

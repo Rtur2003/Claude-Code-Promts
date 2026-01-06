@@ -146,11 +146,12 @@ The development process is never truly "done" - it's an ongoing cycle:
 │  • Determine next iteration                     │
 └───────────────┬─────────────────────────────────┘
                 ↓
-        Is it optimal? ──No──→ Return to ANALYZE
+    Meets success criteria? ──No──→ Return to ANALYZE
+    (Continue iterating?)
                 ↓
                Yes
                 ↓
-             DONE (for now)
+             DONE
 ```
 
 ## Communication Principles

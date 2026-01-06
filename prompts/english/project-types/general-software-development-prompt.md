@@ -525,6 +525,7 @@ def profile_function():
 
 **1. Use appropriate data structures:**
 ```python
+# Python example
 # ❌ Slow: List lookup O(n)
 if item in my_list:  # O(n)
     pass
@@ -532,6 +533,9 @@ if item in my_list:  # O(n)
 # ✅ Fast: Set lookup O(1)
 if item in my_set:  # O(1)
     pass
+
+# Note: This pattern applies to most languages (e.g., JavaScript Array.includes() 
+# is also O(n); use Set.has() for O(1) lookups)
 ```
 
 **2. Avoid unnecessary computation:**
