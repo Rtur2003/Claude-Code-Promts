@@ -323,7 +323,7 @@ test:
   - Coverage >= threshold
 
 security:
-  - npm audit / pip-audit clean
+  - npm audit clean (JS) / pip-audit or safety check clean (Python)
   - No high/critical vulnerabilities
 
 build:

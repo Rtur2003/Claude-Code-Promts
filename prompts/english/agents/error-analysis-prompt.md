@@ -26,7 +26,7 @@ go test ./... 2>&1 | tail -50
 
 # Check for lint errors
 npm run lint 2>&1 || eslint . 2>&1
-flake8 . || ruff check .
+flake8 . 2>&1 || ruff check . 2>&1  # Use flake8 or ruff (alternatives)
 golangci-lint run
 
 # Check for type errors
@@ -35,7 +35,7 @@ mypy . --ignore-missing-imports
 
 # Check for security issues
 npm audit
-pip-audit || safety check
+pip-audit 2>/dev/null || safety check 2>/dev/null  # Use pip-audit or safety (alternatives)
 ```
 
 #### Error Classification
@@ -300,8 +300,10 @@ npx ts-prune
 
 ### Python
 ```bash
-# Full error check
-python -m py_compile **/*.py && pytest && flake8
+# Full error check (run each separately for better error handling)
+find . -name '*.py' -not -path './venv/*' -exec python -m py_compile {} \;
+pytest
+flake8 . || ruff check .
 
 # Debug specific test
 pytest -xvs tests/test_specific.py::test_function

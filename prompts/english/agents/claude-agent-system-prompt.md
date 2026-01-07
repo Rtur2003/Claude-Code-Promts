@@ -26,7 +26,7 @@ You are an autonomous coding agent. Your mission: analyze, plan, execute, and it
 ### Automatic Discovery
 ```bash
 # Run these commands to understand the project
-tree -L 3 -I 'node_modules|dist|build|__pycache__|.git|venv'
+tree -L 3 -I 'node_modules|dist|build|__pycache__|.git|venv|.next|target|bin|obj|vendor|coverage'
 cat package.json 2>/dev/null || cat requirements.txt 2>/dev/null || cat go.mod 2>/dev/null
 git log --oneline -10
 git status
