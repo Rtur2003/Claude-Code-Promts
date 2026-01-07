@@ -93,6 +93,82 @@ These prompts are specifically designed for autonomous AI coding agents. They ar
 
 ---
 
+### 5. Code Review Prompt 🔍
+**File**: [code-review-prompt.md](code-review-prompt.md)
+
+**Purpose**: Systematic code review with quality assurance and best practices.
+
+**Use When**:
+- Reviewing pull requests
+- Self-reviewing code before commit
+- Establishing code review standards
+- Training on review best practices
+
+**Key Features**:
+- Four-phase review protocol
+- Common code patterns to watch for
+- Feedback templates (Blocker, Warning, Suggestion)
+- File-type specific checklists
+
+---
+
+### 6. Security Audit Prompt 🔐
+**File**: [security-audit-prompt.md](security-audit-prompt.md)
+
+**Purpose**: Comprehensive security vulnerability detection and remediation.
+
+**Use When**:
+- Auditing application security
+- Reviewing code for vulnerabilities
+- Implementing security best practices
+- Preparing for security assessments
+
+**Key Features**:
+- OWASP Top 10 checklist
+- Vulnerability severity matrix
+- Automated scanning commands
+- Remediation code examples
+
+---
+
+### 7. Refactoring Prompt ♻️
+**File**: [refactoring-prompt.md](refactoring-prompt.md)
+
+**Purpose**: Systematic code improvement and technical debt reduction.
+
+**Use When**:
+- Improving code quality
+- Reducing technical debt
+- Preparing for new features
+- Code cleanup sessions
+
+**Key Features**:
+- Code smell detection
+- SAFE refactoring protocol
+- Common refactoring patterns
+- Before/after comparisons
+
+---
+
+### 8. Testing Strategies Prompt 🧪
+**File**: [testing-strategies-prompt.md](testing-strategies-prompt.md)
+
+**Purpose**: Comprehensive testing design and implementation guidance.
+
+**Use When**:
+- Designing test strategies
+- Implementing TDD
+- Improving test coverage
+- Writing different test types
+
+**Key Features**:
+- TEST protocol (Target, Engineer, Specify, Track)
+- Unit, integration, E2E examples
+- Performance testing with k6
+- Coverage tracking templates
+
+---
+
 ## How to Use
 
 ### Option 1: Full Agent Setup

@@ -10,11 +10,17 @@ Quick reference guide to all available prompts in this repository.
 | **🔍 Error Analysis** | Debugging & error resolution | [error-analysis-prompt.md](agents/error-analysis-prompt.md) |
 | **📊 Project Workflow** | Project development lifecycle | [project-workflow-prompt.md](agents/project-workflow-prompt.md) |
 | **📋 Quick Reference** | Token-optimized cheat sheet | [agent-quick-reference.md](agents/agent-quick-reference.md) |
+| **🔍 Code Review** | Systematic code review | [code-review-prompt.md](agents/code-review-prompt.md) |
+| **🔐 Security Audit** | Security vulnerability detection | [security-audit-prompt.md](agents/security-audit-prompt.md) |
+| **♻️ Refactoring** | Code improvement patterns | [refactoring-prompt.md](agents/refactoring-prompt.md) |
+| **🧪 Testing Strategies** | Comprehensive testing guidance | [testing-strategies-prompt.md](agents/testing-strategies-prompt.md) |
 | **Foundation** | Universal best practices | [claude-foundation-prompt.md](base/claude-foundation-prompt.md) |
 | **Web Development** | Frontend, React, Vue | [web-development-prompt.md](project-types/web-development-prompt.md) |
 | **API Development** | REST APIs, Backend | [api-development-prompt.md](project-types/api-development-prompt.md) |
 | **Data Science & ML** | ML, Data Analysis | [data-science-ml-prompt.md](project-types/data-science-ml-prompt.md) |
 | **General Software** | Cross-language development | [general-software-development-prompt.md](project-types/general-software-development-prompt.md) |
+| **📱 Mobile Development** | iOS, Android, React Native, Flutter | [mobile-development-prompt.md](project-types/mobile-development-prompt.md) |
+| **🚀 DevOps & CI/CD** | Infrastructure, pipelines, Kubernetes | [devops-cicd-prompt.md](project-types/devops-cicd-prompt.md) |
 | **Workflow Guide** | How to iterate effectively | [iterative-development-guide.md](workflows/iterative-development-guide.md) |
 
 ---
@@ -38,6 +44,10 @@ Specifically designed for autonomous AI coding agents like Claude Code, GitHub C
 | [Error Analysis](agents/error-analysis-prompt.md) | Debugging & fixes | Bug fixing |
 | [Project Workflow](agents/project-workflow-prompt.md) | Full project lifecycle | New/existing projects |
 | [Quick Reference](agents/agent-quick-reference.md) | Cheat sheet | Quick tasks |
+| [Code Review](agents/code-review-prompt.md) | Systematic code review | PR reviews |
+| [Security Audit](agents/security-audit-prompt.md) | Vulnerability detection | Security review |
+| [Refactoring](agents/refactoring-prompt.md) | Code improvement | Technical debt |
+| [Testing Strategies](agents/testing-strategies-prompt.md) | Test design & implementation | QA tasks |
 
 👉 **[View Full Agent Prompts Index](agents/INDEX.md)**
 
@@ -221,23 +231,28 @@ with multiple specialized prompts.
 
 ## Feature Comparison
 
-| Feature | Foundation | Web Dev | API Dev | Data/ML | General |
-|---------|-----------|---------|---------|---------|---------|
-| Analyze-Plan-Execute-Iterate | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Commit Standards | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Error Analysis | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Testing Strategy | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Component Architecture | - | ✓ | - | - | - |
-| Responsive Design | - | ✓ | - | - | - |
-| Accessibility (A11y) | - | ✓ | - | - | - |
-| REST API Design | - | - | ✓ | - | ○ |
-| Authentication Patterns | - | ○ | ✓ | - | ○ |
-| Database Optimization | - | - | ✓ | ○ | ○ |
-| Data Quality Assessment | - | - | - | ✓ | - |
-| Feature Engineering | - | - | - | ✓ | - |
-| Model Development | - | - | - | ✓ | - |
-| Multi-Language Support | ○ | - | ○ | - | ✓ |
-| Project Structure | ○ | ○ | ○ | ○ | ✓ |
+| Feature | Foundation | Web Dev | API Dev | Data/ML | General | Mobile | DevOps |
+|---------|-----------|---------|---------|---------|---------|--------|--------|
+| Analyze-Plan-Execute-Iterate | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Commit Standards | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Error Analysis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Testing Strategy | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Component Architecture | - | ✓ | - | - | - | ✓ | - |
+| Responsive Design | - | ✓ | - | - | - | ✓ | - |
+| Accessibility (A11y) | - | ✓ | - | - | - | ✓ | - |
+| REST API Design | - | - | ✓ | - | ○ | ○ | ○ |
+| Authentication Patterns | - | ○ | ✓ | - | ○ | ✓ | ○ |
+| Database Optimization | - | - | ✓ | ○ | ○ | - | ○ |
+| Data Quality Assessment | - | - | - | ✓ | - | - | - |
+| Feature Engineering | - | - | - | ✓ | - | - | - |
+| Model Development | - | - | - | ✓ | - | - | - |
+| Multi-Language Support | ○ | - | ○ | - | ✓ | ✓ | - |
+| Project Structure | ○ | ○ | ○ | ○ | ✓ | ✓ | ✓ |
+| CI/CD Pipelines | - | - | - | - | - | - | ✓ |
+| Container/Kubernetes | - | - | - | - | - | - | ✓ |
+| Infrastructure as Code | - | - | - | - | - | - | ✓ |
+| Platform-Specific (iOS/Android) | - | - | - | - | - | ✓ | - |
+| Performance Optimization | ○ | ✓ | ✓ | ○ | ○ | ✓ | ✓ |
 
 **Legend**: ✓ = Full coverage, ○ = Partial coverage, - = Not covered
 

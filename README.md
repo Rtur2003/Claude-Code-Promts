@@ -14,6 +14,10 @@ These new prompts are optimized for autonomous operation with Claude Code, GitHu
 | [**Error Analysis**](prompts/english/agents/error-analysis-prompt.md) | Systematic debugging & fixes | ~2K |
 | [**Project Workflow**](prompts/english/agents/project-workflow-prompt.md) | Full project lifecycle management | ~2.5K |
 | [**Quick Reference**](prompts/english/agents/agent-quick-reference.md) | Token-optimized cheat sheet | ~0.8K |
+| [**Code Review**](prompts/english/agents/code-review-prompt.md) | Systematic code review | ~2K |
+| [**Security Audit**](prompts/english/agents/security-audit-prompt.md) | Vulnerability detection & remediation | ~2.5K |
+| [**Refactoring**](prompts/english/agents/refactoring-prompt.md) | Code improvement patterns | ~2.5K |
+| [**Testing Strategies**](prompts/english/agents/testing-strategies-prompt.md) | Comprehensive testing guidance | ~3K |
 
 ### Why Agent Prompts?
 
@@ -45,6 +49,7 @@ All prompts follow a systematic approach:
 - 🔄 **Iterative Development**: Continuous improvement cycle until optimal
 - 📚 **Comprehensive Coverage**: Commits, error analysis, testing, deployment
 - 🏗️ **Project-Specific**: Tailored prompts for different development types
+- 🔒 **Security-Focused**: Security audit and vulnerability detection prompts
 - 🌍 **Language Support**: Starting with English, expandable to other languages
 - 📖 **Well-Documented**: Clear examples and best practices
 
@@ -58,6 +63,10 @@ prompts/
 │   │   ├── error-analysis-prompt.md            # Debugging specialist
 │   │   ├── project-workflow-prompt.md          # Project lifecycle
 │   │   ├── agent-quick-reference.md            # Cheat sheet
+│   │   ├── code-review-prompt.md               # Code review specialist
+│   │   ├── security-audit-prompt.md            # Security audit specialist
+│   │   ├── refactoring-prompt.md               # Refactoring specialist
+│   │   ├── testing-strategies-prompt.md        # Testing specialist
 │   │   └── INDEX.md                            # Agent prompts index
 │   ├── base/
 │   │   └── claude-foundation-prompt.md         # Core system prompt
@@ -65,6 +74,8 @@ prompts/
 │   │   ├── web-development-prompt.md           # Web dev (React, Vue, etc.)
 │   │   ├── api-development-prompt.md           # Backend/API development
 │   │   ├── data-science-ml-prompt.md           # Data science & ML
+│   │   ├── mobile-development-prompt.md        # Mobile (iOS, Android, React Native, Flutter)
+│   │   ├── devops-cicd-prompt.md               # DevOps & CI/CD
 │   │   └── general-software-development-prompt.md
 │   └── workflows/
 │       └── iterative-development-guide.md      # Step-by-step workflow guide
