@@ -9,7 +9,20 @@
 3. **Give to Claude**: Paste at start of session
 4. **Start coding**: Follow the methodology
 
-## 📋 Prompt Selection (Choose One or More)
+## 🤖 Agent Prompts (For AI Coding Agents)
+
+**Best for**: Claude Code, GitHub Copilot, autonomous coding tasks
+
+| Prompt | Use Case | File |
+|--------|----------|------|
+| **Agent System** ⭐ | All autonomous tasks | [claude-agent-system-prompt.md](prompts/english/agents/claude-agent-system-prompt.md) |
+| **Error Analysis** | Debugging & fixes | [error-analysis-prompt.md](prompts/english/agents/error-analysis-prompt.md) |
+| **Project Workflow** | Full project lifecycle | [project-workflow-prompt.md](prompts/english/agents/project-workflow-prompt.md) |
+| **Quick Reference** | Cheat sheet (minimal tokens) | [agent-quick-reference.md](prompts/english/agents/agent-quick-reference.md) |
+
+👉 **[Full Agent Prompts Index](prompts/english/agents/INDEX.md)**
+
+## 📋 Traditional Prompts (For Interactive Sessions)
 
 ### For Everyone
 - **[Foundation Prompt](prompts/english/base/claude-foundation-prompt.md)** - Start here, universal best practices
@@ -27,6 +40,9 @@
 
 | What You're Building | Use These Prompts |
 |---------------------|-------------------|
+| AI Agent Task | Agent System (alone) |
+| Debug/Fix Bugs | Agent System + Error Analysis |
+| New Project | Agent System + Project Workflow |
 | React App | Foundation + Web Development |
 | REST API | Foundation + API Development |
 | ML Model | Foundation + Data Science & ML |
@@ -70,6 +86,19 @@ Every prompt includes:
 
 ## 📝 Example Session Start
 
+### For AI Agents (Claude Code, Copilot)
+
+```
+[Paste Agent System Prompt content]
+
+Analyze this codebase and:
+1. Identify any bugs or issues
+2. Propose improvements
+3. Fix the most critical issues
+```
+
+### For Interactive Sessions
+
 ```
 Hi Claude! I'm building a REST API for a blog platform.
 
@@ -86,6 +115,13 @@ Let's start by analyzing the requirements and creating a plan.
 
 ## ⚡ Pro Tips
 
+### For AI Agents
+1. **Use Agent System Prompt**: It's designed for autonomous operation
+2. **Let it iterate**: Trust the APEI cycle (Analyze → Plan → Execute → Iterate)
+3. **Be specific**: Clear goals lead to better results
+4. **Review checkpoints**: Check progress at each iteration
+
+### For Interactive Sessions
 1. **Start Simple**: Use just Foundation for most projects
 2. **Add Specialization**: Layer on domain prompts as needed
 3. **Trust the Process**: Let Claude follow the Analyze-Plan-Execute cycle
@@ -94,6 +130,13 @@ Let's start by analyzing the requirements and creating a plan.
 
 ## 🎓 Learning Path
 
+### For AI Agents
+1. Read **Agent System Prompt** (5 min)
+2. Try a simple task with the prompt
+3. Review **Quick Reference Card** for shortcuts
+4. Add **Error Analysis** prompt for debugging tasks
+
+### For Interactive Sessions
 1. Read **Foundation Prompt** (10 min)
 2. Skim your **project-specific prompt** (5 min)
 3. Review **Workflow Guide** (15 min)

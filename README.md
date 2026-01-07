@@ -2,11 +2,35 @@
 
 A comprehensive collection of system prompts for Claude AI to achieve optimal software development results through iterative, quality-focused workflows.
 
+## 🚀 NEW: Agent-Optimized Prompts
+
+**Now with prompts specifically designed for AI coding agents!**
+
+These new prompts are optimized for autonomous operation with Claude Code, GitHub Copilot, and similar AI coding assistants:
+
+| Prompt | Purpose | Tokens |
+|--------|---------|--------|
+| [**Agent System**](prompts/english/agents/claude-agent-system-prompt.md) | Core operating system for AI agents | ~1.5K |
+| [**Error Analysis**](prompts/english/agents/error-analysis-prompt.md) | Systematic debugging & fixes | ~2K |
+| [**Project Workflow**](prompts/english/agents/project-workflow-prompt.md) | Full project lifecycle management | ~2.5K |
+| [**Quick Reference**](prompts/english/agents/agent-quick-reference.md) | Token-optimized cheat sheet | ~0.8K |
+
+### Why Agent Prompts?
+
+- ✅ **Token-Efficient**: Maximum effectiveness with minimal tokens
+- ✅ **Autonomous**: Agents work with minimal human intervention
+- ✅ **Self-Correcting**: Built-in iteration loops catch and fix issues
+- ✅ **Universal**: Work with any codebase, language, or framework
+
+👉 **[View Agent Prompts Index](prompts/english/agents/INDEX.md)**
+
+---
+
 ## Overview
 
 This repository provides **production-ready system prompts** that enable Claude to follow industry best practices, maintain high code quality, and work through an iterative development cycle until reaching optimal solutions.
 
-### Core Philosophy: Analyze → Plan → Execute → Iterate
+### Core Philosophy: Analyze → Plan → Execute → Iterate (APEI)
 
 All prompts follow a systematic approach:
 1. **Analyze**: Understand the problem completely
@@ -16,6 +40,7 @@ All prompts follow a systematic approach:
 
 ## Features
 
+- 🤖 **Agent-Ready**: Optimized prompts for AI coding agents
 - 🎯 **Quality-Focused**: Emphasizes code quality, testing, and maintainability
 - 🔄 **Iterative Development**: Continuous improvement cycle until optimal
 - 📚 **Comprehensive Coverage**: Commits, error analysis, testing, deployment
@@ -28,22 +53,50 @@ All prompts follow a systematic approach:
 ```
 prompts/
 ├── english/
+│   ├── agents/                                 # 🆕 Agent-optimized prompts
+│   │   ├── claude-agent-system-prompt.md       # Core agent system
+│   │   ├── error-analysis-prompt.md            # Debugging specialist
+│   │   ├── project-workflow-prompt.md          # Project lifecycle
+│   │   ├── agent-quick-reference.md            # Cheat sheet
+│   │   └── INDEX.md                            # Agent prompts index
 │   ├── base/
-│   │   └── claude-foundation-prompt.md      # Core system prompt
+│   │   └── claude-foundation-prompt.md         # Core system prompt
 │   ├── project-types/
-│   │   ├── web-development-prompt.md        # Web dev (React, Vue, etc.)
-│   │   ├── api-development-prompt.md        # Backend/API development
-│   │   └── data-science-ml-prompt.md        # Data science & ML
+│   │   ├── web-development-prompt.md           # Web dev (React, Vue, etc.)
+│   │   ├── api-development-prompt.md           # Backend/API development
+│   │   ├── data-science-ml-prompt.md           # Data science & ML
+│   │   └── general-software-development-prompt.md
 │   └── workflows/
-│       └── iterative-development-guide.md   # Step-by-step workflow guide
+│       └── iterative-development-guide.md      # Step-by-step workflow guide
 ```
 
 ## Quick Start
+
+### For AI Coding Agents (Recommended)
+
+1. **Copy the Agent System Prompt**:
+   ```
+   [Paste content of claude-agent-system-prompt.md]
+   ```
+
+2. **Start working**:
+   ```
+   Analyze this codebase and fix any issues you find.
+   ```
+
+3. **The agent will automatically**:
+   - Analyze the codebase
+   - Create a plan
+   - Execute step by step
+   - Iterate until optimal
+
+### For Manual Sessions
 
 ### 1. Choose Your Prompt
 
 Select based on your project type:
 
+- **Agent System Prompt**: For AI coding agents (Claude Code, Copilot)
 - **Foundation Prompt**: Universal best practices for any project
 - **Web Development**: Frontend, React, Vue, responsive design
 - **API Development**: REST APIs, GraphQL, backend systems
@@ -263,7 +316,10 @@ and API Development prompt for the backend.
 ## FAQ
 
 **Q: Which prompt should I use?**
-A: Start with the Foundation prompt. Add project-specific prompts as needed.
+A: For AI coding agents (Claude Code, Copilot), use the **Agent System Prompt**. For manual sessions, start with the **Foundation Prompt** and add project-specific prompts as needed.
+
+**Q: What's the difference between Agent and Foundation prompts?**
+A: Agent prompts are token-optimized and designed for autonomous operation. Foundation prompts are more comprehensive and suited for interactive sessions.
 
 **Q: Can I modify the prompts?**
 A: Absolutely! These are templates. Customize them for your needs.
@@ -272,7 +328,7 @@ A: Absolutely! These are templates. Customize them for your needs.
 A: When success criteria are met and further improvements provide diminishing returns.
 
 **Q: Do these work with other AI models?**
-A: They're optimized for Claude but can be adapted for other models.
+A: They're optimized for Claude but can be adapted for other models like GPT-4, Gemini, etc.
 
 **Q: Can I use these for commercial projects?**
 A: Yes! These prompts are provided for use in any project.
