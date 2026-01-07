@@ -16,6 +16,7 @@ Quick reference guide to all available prompts in this repository.
 | **🧪 Testing Strategies** | Comprehensive testing guidance | [testing-strategies-prompt.md](agents/testing-strategies-prompt.md) |
 | **📝 Documentation** | Technical writing & API docs | [documentation-prompt.md](agents/documentation-prompt.md) |
 | **⚡ Performance** | Optimization & profiling | [performance-optimization-prompt.md](agents/performance-optimization-prompt.md) |
+| **🔀 Git & Version Control** | Branching, commits, collaboration | [git-version-control-prompt.md](agents/git-version-control-prompt.md) |
 | **Foundation** | Universal best practices | [claude-foundation-prompt.md](base/claude-foundation-prompt.md) |
 | **Web Development** | Frontend, React, Vue | [web-development-prompt.md](project-types/web-development-prompt.md) |
 | **API Development** | REST APIs, Backend | [api-development-prompt.md](project-types/api-development-prompt.md) |
@@ -23,6 +24,7 @@ Quick reference guide to all available prompts in this repository.
 | **General Software** | Cross-language development | [general-software-development-prompt.md](project-types/general-software-development-prompt.md) |
 | **📱 Mobile Development** | iOS, Android, React Native, Flutter | [mobile-development-prompt.md](project-types/mobile-development-prompt.md) |
 | **🚀 DevOps & CI/CD** | Infrastructure, pipelines, Kubernetes | [devops-cicd-prompt.md](project-types/devops-cicd-prompt.md) |
+| **🗄️ Database & SQL** | Schema design, queries, optimization | [database-sql-prompt.md](project-types/database-sql-prompt.md) |
 | **Workflow Guide** | How to iterate effectively | [iterative-development-guide.md](workflows/iterative-development-guide.md) |
 | **📚 Examples** | Real-world usage examples | [examples/](examples/) |
 
@@ -33,7 +35,7 @@ Quick reference guide to all available prompts in this repository.
 | Language | Status | Index |
 |----------|--------|-------|
 | English | ✅ Complete | [prompts/english/](.) |
-| Türkçe | 🆕 In Progress | [prompts/turkish/](../turkish/INDEX.md) |
+| Türkçe | 🔄 In Progress (4 prompts) | [prompts/turkish/](../turkish/INDEX.md) |
 
 ---
 

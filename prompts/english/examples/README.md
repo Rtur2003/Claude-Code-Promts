@@ -10,15 +10,6 @@ Step-by-step example of using prompts to build a REST API with Node.js/Express.
 ### 2. [Debugging a Production Bug](debugging-example.md)
 How to use Error Analysis prompt to systematically debug and fix issues.
 
-### 3. [Code Review Workflow](code-review-example.md)
-Using the Code Review prompt for systematic PR reviews.
-
-### 4. [Security Audit](security-audit-example.md)
-Conducting a security audit using the Security Audit prompt.
-
-### 5. [Refactoring Legacy Code](refactoring-example.md)
-Applying the Refactoring prompt to improve legacy codebase.
-
 ---
 
 ## How to Use These Examples

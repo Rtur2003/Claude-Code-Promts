@@ -25,6 +25,7 @@
 | **Testing Strategies** | Test design & TDD | [testing-strategies-prompt.md](prompts/english/agents/testing-strategies-prompt.md) |
 | **Documentation** | Technical writing | [documentation-prompt.md](prompts/english/agents/documentation-prompt.md) |
 | **Performance** | Optimization | [performance-optimization-prompt.md](prompts/english/agents/performance-optimization-prompt.md) |
+| **Git & Version Control** | Branching, commits | [git-version-control-prompt.md](prompts/english/agents/git-version-control-prompt.md) |
 
 👉 **[Full Agent Prompts Index](prompts/english/agents/INDEX.md)**
 
@@ -32,6 +33,8 @@
 
 - **[Türkçe Agent Sistem](prompts/turkish/agents/claude-agent-system-prompt-tr.md)** - AI ajanları için temel sistem
 - **[Türkçe Temel Prompt](prompts/turkish/base/claude-foundation-prompt-tr.md)** - Evrensel en iyi uygulamalar
+- **[Türkçe Kod İnceleme](prompts/turkish/agents/code-review-prompt-tr.md)** - Sistematik kod inceleme
+- **[Türkçe Hata Analizi](prompts/turkish/agents/error-analysis-prompt-tr.md)** - Hata ayıklama
 
 👉 **[Türkçe İndeks](prompts/turkish/INDEX.md)**
 
@@ -46,6 +49,7 @@
 - **[Data Science & ML](prompts/english/project-types/data-science-ml-prompt.md)** - Python, ML, Data Analysis
 - **[Mobile Development](prompts/english/project-types/mobile-development-prompt.md)** - iOS, Android, React Native, Flutter
 - **[DevOps & CI/CD](prompts/english/project-types/devops-cicd-prompt.md)** - Kubernetes, Docker, Pipelines
+- **[Database & SQL](prompts/english/project-types/database-sql-prompt.md)** - PostgreSQL, MySQL, Schema design
 - **[General Software](prompts/english/project-types/general-software-development-prompt.md)** - Multi-language
 
 ### Examples

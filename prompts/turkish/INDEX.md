@@ -52,6 +52,42 @@ Bu prompt'lar özellikle Claude Code, GitHub Copilot ve benzeri yapay zeka kodla
 
 ---
 
+### 3. Kod İnceleme Prompt'u 🔍
+**Dosya**: [code-review-prompt-tr.md](agents/code-review-prompt-tr.md)
+
+**Amaç**: Sistematik kod inceleme ile kalite güvencesi sağla.
+
+**Ne Zaman Kullanılır**:
+- Pull request incelerken
+- Kod kalitesini değerlendirirken
+- Takım arkadaşlarına geri bildirim verirken
+
+**Temel Özellikler**:
+- ANLA protokolü (Anla, Not Al, Listele, Aktar)
+- Güvenlik, performans ve bakım kontrol listeleri
+- Geri bildirim şablonları
+- Yaygın kod pattern'leri
+
+---
+
+### 4. Hata Analizi Prompt'u 🐛
+**Dosya**: [error-analysis-prompt-tr.md](agents/error-analysis-prompt-tr.md)
+
+**Amaç**: Sistematik hata tespiti, kök neden analizi ve güvenilir düzeltmeler.
+
+**Ne Zaman Kullanılır**:
+- Hata ayıklama yaparken
+- Üretim sorunlarını çözerken
+- Test hatalarını analiz ederken
+
+**Temel Özellikler**:
+- BULAR protokolü (Bul, Understand, Listele, Aksiyon, Raporla)
+- 5 Neden tekniği
+- Hata sınıflandırması (P0-P3)
+- Düzeltme doğrulama
+
+---
+
 ## Nasıl Kullanılır
 
 ### Seçenek 1: Tam Agent Kurulumu
@@ -71,9 +107,9 @@ Spesifik görevler için özelleştirilmiş prompt'lar ekle:
 [Temel prompt] + [Hata Analizi Prompt'u]
 ```
 
-**Proje geliştirme için**:
+**Kod inceleme için**:
 ```
-[Temel prompt] + [Proje İş Akışı Prompt'u]
+[Temel prompt] + [Kod İnceleme Prompt'u]
 ```
 
 ---
@@ -98,9 +134,9 @@ Spesifik görevler için özelleştirilmiş prompt'lar ekle:
 
 Aşağıdaki prompt'ların Türkçe çevirileri yakında eklenecektir:
 
-- [ ] Hata Analizi Prompt'u
+- [x] ~~Hata Analizi Prompt'u~~ ✅
 - [ ] Proje İş Akışı Prompt'u
-- [ ] Kod İnceleme Prompt'u
+- [x] ~~Kod İnceleme Prompt'u~~ ✅
 - [ ] Güvenlik Denetimi Prompt'u
 - [ ] Refactoring Prompt'u
 - [ ] Test Stratejileri Prompt'u

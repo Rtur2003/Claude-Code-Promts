@@ -207,6 +207,25 @@ These prompts are specifically designed for autonomous AI coding agents. They ar
 
 ---
 
+### 11. Git & Version Control Prompt 🔀
+**File**: [git-version-control-prompt.md](git-version-control-prompt.md)
+
+**Purpose**: Manage version control effectively with best practices.
+
+**Use When**:
+- Managing branches and merges
+- Writing commit messages
+- Resolving conflicts
+- Maintaining clean history
+
+**Key Features**:
+- BRANCH protocol
+- Git Flow and GitHub Flow strategies
+- Commit message conventions
+- Conflict resolution guides
+
+---
+
 ## How to Use
 
 ### Option 1: Full Agent Setup
