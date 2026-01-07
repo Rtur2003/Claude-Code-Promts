@@ -19,8 +19,24 @@
 | **Error Analysis** | Debugging & fixes | [error-analysis-prompt.md](prompts/english/agents/error-analysis-prompt.md) |
 | **Project Workflow** | Full project lifecycle | [project-workflow-prompt.md](prompts/english/agents/project-workflow-prompt.md) |
 | **Quick Reference** | Cheat sheet (minimal tokens) | [agent-quick-reference.md](prompts/english/agents/agent-quick-reference.md) |
+| **Code Review** | Systematic PR reviews | [code-review-prompt.md](prompts/english/agents/code-review-prompt.md) |
+| **Security Audit** | Vulnerability detection | [security-audit-prompt.md](prompts/english/agents/security-audit-prompt.md) |
+| **Refactoring** | Code improvement | [refactoring-prompt.md](prompts/english/agents/refactoring-prompt.md) |
+| **Testing Strategies** | Test design & TDD | [testing-strategies-prompt.md](prompts/english/agents/testing-strategies-prompt.md) |
+| **Documentation** | Technical writing | [documentation-prompt.md](prompts/english/agents/documentation-prompt.md) |
+| **Performance** | Optimization | [performance-optimization-prompt.md](prompts/english/agents/performance-optimization-prompt.md) |
+| **Git & Version Control** | Branching, commits | [git-version-control-prompt.md](prompts/english/agents/git-version-control-prompt.md) |
 
 👉 **[Full Agent Prompts Index](prompts/english/agents/INDEX.md)**
+
+## 🌍 Türkçe Prompt'lar (Turkish)
+
+- **[Türkçe Agent Sistem](prompts/turkish/agents/claude-agent-system-prompt-tr.md)** - AI ajanları için temel sistem
+- **[Türkçe Temel Prompt](prompts/turkish/base/claude-foundation-prompt-tr.md)** - Evrensel en iyi uygulamalar
+- **[Türkçe Kod İnceleme](prompts/turkish/agents/code-review-prompt-tr.md)** - Sistematik kod inceleme
+- **[Türkçe Hata Analizi](prompts/turkish/agents/error-analysis-prompt-tr.md)** - Hata ayıklama
+
+👉 **[Türkçe İndeks](prompts/turkish/INDEX.md)**
 
 ## 📋 Traditional Prompts (For Interactive Sessions)
 
@@ -31,7 +47,13 @@
 - **[Web Development](prompts/english/project-types/web-development-prompt.md)** - React, Vue, HTML/CSS
 - **[API Development](prompts/english/project-types/api-development-prompt.md)** - REST, GraphQL, Backend
 - **[Data Science & ML](prompts/english/project-types/data-science-ml-prompt.md)** - Python, ML, Data Analysis
+- **[Mobile Development](prompts/english/project-types/mobile-development-prompt.md)** - iOS, Android, React Native, Flutter
+- **[DevOps & CI/CD](prompts/english/project-types/devops-cicd-prompt.md)** - Kubernetes, Docker, Pipelines
+- **[Database & SQL](prompts/english/project-types/database-sql-prompt.md)** - PostgreSQL, MySQL, Schema design
 - **[General Software](prompts/english/project-types/general-software-development-prompt.md)** - Multi-language
+
+### Examples
+- **[REST API Example](prompts/english/examples/rest-api-example.md)** - Building a REST API step-by-step
 
 ### Learn the Process
 - **[Workflow Guide](prompts/english/workflows/iterative-development-guide.md)** - How to iterate effectively
@@ -43,9 +65,15 @@
 | AI Agent Task | Agent System (alone) |
 | Debug/Fix Bugs | Agent System + Error Analysis |
 | New Project | Agent System + Project Workflow |
+| Code Review | Agent System + Code Review |
+| Security Audit | Agent System + Security Audit |
+| Refactoring | Agent System + Refactoring |
+| Test Suite | Agent System + Testing Strategies |
 | React App | Foundation + Web Development |
 | REST API | Foundation + API Development |
 | ML Model | Foundation + Data Science & ML |
+| Mobile App | Foundation + Mobile Development |
+| DevOps/Infra | Foundation + DevOps & CI/CD |
 | Full-Stack App | Foundation + Web + API |
 | Python Script | Foundation + General Software |
 | Any Project | Foundation (at minimum) |

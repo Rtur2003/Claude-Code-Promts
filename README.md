@@ -14,6 +14,13 @@ These new prompts are optimized for autonomous operation with Claude Code, GitHu
 | [**Error Analysis**](prompts/english/agents/error-analysis-prompt.md) | Systematic debugging & fixes | ~2K |
 | [**Project Workflow**](prompts/english/agents/project-workflow-prompt.md) | Full project lifecycle management | ~2.5K |
 | [**Quick Reference**](prompts/english/agents/agent-quick-reference.md) | Token-optimized cheat sheet | ~0.8K |
+| [**Code Review**](prompts/english/agents/code-review-prompt.md) | Systematic code review | ~2K |
+| [**Security Audit**](prompts/english/agents/security-audit-prompt.md) | Vulnerability detection & remediation | ~2.5K |
+| [**Refactoring**](prompts/english/agents/refactoring-prompt.md) | Code improvement patterns | ~2.5K |
+| [**Testing Strategies**](prompts/english/agents/testing-strategies-prompt.md) | Comprehensive testing guidance | ~3K |
+| [**Documentation**](prompts/english/agents/documentation-prompt.md) | Technical writing & API docs | ~2.5K |
+| [**Performance**](prompts/english/agents/performance-optimization-prompt.md) | Optimization & profiling | ~3K |
+| [**Git & Version Control**](prompts/english/agents/git-version-control-prompt.md) | Branching, commits, collaboration | ~2.5K |
 
 ### Why Agent Prompts?
 
@@ -23,6 +30,15 @@ These new prompts are optimized for autonomous operation with Claude Code, GitHu
 - ✅ **Universal**: Work with any codebase, language, or framework
 
 👉 **[View Agent Prompts Index](prompts/english/agents/INDEX.md)**
+
+---
+
+## 🌍 Language Support
+
+| Language | Status | Link |
+|----------|--------|------|
+| English | ✅ Complete (12 agent + 7 project prompts) | [prompts/english/](prompts/english/INDEX.md) |
+| Türkçe | 🔄 In Progress (4 prompts) | [prompts/turkish/](prompts/turkish/INDEX.md) |
 
 ---
 
@@ -45,6 +61,7 @@ All prompts follow a systematic approach:
 - 🔄 **Iterative Development**: Continuous improvement cycle until optimal
 - 📚 **Comprehensive Coverage**: Commits, error analysis, testing, deployment
 - 🏗️ **Project-Specific**: Tailored prompts for different development types
+- 🔒 **Security-Focused**: Security audit and vulnerability detection prompts
 - 🌍 **Language Support**: Starting with English, expandable to other languages
 - 📖 **Well-Documented**: Clear examples and best practices
 
@@ -58,6 +75,13 @@ prompts/
 │   │   ├── error-analysis-prompt.md            # Debugging specialist
 │   │   ├── project-workflow-prompt.md          # Project lifecycle
 │   │   ├── agent-quick-reference.md            # Cheat sheet
+│   │   ├── code-review-prompt.md               # Code review specialist
+│   │   ├── security-audit-prompt.md            # Security audit specialist
+│   │   ├── refactoring-prompt.md               # Refactoring specialist
+│   │   ├── testing-strategies-prompt.md        # Testing specialist
+│   │   ├── documentation-prompt.md             # Documentation specialist
+│   │   ├── performance-optimization-prompt.md  # Performance specialist
+│   │   ├── git-version-control-prompt.md       # Git & version control
 │   │   └── INDEX.md                            # Agent prompts index
 │   ├── base/
 │   │   └── claude-foundation-prompt.md         # Core system prompt
@@ -65,9 +89,24 @@ prompts/
 │   │   ├── web-development-prompt.md           # Web dev (React, Vue, etc.)
 │   │   ├── api-development-prompt.md           # Backend/API development
 │   │   ├── data-science-ml-prompt.md           # Data science & ML
+│   │   ├── mobile-development-prompt.md        # Mobile (iOS, Android, React Native, Flutter)
+│   │   ├── devops-cicd-prompt.md               # DevOps & CI/CD
+│   │   ├── database-sql-prompt.md              # Database design & SQL
 │   │   └── general-software-development-prompt.md
+│   ├── examples/                               # 🆕 Real-world usage examples
+│   │   ├── README.md
+│   │   ├── rest-api-example.md
+│   │   └── debugging-example.md
 │   └── workflows/
 │       └── iterative-development-guide.md      # Step-by-step workflow guide
+├── turkish/                                    # 🆕 Türkçe prompts
+│   ├── agents/
+│   │   ├── claude-agent-system-prompt-tr.md
+│   │   ├── code-review-prompt-tr.md
+│   │   └── error-analysis-prompt-tr.md
+│   ├── base/
+│   │   └── claude-foundation-prompt-tr.md
+│   └── INDEX.md
 ```
 
 ## Quick Start
