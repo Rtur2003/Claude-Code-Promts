@@ -6,12 +6,42 @@ Quick reference guide to all available prompts in this repository.
 
 | Prompt | Use Case | File |
 |--------|----------|------|
+| **🤖 Agent System** | AI coding agents (Claude Code, Copilot) | [claude-agent-system-prompt.md](agents/claude-agent-system-prompt.md) |
+| **🔍 Error Analysis** | Debugging & error resolution | [error-analysis-prompt.md](agents/error-analysis-prompt.md) |
+| **📊 Project Workflow** | Project development lifecycle | [project-workflow-prompt.md](agents/project-workflow-prompt.md) |
+| **📋 Quick Reference** | Token-optimized cheat sheet | [agent-quick-reference.md](agents/agent-quick-reference.md) |
 | **Foundation** | Universal best practices | [claude-foundation-prompt.md](base/claude-foundation-prompt.md) |
 | **Web Development** | Frontend, React, Vue | [web-development-prompt.md](project-types/web-development-prompt.md) |
 | **API Development** | REST APIs, Backend | [api-development-prompt.md](project-types/api-development-prompt.md) |
 | **Data Science & ML** | ML, Data Analysis | [data-science-ml-prompt.md](project-types/data-science-ml-prompt.md) |
 | **General Software** | Cross-language development | [general-software-development-prompt.md](project-types/general-software-development-prompt.md) |
 | **Workflow Guide** | How to iterate effectively | [iterative-development-guide.md](workflows/iterative-development-guide.md) |
+
+---
+
+## 🤖 NEW: Agent-Optimized Prompts
+
+Specifically designed for autonomous AI coding agents like Claude Code, GitHub Copilot, and similar tools.
+
+### Why Agent Prompts?
+
+- **Token-Efficient**: Maximum value with minimal tokens
+- **Autonomous**: Agents can work with minimal human intervention
+- **Self-Correcting**: Built-in iteration loops catch and fix issues
+- **Universal**: Work with any codebase or language
+
+### Agent Prompts Index
+
+| Prompt | Purpose | Best For |
+|--------|---------|----------|
+| [Agent System](agents/claude-agent-system-prompt.md) | Core operating system | All tasks |
+| [Error Analysis](agents/error-analysis-prompt.md) | Debugging & fixes | Bug fixing |
+| [Project Workflow](agents/project-workflow-prompt.md) | Full project lifecycle | New/existing projects |
+| [Quick Reference](agents/agent-quick-reference.md) | Cheat sheet | Quick tasks |
+
+👉 **[View Full Agent Prompts Index](agents/INDEX.md)**
+
+---
 
 ## Prompt Selection Guide
 
