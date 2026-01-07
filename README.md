@@ -18,6 +18,8 @@ These new prompts are optimized for autonomous operation with Claude Code, GitHu
 | [**Security Audit**](prompts/english/agents/security-audit-prompt.md) | Vulnerability detection & remediation | ~2.5K |
 | [**Refactoring**](prompts/english/agents/refactoring-prompt.md) | Code improvement patterns | ~2.5K |
 | [**Testing Strategies**](prompts/english/agents/testing-strategies-prompt.md) | Comprehensive testing guidance | ~3K |
+| [**Documentation**](prompts/english/agents/documentation-prompt.md) | Technical writing & API docs | ~2.5K |
+| [**Performance**](prompts/english/agents/performance-optimization-prompt.md) | Optimization & profiling | ~3K |
 
 ### Why Agent Prompts?
 
@@ -27,6 +29,15 @@ These new prompts are optimized for autonomous operation with Claude Code, GitHu
 - ✅ **Universal**: Work with any codebase, language, or framework
 
 👉 **[View Agent Prompts Index](prompts/english/agents/INDEX.md)**
+
+---
+
+## 🌍 Language Support
+
+| Language | Status | Link |
+|----------|--------|------|
+| English | ✅ Complete | [prompts/english/](prompts/english/INDEX.md) |
+| Türkçe | 🆕 New | [prompts/turkish/](prompts/turkish/INDEX.md) |
 
 ---
 
@@ -67,6 +78,8 @@ prompts/
 │   │   ├── security-audit-prompt.md            # Security audit specialist
 │   │   ├── refactoring-prompt.md               # Refactoring specialist
 │   │   ├── testing-strategies-prompt.md        # Testing specialist
+│   │   ├── documentation-prompt.md             # Documentation specialist
+│   │   ├── performance-optimization-prompt.md  # Performance specialist
 │   │   └── INDEX.md                            # Agent prompts index
 │   ├── base/
 │   │   └── claude-foundation-prompt.md         # Core system prompt
@@ -77,8 +90,17 @@ prompts/
 │   │   ├── mobile-development-prompt.md        # Mobile (iOS, Android, React Native, Flutter)
 │   │   ├── devops-cicd-prompt.md               # DevOps & CI/CD
 │   │   └── general-software-development-prompt.md
+│   ├── examples/                               # 🆕 Real-world usage examples
+│   │   ├── README.md
+│   │   └── rest-api-example.md
 │   └── workflows/
 │       └── iterative-development-guide.md      # Step-by-step workflow guide
+├── turkish/                                    # 🆕 Türkçe prompts
+│   ├── agents/
+│   │   └── claude-agent-system-prompt-tr.md
+│   ├── base/
+│   │   └── claude-foundation-prompt-tr.md
+│   └── INDEX.md
 ```
 
 ## Quick Start

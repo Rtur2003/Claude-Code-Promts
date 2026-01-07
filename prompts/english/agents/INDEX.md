@@ -169,6 +169,44 @@ These prompts are specifically designed for autonomous AI coding agents. They ar
 
 ---
 
+### 9. Documentation Prompt 📝
+**File**: [documentation-prompt.md](documentation-prompt.md)
+
+**Purpose**: Create clear, comprehensive, and maintainable documentation.
+
+**Use When**:
+- Writing README files
+- Creating API documentation
+- Building user guides
+- Documenting code
+
+**Key Features**:
+- CLEAR protocol (Catalog, Learn, Explain, Audit, Refine)
+- README and API doc templates
+- JSDoc/Docstring patterns
+- Documentation quality checklists
+
+---
+
+### 10. Performance Optimization Prompt ⚡
+**File**: [performance-optimization-prompt.md](performance-optimization-prompt.md)
+
+**Purpose**: Identify bottlenecks, implement optimizations, ensure efficiency.
+
+**Use When**:
+- Profiling applications
+- Optimizing slow code
+- Reducing resource usage
+- Performance audits
+
+**Key Features**:
+- MEASURE protocol
+- Profiling commands for multiple languages
+- Caching and optimization patterns
+- Performance budgets and monitoring
+
+---
+
 ## How to Use
 
 ### Option 1: Full Agent Setup

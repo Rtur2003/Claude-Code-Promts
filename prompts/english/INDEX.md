@@ -14,6 +14,8 @@ Quick reference guide to all available prompts in this repository.
 | **🔐 Security Audit** | Security vulnerability detection | [security-audit-prompt.md](agents/security-audit-prompt.md) |
 | **♻️ Refactoring** | Code improvement patterns | [refactoring-prompt.md](agents/refactoring-prompt.md) |
 | **🧪 Testing Strategies** | Comprehensive testing guidance | [testing-strategies-prompt.md](agents/testing-strategies-prompt.md) |
+| **📝 Documentation** | Technical writing & API docs | [documentation-prompt.md](agents/documentation-prompt.md) |
+| **⚡ Performance** | Optimization & profiling | [performance-optimization-prompt.md](agents/performance-optimization-prompt.md) |
 | **Foundation** | Universal best practices | [claude-foundation-prompt.md](base/claude-foundation-prompt.md) |
 | **Web Development** | Frontend, React, Vue | [web-development-prompt.md](project-types/web-development-prompt.md) |
 | **API Development** | REST APIs, Backend | [api-development-prompt.md](project-types/api-development-prompt.md) |
@@ -22,6 +24,16 @@ Quick reference guide to all available prompts in this repository.
 | **📱 Mobile Development** | iOS, Android, React Native, Flutter | [mobile-development-prompt.md](project-types/mobile-development-prompt.md) |
 | **🚀 DevOps & CI/CD** | Infrastructure, pipelines, Kubernetes | [devops-cicd-prompt.md](project-types/devops-cicd-prompt.md) |
 | **Workflow Guide** | How to iterate effectively | [iterative-development-guide.md](workflows/iterative-development-guide.md) |
+| **📚 Examples** | Real-world usage examples | [examples/](examples/) |
+
+---
+
+## 🌍 Language Support
+
+| Language | Status | Index |
+|----------|--------|-------|
+| English | ✅ Complete | [prompts/english/](.) |
+| Türkçe | 🆕 In Progress | [prompts/turkish/](../turkish/INDEX.md) |
 
 ---
 
