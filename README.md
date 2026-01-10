@@ -37,7 +37,7 @@ These new prompts are optimized for autonomous operation with Claude Code, GitHu
 
 | Language | Status | Link |
 |----------|--------|------|
-| English | ✅ Complete (12 agent + 7 project prompts) | [prompts/english/](prompts/english/INDEX.md) |
+| English | ✅ Complete (13 agent + 7 project prompts) | [prompts/english/](prompts/english/INDEX.md) |
 | Türkçe | 🔄 In Progress (4 prompts) | [prompts/turkish/](prompts/turkish/INDEX.md) |
 
 ---
