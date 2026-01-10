@@ -226,6 +226,23 @@ These prompts are specifically designed for autonomous AI coding agents. They ar
 
 ---
 
+### 12. Integration Guardian Prompt 🛡️
+**File**: [integration-guardian-prompt.md](integration-guardian-prompt.md)
+
+**Purpose**: Protect system integrity while making minimal changes—enforcing i18n, design tokens, API/schema contracts, security, performance, and a11y.
+
+**Use When**:
+- Adding/changing features that touch translations, tokens/themes, contracts, or shared utilities
+- You need evidence-backed risk scanning with concise, keyworded output
+- Want to avoid duplicate components/keys and keep tokens/contracts aligned
+
+**Key Features**:
+- Discover → Conflict Scan → Risk Check → Minimal Plan → Execute & Verify → Report
+- Integration checklist (i18n, tokens/theme, API/schema, security, perf, a11y, feature flags, deps)
+- Token-thrifty output: Status | Steps | Risks | Evidence
+
+---
+
 ## How to Use
 
 ### Option 1: Full Agent Setup
