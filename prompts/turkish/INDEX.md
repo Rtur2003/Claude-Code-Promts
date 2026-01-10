@@ -33,7 +33,24 @@ Bu prompt'lar özellikle Claude Code, GitHub Copilot ve benzeri yapay zeka kodla
 
 ---
 
-### 2. Claude Temel Sistem Prompt'u
+### 2. Entegrasyon Gardiyanı Prompt'u 🛡️
+**Dosya**: [entegrasyon-gardiyani-agent-prompt-tr.md](agents/entegrasyon-gardiyani-agent-prompt-tr.md)
+
+**Amaç**: Sistem bütünlüğünü bozmadan çalışmak için tam kapsamlı kontrol listesi. Çeviri, tema, API sözleşmesi, güvenlik ve performans risklerini entegre biçimde yönetir.
+
+**Ne Zaman Kullanılır**:
+- Yeni özellik eklerken mevcut sistemle uyumdan emin olmak gerektiğinde
+- Çeviri/tema/konfigürasyon/şema değişikliklerinin yan etkilerini kontrol etmek için
+- Token tasarrufu ile kısa ama kanıtlı yanıtlar istenirken
+
+**Temel Özellikler**:
+- Haritalandırma → Çakışma Tarama → Risk Analizi → Plan → Uygula → Doğrula
+- i18n, tema/design token, veri modeli, API sözleşmesi, güvenlik ve performans kontrol listeleri
+- Gerçek sorun kanıtı olmadan farazi öneri yapılmaz; çıktılar kısa tutulur
+
+---
+
+### 3. Claude Temel Sistem Prompt'u
 **Dosya**: [claude-foundation-prompt-tr.md](base/claude-foundation-prompt-tr.md)
 
 **Amaç**: Her proje için evrensel en iyi uygulamalar ve temel prensipler.
@@ -52,7 +69,7 @@ Bu prompt'lar özellikle Claude Code, GitHub Copilot ve benzeri yapay zeka kodla
 
 ---
 
-### 3. Kod İnceleme Prompt'u 🔍
+### 4. Kod İnceleme Prompt'u 🔍
 **Dosya**: [code-review-prompt-tr.md](agents/code-review-prompt-tr.md)
 
 **Amaç**: Sistematik kod inceleme ile kalite güvencesi sağla.
@@ -70,7 +87,7 @@ Bu prompt'lar özellikle Claude Code, GitHub Copilot ve benzeri yapay zeka kodla
 
 ---
 
-### 4. Hata Analizi Prompt'u 🐛
+### 5. Hata Analizi Prompt'u 🐛
 **Dosya**: [error-analysis-prompt-tr.md](agents/error-analysis-prompt-tr.md)
 
 **Amaç**: Sistematik hata tespiti, kök neden analizi ve güvenilir düzeltmeler.
