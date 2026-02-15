@@ -1,361 +1,68 @@
 # Agent Prompts Index
 
-> **Optimized for AI Coding Agents** | **Claude Code, GitHub Copilot, etc.**
+> Optimized for autonomous AI coding agents — Claude Code, GitHub Copilot, etc.
 
-## Overview
+## Catalog
 
-These prompts are specifically designed for autonomous AI coding agents. They are:
-
-- ✅ **Token-Optimized**: Minimal tokens for maximum effectiveness
-- ✅ **Agent-Ready**: Structured for autonomous operation
-- ✅ **Action-Oriented**: Clear commands and workflows
-- ✅ **Universal**: Work with any codebase or language
-
----
-
-## Available Prompts
-
-### 1. Claude Agent System Prompt ⭐ (Start Here)
-**File**: [claude-agent-system-prompt.md](claude-agent-system-prompt.md)
-
-**Purpose**: Core operating system for AI coding agents. Contains the APEI loop (Analyze → Plan → Execute → Iterate) and all foundational behaviors.
-
-**Use When**:
-- Starting any coding task
-- Need a complete agent system prompt
-- Want systematic, iterative development
-
-**Key Features**:
-- APEI development cycle
-- Commit standards
-- Code quality checklist
-- Communication templates
-- Token optimization tips
+| # | Prompt | Purpose | Tokens | File |
+|---|--------|---------|--------|------|
+| 1 | **Agent System** ⭐ | Core APEI operating system | ~1.5K | [View](claude-agent-system-prompt.md) |
+| 2 | **Error Analysis** | Debugging & root cause analysis | ~2K | [View](error-analysis-prompt.md) |
+| 3 | **Project Workflow** | End-to-end project lifecycle | ~2.5K | [View](project-workflow-prompt.md) |
+| 4 | **Quick Reference** | Cheat sheet (minimal tokens) | ~0.8K | [View](agent-quick-reference.md) |
+| 5 | **Code Review** | Systematic PR review | ~2K | [View](code-review-prompt.md) |
+| 6 | **Security Audit** | Vulnerability detection (OWASP) | ~2.5K | [View](security-audit-prompt.md) |
+| 7 | **Refactoring** | Code smell detection & SAFE protocol | ~2.5K | [View](refactoring-prompt.md) |
+| 8 | **Testing** | TEST protocol, TDD, coverage | ~3K | [View](testing-strategies-prompt.md) |
+| 9 | **Documentation** | CLEAR protocol, API docs | ~2.5K | [View](documentation-prompt.md) |
+| 10 | **Performance** | MEASURE protocol, profiling | ~3K | [View](performance-optimization-prompt.md) |
+| 11 | **Git & VCS** | BRANCH protocol, commits | ~2.5K | [View](git-version-control-prompt.md) |
+| 12 | **Integration Guardian** | i18n, tokens, contracts, a11y | ~0.5K | [View](integration-guardian-prompt.md) |
 
 ---
 
-### 2. Error Analysis Prompt 🔍
-**File**: [error-analysis-prompt.md](error-analysis-prompt.md)
-
-**Purpose**: Systematic error detection, root cause analysis, and resolution.
-
-**Use When**:
-- Debugging failing builds
-- Fixing test failures
-- Resolving runtime errors
-- Investigating security issues
-
-**Key Features**:
-- Automatic error scanning commands
-- Error classification (P0-P3)
-- Root cause analysis (5 Whys)
-- Fix implementation process
-- Prevention strategies
-
----
-
-### 3. Project Workflow Prompt 📊
-**File**: [project-workflow-prompt.md](project-workflow-prompt.md)
-
-**Purpose**: End-to-end project management from assessment to maintenance.
-
-**Use When**:
-- Starting a new project
-- Taking over existing codebase
-- Planning feature development
-- Improving project health
-
-**Key Features**:
-- Project assessment framework
-- Goal definition templates
-- Feature breakdown structure
-- Testing strategy
-- Maintenance checklists
-
----
-
-### 4. Quick Reference Card 📋
-**File**: [agent-quick-reference.md](agent-quick-reference.md)
-
-**Purpose**: Ultra-concise reference for common patterns and commands.
-
-**Use When**:
-- Need quick reminder of formats
-- Want copy-paste templates
-- Looking up common commands
-- Memory-constrained context
-
-**Key Features**:
-- All templates in one page
-- Common commands cheat sheet
-- Checklist quick reference
-- Debug workflow summary
-
----
-
-### 5. Code Review Prompt 🔍
-**File**: [code-review-prompt.md](code-review-prompt.md)
-
-**Purpose**: Systematic code review with quality assurance and best practices.
-
-**Use When**:
-- Reviewing pull requests
-- Self-reviewing code before commit
-- Establishing code review standards
-- Training on review best practices
-
-**Key Features**:
-- Four-phase review protocol
-- Common code patterns to watch for
-- Feedback templates (Blocker, Warning, Suggestion)
-- File-type specific checklists
-
----
-
-### 6. Security Audit Prompt 🔐
-**File**: [security-audit-prompt.md](security-audit-prompt.md)
-
-**Purpose**: Comprehensive security vulnerability detection and remediation.
-
-**Use When**:
-- Auditing application security
-- Reviewing code for vulnerabilities
-- Implementing security best practices
-- Preparing for security assessments
-
-**Key Features**:
-- OWASP Top 10 checklist
-- Vulnerability severity matrix
-- Automated scanning commands
-- Remediation code examples
-
----
-
-### 7. Refactoring Prompt ♻️
-**File**: [refactoring-prompt.md](refactoring-prompt.md)
-
-**Purpose**: Systematic code improvement and technical debt reduction.
-
-**Use When**:
-- Improving code quality
-- Reducing technical debt
-- Preparing for new features
-- Code cleanup sessions
-
-**Key Features**:
-- Code smell detection
-- SAFE refactoring protocol
-- Common refactoring patterns
-- Before/after comparisons
-
----
-
-### 8. Testing Strategies Prompt 🧪
-**File**: [testing-strategies-prompt.md](testing-strategies-prompt.md)
-
-**Purpose**: Comprehensive testing design and implementation guidance.
-
-**Use When**:
-- Designing test strategies
-- Implementing TDD
-- Improving test coverage
-- Writing different test types
-
-**Key Features**:
-- TEST protocol (Target, Engineer, Specify, Track)
-- Unit, integration, E2E examples
-- Performance testing with k6
-- Coverage tracking templates
-
----
-
-### 9. Documentation Prompt 📝
-**File**: [documentation-prompt.md](documentation-prompt.md)
-
-**Purpose**: Create clear, comprehensive, and maintainable documentation.
-
-**Use When**:
-- Writing README files
-- Creating API documentation
-- Building user guides
-- Documenting code
-
-**Key Features**:
-- CLEAR protocol (Catalog, Learn, Explain, Audit, Refine)
-- README and API doc templates
-- JSDoc/Docstring patterns
-- Documentation quality checklists
-
----
-
-### 10. Performance Optimization Prompt ⚡
-**File**: [performance-optimization-prompt.md](performance-optimization-prompt.md)
-
-**Purpose**: Identify bottlenecks, implement optimizations, ensure efficiency.
-
-**Use When**:
-- Profiling applications
-- Optimizing slow code
-- Reducing resource usage
-- Performance audits
-
-**Key Features**:
-- MEASURE protocol
-- Profiling commands for multiple languages
-- Caching and optimization patterns
-- Performance budgets and monitoring
-
----
-
-### 11. Git & Version Control Prompt 🔀
-**File**: [git-version-control-prompt.md](git-version-control-prompt.md)
-
-**Purpose**: Manage version control effectively with best practices.
-
-**Use When**:
-- Managing branches and merges
-- Writing commit messages
-- Resolving conflicts
-- Maintaining clean history
-
-**Key Features**:
-- BRANCH protocol
-- Git Flow and GitHub Flow strategies
-- Commit message conventions
-- Conflict resolution guides
-
----
-
-### 12. Integration Guardian Prompt 🛡️
-**File**: [integration-guardian-prompt.md](integration-guardian-prompt.md)
-
-**Purpose**: Protect system integrity while making minimal changes—enforcing i18n, design tokens, API/schema contracts, security, performance, and a11y.
-
-**Use When**:
-- Adding/changing features that touch translations, tokens/themes, contracts, or shared utilities
-- You need evidence-backed risk scanning with concise, keyworded output
-- Want to avoid duplicate components/keys and keep tokens/contracts aligned
-
-**Key Features**:
-- Discover → Conflict Scan → Risk Check → Minimal Plan → Execute & Verify → Report
-- Integration checklist (i18n, tokens/theme, API/schema, security, perf, a11y, feature flags, deps)
-- Token-thrifty output: Status | Steps | Risks | Evidence
-
----
-
-## How to Use
+## Usage
 
 ### Option 1: Full Agent Setup
-Use the **Claude Agent System Prompt** as your base. It contains everything needed for autonomous operation.
-
-```
-[Provide claude-agent-system-prompt.md content to the AI]
-
-Now, please analyze this codebase and propose improvements...
-```
+Use **Agent System Prompt** as base. It contains everything for autonomous operation.
 
 ### Option 2: Task-Specific
-Add specialized prompts for specific tasks:
+Combine Agent System + specialist prompt:
 
-**For debugging**:
-```
-[Base prompt] + [Error Analysis Prompt]
-```
+| Task | Combine With |
+|------|-------------|
+| Debugging | Error Analysis |
+| New project | Project Workflow |
+| PR review | Code Review |
+| Security check | Security Audit |
+| Tech debt | Refactoring |
+| Test coverage | Testing |
+| Writing docs | Documentation |
+| Slow code | Performance |
+| Git workflow | Git & VCS |
+| System integrity | Integration Guardian |
 
-**For project development**:
-```
-[Base prompt] + [Project Workflow Prompt]
-```
-
-### Option 3: Quick Reference Only
-For simple tasks or when context is limited:
-```
-[Quick Reference Card only]
-```
+### Option 3: Minimal Context
+Use **Quick Reference** alone when token budget is tight (< 2K).
 
 ---
 
-## Comparison: Agent vs Traditional Prompts
+## Token Budget Guide
 
-| Feature | Traditional Prompts | Agent Prompts |
-|---------|-------------------|---------------|
-| Length | Verbose | Token-optimized |
+| Budget | Recommended |
+|--------|-------------|
+| < 2K tokens | Quick Reference only |
+| 2K–8K tokens | Agent System Prompt |
+| 8K+ tokens | Agent System + specialist + project-type |
+
+---
+
+## Agent vs Traditional Prompts
+
+| Feature | Traditional | Agent |
+|---------|:-----------:|:-----:|
+| Token usage | Verbose | Optimized |
 | Structure | Descriptive | Action-oriented |
-| Output | Suggestions | Autonomous execution |
-| Workflow | Manual guidance | Self-directing loops |
-| Error Handling | Reactive | Proactive + preventive |
-
----
-
-## Combining with Project-Type Prompts
-
-Agent prompts work well combined with project-type prompts:
-
-### Web Development
-```
-[Claude Agent System] + [Web Development Prompt]
-```
-
-### API Development
-```
-[Claude Agent System] + [API Development Prompt]
-```
-
-### Data Science
-```
-[Claude Agent System] + [Data Science Prompt]
-```
-
----
-
-## Token Optimization Guide
-
-### Minimal Context (Under 2K tokens)
-Use: **Quick Reference Card** only
-
-### Standard Context (2K-8K tokens)
-Use: **Claude Agent System Prompt**
-
-### Extended Context (8K+ tokens)
-Use: **Full combination** with project-type prompts
-
----
-
-## Prompt Effectiveness
-
-All agent prompts are designed for:
-
-1. **Autonomous Operation**: Agents can work with minimal human intervention
-2. **Self-Correction**: Built-in iteration loops catch and fix issues
-3. **Quality Assurance**: Checklists and validation at every step
-4. **Clear Communication**: Structured reporting formats
-5. **Efficient Token Usage**: Maximum value per token
-
----
-
-## Best Practices
-
-### DO ✅
-- Start with the Agent System Prompt
-- Let the agent complete the APEI cycle
-- Trust the iterative process
-- Use Quick Reference for simple tasks
-
-### DON'T ❌
-- Interrupt mid-cycle unnecessarily
-- Skip the analysis phase
-- Ignore test failures
-- Rush to "done" without validation
-
----
-
-## Feedback & Improvement
-
-These prompts are continuously improved based on real-world usage. Key metrics:
-
-- Task completion rate
-- Error rate reduction
-- Token efficiency
-- User satisfaction
-
-Found an improvement? The prompts themselves follow the APEI cycle for enhancement.
+| Execution | Manual guidance | Autonomous |
+| Error handling | Reactive | Proactive |
+| Workflow | Linear | Self-directing loops |
