@@ -298,4 +298,4 @@ Every iteration should:
 1. Add measurable value
 2. Maintain or improve code quality
 3. Move closer to success criteria
-4. Leave the codebase better than before. *(TR: Kod tabanını öncekinden daha iyi bırak; kurala uyarak projeyi her anlamda geliştir.)*
+4. Leave the codebase better than before
