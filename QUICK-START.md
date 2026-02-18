@@ -23,6 +23,15 @@
 | Token efficiency | **Claude Code Tokens** | [View](prompts/english/agents/claude-code-token-optimization-prompt.md) |
 | CLAUDE.md & hooks setup | **Claude Code Workflow** | [View](prompts/english/agents/claude-code-workflow-prompt.md) |
 
+### Architecture & Development
+
+| Task | Prompt | File |
+|------|--------|------|
+| Tool/library selection | **Technology Stack** ⭐ | [View](prompts/english/agents/technology-stack-prompt.md) |
+| System design & patterns | **Architecture Patterns** | [View](prompts/english/agents/architecture-patterns-prompt.md) |
+| Modern full-stack app | **Full-Stack Development** | [View](prompts/english/agents/fullstack-development-prompt.md) |
+| Complex multi-step tasks | **Prompt Chaining** | [View](prompts/english/agents/prompt-chaining-prompt.md) |
+
 ### Interactive Sessions
 
 | Project | Prompts | Files |

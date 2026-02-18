@@ -513,3 +513,60 @@ APIs are contracts with clients. Backward compatibility matters:
 - Communicate with API consumers
 
 Build APIs that are secure, performant, and maintainable.
+
+---
+
+## Modern API Tooling Quick Reference (2024/2025)
+
+### Modern Framework Options
+
+| Framework | Runtime | Key Advantage |
+|-----------|---------|---------------|
+| **Hono** | Bun/Deno/Node/CF Workers | Ultra-fast, runs everywhere, middleware ecosystem |
+| **ElysiaJS** | Bun | End-to-end type safety, best Bun performance |
+| **FastAPI** | Python | Auto-generated docs, async, Pydantic v2 |
+| **Fiber** | Go | Express-like API for Go, fastest Go framework |
+| **Axum** | Rust | Tower middleware, type-safe extractors |
+
+### Modern API Patterns
+
+```markdown
+Traditional REST → Consider:
+├── tRPC: End-to-end type safety, no API definitions needed
+├── GraphQL (Pothos): Type-safe schema builder for TypeScript
+├── Hono RPC: Type-safe client from Hono server definitions
+└── OpenAPI + Orval: Auto-generate typed client from specs
+
+Modern API Design:
+├── Edge-first: Deploy API handlers to edge (Cloudflare Workers, Vercel Edge)
+├── Streaming: Server-Sent Events for real-time (simpler than WebSocket)
+├── Type-safe: Zod validation → TypeScript types → client types
+└── Schema-first: Define schema, generate everything else
+```
+
+### Modern Database Layer
+
+```markdown
+ORM / Query Builder Recommendations:
+├── Drizzle ORM: SQL-like syntax, zero overhead, type-safe
+├── Prisma: Schema-first, great DX, widely adopted
+├── Kysely: Pure SQL query builder, no ORM magic
+└── sqlx (Go/Rust): Compile-time verified SQL queries
+
+Key Rule: Pick Drizzle for new TypeScript projects (better performance,
+closer to SQL). Use Prisma if team prefers schema-first DX.
+```
+
+### Modern Auth Solutions
+
+```markdown
+Self-hosted:
+├── Better Auth: Framework-agnostic, plugins, social + 2FA
+├── Lucia: Session-based, no vendor lock-in, any database
+└── Auth.js (NextAuth): Multiple providers, database adapters
+
+Managed:
+├── Clerk: Prebuilt UI, user management, webhooks
+├── Supabase Auth: Built into Supabase, GoTrue-based
+└── WorkOS: Enterprise SSO, directory sync, SCIM
+```

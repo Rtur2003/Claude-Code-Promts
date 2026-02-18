@@ -21,6 +21,10 @@
 | 13 | **Claude Code Modes** ⭐ | Mode transitions, /think, /ultrathink | ~2.5K | [View](claude-code-modes-prompt.md) |
 | 14 | **Claude Code Tokens** | Token optimization, SAVE protocol | ~2.5K | [View](claude-code-token-optimization-prompt.md) |
 | 15 | **Claude Code Workflow** | CLAUDE.md, hooks, permissions, MCP | ~3K | [View](claude-code-workflow-prompt.md) |
+| 16 | **Technology Stack** ⭐ | Library discovery, modern tools, hidden gems | ~4K | [View](technology-stack-prompt.md) |
+| 17 | **Architecture Patterns** | System design, microservices, DDD, CQRS | ~3.5K | [View](architecture-patterns-prompt.md) |
+| 18 | **Full-Stack Development** | Next.js/Nuxt/SvelteKit, end-to-end type safety | ~3.5K | [View](fullstack-development-prompt.md) |
+| 19 | **Prompt Chaining** | Multi-step workflows, context management | ~3K | [View](prompt-chaining-prompt.md) |
 
 ---
 
@@ -57,6 +61,10 @@ Combine Agent System + specialist prompt:
 | Slow code | Performance |
 | Git workflow | Git & VCS |
 | System integrity | Integration Guardian |
+| Tool/library selection | Technology Stack |
+| System architecture | Architecture Patterns |
+| Full-stack app | Full-Stack Development |
+| Complex multi-step task | Prompt Chaining |
 
 ### Option 3: Minimal Context
 Use **Quick Reference** alone when token budget is tight (< 2K).

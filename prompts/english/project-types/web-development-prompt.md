@@ -273,3 +273,53 @@ Web development is iterative. Start with a working version, then optimize:
 3. Make it fast
 
 Prioritize user experience above all else.
+
+---
+
+## Modern Web Tooling Quick Reference (2024/2025)
+
+### Recommended Modern Stack
+
+| Category | Modern Choice | Why |
+|----------|--------------|-----|
+| **Framework** | Next.js 14+ / Nuxt 3 / SvelteKit | Server components, file-based routing |
+| **Build Tool** | Vite / Turbopack | 10-100x faster than Webpack |
+| **Styling** | Tailwind CSS + shadcn/ui | Utility-first, beautiful defaults |
+| **State** | Zustand / Jotai / Nanostores | Minimal boilerplate, tiny bundle |
+| **Data Fetching** | TanStack Query / SWR | Caching, background refetch |
+| **Forms** | React Hook Form + Zod | Minimal re-renders, type-safe validation |
+| **Animation** | Framer Motion / Auto Animate / GSAP | Declarative, performant |
+| **Testing** | Vitest + Playwright + MSW | Fast unit tests, real E2E, API mocking |
+| **Component Dev** | Storybook 8 | Isolated, documented components |
+| **Type Safety** | TypeScript + Zod | Runtime + compile-time safety |
+
+### Key Paradigm Shifts
+
+```markdown
+OLD → NEW:
+├── Create React App → Vite or Next.js
+├── Redux + thunks → Zustand or Jotai
+├── Axios everywhere → TanStack Query + fetch
+├── CSS-in-JS runtime → Tailwind CSS (zero-runtime)
+├── Webpack config → Vite (zero config)
+├── Jest → Vitest (10x faster, same API)
+├── Cypress → Playwright (faster, cross-browser)
+├── Formik → React Hook Form (fewer re-renders)
+├── Moment.js → date-fns or dayjs (tree-shakeable)
+├── Lodash full → lodash-es or native JS (smaller bundle)
+└── PropTypes → TypeScript (compile-time safety)
+```
+
+### Modern Performance Targets
+
+```markdown
+Core Web Vitals (2024):
+- LCP (Largest Contentful Paint): < 2.5s
+- INP (Interaction to Next Paint): < 200ms  ← replaces FID
+- CLS (Cumulative Layout Shift): < 0.1
+
+Bundle Size Targets:
+- First load JS: < 100KB (compressed)
+- Per-route JS: < 50KB (compressed)
+- Total CSS: < 50KB (with Tailwind purge)
+```
