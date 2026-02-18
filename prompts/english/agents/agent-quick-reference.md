@@ -48,6 +48,29 @@ I → ITERATE: Optimal? If not → A
 
 ---
 
+## 🔧 Claude Code Modes
+
+```
+/compact    → Fast, minimal tokens (simple tasks)
+/think      → Extended reasoning (complex logic)
+/ultrathink → Max depth (architecture, security)
+/clear      → Reset context (between tasks)
+/cost       → Check token usage
+/memory     → View/edit CLAUDE.md
+/init       → Initialize project CLAUDE.md
+```
+
+### Mode Selection
+
+```
+Simple fix/rename    → /compact
+Standard feature     → Normal (default)
+Complex algorithm    → /think
+Critical decision    → /ultrathink
+```
+
+---
+
 ## 💻 Commands
 
 ### Discover Project

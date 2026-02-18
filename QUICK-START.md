@@ -15,6 +15,23 @@
 | Test design | Agent System + **Testing** | [View](prompts/english/agents/testing-strategies-prompt.md) |
 | Minimal context | **Quick Reference** only | [View](prompts/english/agents/agent-quick-reference.md) |
 
+### Claude Code-Specific
+
+| Task | Prompt | File |
+|------|--------|------|
+| Mode planning (/think, /ultrathink) | **Claude Code Modes** ⭐ | [View](prompts/english/agents/claude-code-modes-prompt.md) |
+| Token efficiency | **Claude Code Tokens** | [View](prompts/english/agents/claude-code-token-optimization-prompt.md) |
+| CLAUDE.md & hooks setup | **Claude Code Workflow** | [View](prompts/english/agents/claude-code-workflow-prompt.md) |
+
+### Architecture & Development
+
+| Task | Prompt | File |
+|------|--------|------|
+| Tool/library selection | **Technology Stack** ⭐ | [View](prompts/english/agents/technology-stack-prompt.md) |
+| System design & patterns | **Architecture Patterns** | [View](prompts/english/agents/architecture-patterns-prompt.md) |
+| Modern full-stack app | **Full-Stack Development** | [View](prompts/english/agents/fullstack-development-prompt.md) |
+| Complex multi-step tasks | **Prompt Chaining** | [View](prompts/english/agents/prompt-chaining-prompt.md) |
+
 ### Interactive Sessions
 
 | Project | Prompts | Files |
@@ -36,6 +53,9 @@
 | Temel Prompt | [View](prompts/turkish/base/claude-foundation-prompt-tr.md) |
 | Kod İnceleme | [View](prompts/turkish/agents/code-review-prompt-tr.md) |
 | Hata Analizi | [View](prompts/turkish/agents/error-analysis-prompt-tr.md) |
+| Claude Code Modları ⭐ | [View](prompts/turkish/agents/claude-code-modes-prompt-tr.md) |
+| Claude Code Token | [View](prompts/turkish/agents/claude-code-token-optimization-prompt-tr.md) |
+| Claude Code İş Akışı | [View](prompts/turkish/agents/claude-code-workflow-prompt-tr.md) |
 
 ---
 

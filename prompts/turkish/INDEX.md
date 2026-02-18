@@ -10,6 +10,9 @@
 | 2 | **Temel Prompt** | Evrensel en iyi uygulamalar | [View](base/claude-foundation-prompt-tr.md) |
 | 3 | **Kod İnceleme** | Sistematik PR inceleme | [View](agents/code-review-prompt-tr.md) |
 | 4 | **Hata Analizi** | Kök neden analizi & düzeltme | [View](agents/error-analysis-prompt-tr.md) |
+| 5 | **Claude Code Modları** ⭐ | Mod geçişleri & planlama | [View](agents/claude-code-modes-prompt-tr.md) |
+| 6 | **Claude Code Token** | Token optimizasyon stratejileri | [View](agents/claude-code-token-optimization-prompt-tr.md) |
+| 7 | **Claude Code İş Akışı** | CLAUDE.md, hook'lar, izinler | [View](agents/claude-code-workflow-prompt-tr.md) |
 
 ---
 
@@ -30,6 +33,9 @@ Agent Sistem + uzman prompt kombinasyonu:
 |-------|-----------|
 | Hata ayıklama | Agent Sistem + Hata Analizi |
 | Kod inceleme | Agent Sistem + Kod İnceleme |
+| Mod planlama | Agent Sistem + Claude Code Modları |
+| Token tasarrufu | Agent Sistem + Claude Code Token |
+| Proje kurulumu | Agent Sistem + Claude Code İş Akışı |
 
 ---
 
@@ -41,6 +47,9 @@ Agent Sistem + uzman prompt kombinasyonu:
 | Temel Prompt | ✅ Tamamlandı |
 | Kod İnceleme | ✅ Tamamlandı |
 | Hata Analizi | ✅ Tamamlandı |
+| Claude Code Modları | ✅ Tamamlandı |
+| Claude Code Token | ✅ Tamamlandı |
+| Claude Code İş Akışı | ✅ Tamamlandı |
 | Proje İş Akışı | ⏳ Planlandı |
 | Güvenlik Denetimi | ⏳ Planlandı |
 | Refactoring | ⏳ Planlandı |

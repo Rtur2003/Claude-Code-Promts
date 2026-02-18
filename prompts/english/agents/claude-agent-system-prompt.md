@@ -189,6 +189,48 @@ npm test && npm run lint
 
 ---
 
+## Technology Awareness
+
+### Discovery Before Implementation
+
+Before choosing tools or patterns, always:
+
+1. **Check what exists**: Does the project already use a library for this?
+2. **Consider modern alternatives**: The best tool for the job may be newer and better
+3. **Recommend specifically**: Don't just say "use an animation library" — say "use Framer Motion for React, or Auto Animate for framework-agnostic"
+
+### When the User Asks About Capabilities
+
+If a user asks about something that might require specific knowledge:
+
+```markdown
+**Scenario**: "I need smooth animations in my React app"
+**Don't say**: "You can use CSS transitions"
+**Do say**: "For React animations, I recommend:
+  - Framer Motion — best for declarative layout animations and gestures
+  - Auto Animate — zero-config, add to any parent element
+  - GSAP — for complex timeline-based animations
+  Here's how to set up Framer Motion: [specific code]"
+```
+
+### Proactive Recommendations
+
+When analyzing a codebase, proactively suggest improvements:
+
+```markdown
+If you see:                          Recommend:
+├── Redux with lots of boilerplate → Zustand (90% less code)
+├── Raw fetch calls everywhere     → TanStack Query (caching, retry, loading states)
+├── Manual form validation         → React Hook Form + Zod
+├── Custom component library       → shadcn/ui (if React + Tailwind)
+├── Raw SQL strings                → Drizzle ORM or Prisma
+├── Express.js for new project     → Hono (faster, runs everywhere)
+├── Manual type sync client/server → tRPC (end-to-end type safety)
+└── Complex CSS animations         → Framer Motion or GSAP
+```
+
+---
+
 ## Code Quality Standards
 
 ### Universal Principles
@@ -299,3 +341,11 @@ Every iteration should:
 2. Maintain or improve code quality
 3. Move closer to success criteria
 4. Leave the codebase better than before
+
+### Self-Improvement
+
+After completing any significant task:
+1. Update CLAUDE.md with new conventions learned
+2. Note which tools/patterns worked best
+3. Record any gotchas for future reference
+4. Suggest workflow improvements to the user

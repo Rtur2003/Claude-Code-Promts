@@ -20,6 +20,13 @@ Optimized for autonomous AI coding agents (Claude Code, GitHub Copilot, etc.).
 | 10 | **Performance** | Optimization & profiling | ~3K | [View](agents/performance-optimization-prompt.md) |
 | 11 | **Git & VCS** | Branching & commits | ~2.5K | [View](agents/git-version-control-prompt.md) |
 | 12 | **Integration Guardian** | System integrity | ~0.5K | [View](agents/integration-guardian-prompt.md) |
+| 13 | **Claude Code Modes** ⭐ | Mode transitions & planning | ~2.5K | [View](agents/claude-code-modes-prompt.md) |
+| 14 | **Claude Code Tokens** | Token optimization strategies | ~2.5K | [View](agents/claude-code-token-optimization-prompt.md) |
+| 15 | **Claude Code Workflow** | CLAUDE.md, hooks, permissions | ~3K | [View](agents/claude-code-workflow-prompt.md) |
+| 16 | **Technology Stack** ⭐ | Library discovery & modern tools | ~4K | [View](agents/technology-stack-prompt.md) |
+| 17 | **Architecture Patterns** | System design, DDD, CQRS | ~3.5K | [View](agents/architecture-patterns-prompt.md) |
+| 18 | **Full-Stack Development** | End-to-end type-safe full-stack | ~3.5K | [View](agents/fullstack-development-prompt.md) |
+| 19 | **Prompt Chaining** | Multi-step workflows | ~3K | [View](agents/prompt-chaining-prompt.md) |
 
 → [Full Agent Index](agents/INDEX.md)
 
@@ -61,21 +68,24 @@ Use with Foundation prompt for interactive sessions.
 
 ## Feature Matrix
 
-| Feature | Foundation | Web | API | Data/ML | Mobile | DevOps | Database |
-|---------|:---------:|:---:|:---:|:-------:|:------:|:------:|:--------:|
-| APEI Cycle | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Commit Standards | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Error Analysis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Testing | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Component Architecture | — | ✓ | — | — | ✓ | — | — |
-| Responsive / A11y | — | ✓ | — | — | ✓ | — | — |
-| REST / GraphQL Design | — | — | ✓ | — | — | — | — |
-| Auth Patterns | — | — | ✓ | — | ✓ | — | — |
-| DB Optimization | — | — | ✓ | ○ | — | — | ✓ |
-| ML Pipeline | — | — | — | ✓ | — | — | — |
-| CI/CD Pipelines | — | — | — | — | — | ✓ | — |
-| Containers / K8s | — | — | — | — | — | ✓ | — |
-| Platform-Specific | — | — | — | — | ✓ | — | — |
+| Feature | Foundation | Web | API | Data/ML | Mobile | DevOps | Database | Full-Stack | Arch |
+|---------|:---------:|:---:|:---:|:-------:|:------:|:------:|:--------:|:----------:|:----:|
+| APEI Cycle | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Commit Standards | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
+| Error Analysis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
+| Testing | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
+| Component Architecture | — | ✓ | — | — | ✓ | — | — | ✓ | ✓ |
+| Responsive / A11y | — | ✓ | — | — | ✓ | — | — | ○ | — |
+| REST / GraphQL Design | — | — | ✓ | — | — | — | — | ✓ | — |
+| Auth Patterns | — | — | ✓ | — | ✓ | — | — | ✓ | — |
+| DB Optimization | — | — | ✓ | ○ | — | — | ✓ | ✓ | — |
+| ML Pipeline | — | — | — | ✓ | — | — | — | — | — |
+| CI/CD Pipelines | — | — | — | — | — | ✓ | — | ○ | — |
+| Containers / K8s | — | — | — | — | — | ✓ | — | — | ✓ |
+| Platform-Specific | — | — | — | — | ✓ | — | — | — | — |
+| Modern Tooling | — | ✓ | ✓ | — | — | — | — | ✓ | — |
+| System Design | — | — | — | — | — | — | — | — | ✓ |
+| Type Safety E2E | — | — | ○ | — | — | — | — | ✓ | — |
 
 ✓ = Full  ○ = Partial  — = Not covered
 
