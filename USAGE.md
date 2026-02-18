@@ -18,6 +18,9 @@
 | AI agent, any task | Agent System |
 | AI agent, debugging | Agent System + Error Analysis |
 | AI agent, project | Agent System + Project Workflow |
+| Claude Code, mode planning | Agent System + Claude Code Modes |
+| Claude Code, token efficiency | Agent System + Claude Code Tokens |
+| Claude Code, project setup | Agent System + Claude Code Workflow |
 | Interactive, React app | Foundation + Web Development |
 | Interactive, REST API | Foundation + API Development |
 | Interactive, ML model | Foundation + Data Science & ML |

@@ -47,7 +47,7 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Language | Status | Prompts | Link |
 |----------|--------|---------|------|
 | English | ✅ Complete | 15 agent + 8 project | [Index](prompts/english/INDEX.md) |
-| Türkçe | 🔄 In Progress | 4 prompts | [Index](prompts/turkish/INDEX.md) |
+| Türkçe | 🔄 In Progress | 7 prompts | [Index](prompts/turkish/INDEX.md) |
 
 ---
 

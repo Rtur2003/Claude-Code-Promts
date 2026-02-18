@@ -44,6 +44,9 @@
 | Temel Prompt | [View](prompts/turkish/base/claude-foundation-prompt-tr.md) |
 | Kod İnceleme | [View](prompts/turkish/agents/code-review-prompt-tr.md) |
 | Hata Analizi | [View](prompts/turkish/agents/error-analysis-prompt-tr.md) |
+| Claude Code Modları ⭐ | [View](prompts/turkish/agents/claude-code-modes-prompt-tr.md) |
+| Claude Code Token | [View](prompts/turkish/agents/claude-code-token-optimization-prompt-tr.md) |
+| Claude Code İş Akışı | [View](prompts/turkish/agents/claude-code-workflow-prompt-tr.md) |
 
 ---
 
