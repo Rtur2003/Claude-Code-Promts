@@ -174,7 +174,7 @@ export async function createUser(formData: FormData) {
     revalidatePath('/dashboard/users');
     return { data: user };
   } catch (error) {
-    if (error.code === '23505') {
+    if (error.code === '23505') { // PostgreSQL unique constraint violation
       return { error: { email: ['Email already exists'] } };
     }
     return { error: { _form: ['Failed to create user'] } };

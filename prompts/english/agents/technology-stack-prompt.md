@@ -53,7 +53,7 @@ When choosing tools for any task:
 // Framer Motion — React example
 import { motion, AnimatePresence } from 'framer-motion';
 
-const FadeIn = ({ children }) => (
+const FadeIn = ({ children }: { children: React.ReactNode }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}

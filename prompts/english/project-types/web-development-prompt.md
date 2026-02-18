@@ -315,7 +315,7 @@ OLD → NEW:
 ```markdown
 Core Web Vitals (2024):
 - LCP (Largest Contentful Paint): < 2.5s
-- INP (Interaction to Next Paint): < 200ms  ← replaces FID
+- INP (Interaction to Next Paint): < 200ms  (replaces FID)
 - CLS (Cumulative Layout Shift): < 0.1
 
 Bundle Size Targets:
