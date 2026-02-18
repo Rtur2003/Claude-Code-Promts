@@ -21,6 +21,14 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Git & VCS** | Branching & commits | ~2.5K | [View](prompts/english/agents/git-version-control-prompt.md) |
 | **Integration Guardian** | System integrity | ~0.5K | [View](prompts/english/agents/integration-guardian-prompt.md) |
 
+### 🎯 Claude Code-Specific Prompts
+
+| Prompt | Purpose | Tokens | File |
+|--------|---------|--------|------|
+| **Mode Transitions** ⭐ | /think, /ultrathink, /compact modes & planning | ~2.5K | [View](prompts/english/agents/claude-code-modes-prompt.md) |
+| **Token Optimization** | Token saving strategies for Claude Code | ~2.5K | [View](prompts/english/agents/claude-code-token-optimization-prompt.md) |
+| **Workflow & Config** | CLAUDE.md, hooks, permissions, MCP | ~3K | [View](prompts/english/agents/claude-code-workflow-prompt.md) |
+
 ### 📋 Foundation & Project Prompts (Interactive Sessions)
 
 | Prompt | Purpose | Technologies | File |
@@ -38,7 +46,7 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 
 | Language | Status | Prompts | Link |
 |----------|--------|---------|------|
-| English | ✅ Complete | 13 agent + 8 project | [Index](prompts/english/INDEX.md) |
+| English | ✅ Complete | 15 agent + 8 project | [Index](prompts/english/INDEX.md) |
 | Türkçe | 🔄 In Progress | 4 prompts | [Index](prompts/turkish/INDEX.md) |
 
 ---
@@ -76,6 +84,9 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Project Type | Prompts to Use |
 |-------------|----------------|
 | AI Agent Task | Agent System |
+| Claude Code Setup | Agent System + Workflow & Config |
+| Claude Code Planning | Agent System + Mode Transitions |
+| Token-Efficient Session | Agent System + Token Optimization |
 | Debug / Fix Bugs | Agent System + Error Analysis |
 | New Project | Agent System + Project Workflow |
 | Code Review | Agent System + Code Review |
@@ -93,13 +104,13 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 ```
 prompts/
 ├── english/
-│   ├── agents/          # Agent-optimized prompts (12 files)
+│   ├── agents/          # Agent-optimized prompts (15 files)
 │   ├── base/            # Foundation prompt
 │   ├── project-types/   # Domain-specific prompts (7 files)
 │   ├── examples/        # Real-world usage examples
 │   └── workflows/       # APEI methodology guide
 ├── turkish/
-│   ├── agents/          # Türkçe agent prompts (3 files)
+│   ├── agents/          # Türkçe agent prompts (6 files)
 │   ├── base/            # Türkçe foundation prompt
 │   └── INDEX.md
 ```

@@ -15,6 +15,14 @@
 | Test design | Agent System + **Testing** | [View](prompts/english/agents/testing-strategies-prompt.md) |
 | Minimal context | **Quick Reference** only | [View](prompts/english/agents/agent-quick-reference.md) |
 
+### Claude Code-Specific
+
+| Task | Prompt | File |
+|------|--------|------|
+| Mode planning (/think, /ultrathink) | **Claude Code Modes** ⭐ | [View](prompts/english/agents/claude-code-modes-prompt.md) |
+| Token efficiency | **Claude Code Tokens** | [View](prompts/english/agents/claude-code-token-optimization-prompt.md) |
+| CLAUDE.md & hooks setup | **Claude Code Workflow** | [View](prompts/english/agents/claude-code-workflow-prompt.md) |
+
 ### Interactive Sessions
 
 | Project | Prompts | Files |

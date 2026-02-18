@@ -20,6 +20,9 @@ Optimized for autonomous AI coding agents (Claude Code, GitHub Copilot, etc.).
 | 10 | **Performance** | Optimization & profiling | ~3K | [View](agents/performance-optimization-prompt.md) |
 | 11 | **Git & VCS** | Branching & commits | ~2.5K | [View](agents/git-version-control-prompt.md) |
 | 12 | **Integration Guardian** | System integrity | ~0.5K | [View](agents/integration-guardian-prompt.md) |
+| 13 | **Claude Code Modes** ⭐ | Mode transitions & planning | ~2.5K | [View](agents/claude-code-modes-prompt.md) |
+| 14 | **Claude Code Tokens** | Token optimization strategies | ~2.5K | [View](agents/claude-code-token-optimization-prompt.md) |
+| 15 | **Claude Code Workflow** | CLAUDE.md, hooks, permissions | ~3K | [View](agents/claude-code-workflow-prompt.md) |
 
 → [Full Agent Index](agents/INDEX.md)
 
