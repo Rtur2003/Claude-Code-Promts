@@ -84,7 +84,7 @@ Stack: Node.js, Express, PostgreSQL
 
 **Execute:** Implement steps 1–5 with tests after each step.
 
-**Evaluate:**
+**Iterate:**
 - ✓ Login works, tokens generated, routes protected
 - ⚠ No refresh tokens, short expiry
 

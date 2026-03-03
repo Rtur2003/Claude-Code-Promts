@@ -19,7 +19,7 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Documentation** | Technical writing | ~2.5K | [View](prompts/english/agents/documentation-prompt.md) |
 | **Performance** | Optimization & profiling | ~3K | [View](prompts/english/agents/performance-optimization-prompt.md) |
 | **Git & VCS** | Branching & commits | ~2.5K | [View](prompts/english/agents/git-version-control-prompt.md) |
-| **Integration Guardian** | System integrity | ~2.5K | [View](prompts/english/agents/integration-guardian-prompt.md) |
+| **Integration Guardian** | System integrity | ~3.5K | [View](prompts/english/agents/integration-guardian-prompt.md) |
 
 ### 🎯 Claude Code-Specific Prompts
 

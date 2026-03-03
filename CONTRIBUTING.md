@@ -12,7 +12,7 @@
 ## Quick Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Claude-Code-Promts.git
+git clone https://github.com/Rtur2003/Claude-Code-Promts.git
 cd Claude-Code-Promts
 git checkout -b feature/your-feature-name
 ```

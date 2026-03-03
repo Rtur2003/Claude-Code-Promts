@@ -142,7 +142,7 @@ The development process is never truly "done" - it's an ongoing cycle:
 └───────────────┬─────────────────────────────────┘
                 ↓
 ┌─────────────────────────────────────────────────┐
-│                  EVALUATE                       │
+│                  ITERATE                        │
 │  • Measure results                              │
 │  • Identify improvements                        │
 │  • Determine next iteration                     │
