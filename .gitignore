@@ -4,18 +4,38 @@
 *.swp
 *.swo
 *~
-.DS_Store
+
+# Dependencies
+node_modules/
+vendor/
+venv/
+__pycache__/
+
+# Build outputs
+dist/
+build/
+*.pyc
+*.class
+
+# Environment
+.env
+.env.local
+*.local
 
 # Logs
 *.log
 logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.pytest_cache/
 
 # Temporary files
 *.tmp
 *.temp
 tmp/
 temp/
-
-# OS generated files
-Thumbs.db
-.DS_Store

@@ -18,6 +18,14 @@
 | AI agent, any task | Agent System |
 | AI agent, debugging | Agent System + Error Analysis |
 | AI agent, project | Agent System + Project Workflow |
+| AI agent, code review | Agent System + Code Review |
+| AI agent, security | Agent System + Security Audit |
+| AI agent, refactoring | Agent System + Refactoring |
+| AI agent, testing | Agent System + Testing |
+| AI agent, docs | Agent System + Documentation |
+| AI agent, performance | Agent System + Performance |
+| AI agent, git workflow | Agent System + Git & VCS |
+| AI agent, integration | Agent System + Integration Guardian |
 | Claude Code, mode planning | Agent System + Claude Code Modes |
 | Claude Code, token efficiency | Agent System + Claude Code Tokens |
 | Claude Code, project setup | Agent System + Claude Code Workflow |
@@ -31,6 +39,8 @@
 | Interactive, full-stack | Foundation + Web + API |
 | Interactive, mobile | Foundation + Mobile Development |
 | Interactive, infra | Foundation + DevOps & CI/CD |
+| Interactive, database | Foundation + Database & SQL |
+| Interactive, general | Foundation + General Software |
 
 ### 3. Apply
 
@@ -74,7 +84,7 @@ Stack: Node.js, Express, PostgreSQL
 
 **Execute:** Implement steps 1–5 with tests after each step.
 
-**Evaluate:**
+**Iterate:**
 - ✓ Login works, tokens generated, routes protected
 - ⚠ No refresh tokens, short expiry
 

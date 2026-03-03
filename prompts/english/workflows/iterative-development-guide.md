@@ -25,7 +25,7 @@ This guide demonstrates how to apply the **Analyze → Plan → Execute → Iter
      └──────┬───────┘
             ↓
      ┌──────────────┐
-     │   EVALUATE   │
+     │   ITERATE    │
      │  Measure &   │
      │  Review      │
      └──────┬───────┘
@@ -368,7 +368,7 @@ git checkout -- file.js  # Revert single file
 git reset --hard  # Revert all changes (last resort)
 ```
 
-## Phase 4: Evaluate
+## Phase 4: Iterate
 
 ### Objectives
 - Measure results against success criteria

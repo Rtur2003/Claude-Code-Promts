@@ -19,7 +19,7 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Documentation** | Technical writing | ~2.5K | [View](prompts/english/agents/documentation-prompt.md) |
 | **Performance** | Optimization & profiling | ~3K | [View](prompts/english/agents/performance-optimization-prompt.md) |
 | **Git & VCS** | Branching & commits | ~2.5K | [View](prompts/english/agents/git-version-control-prompt.md) |
-| **Integration Guardian** | System integrity | ~0.5K | [View](prompts/english/agents/integration-guardian-prompt.md) |
+| **Integration Guardian** | System integrity | ~3.5K | [View](prompts/english/agents/integration-guardian-prompt.md) |
 
 ### 🎯 Claude Code-Specific Prompts
 
@@ -50,13 +50,6 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **DevOps & CI/CD** | Infrastructure | K8s, Docker, Terraform | [View](prompts/english/project-types/devops-cicd-prompt.md) |
 | **Database & SQL** | Data layer | PostgreSQL, MySQL, Redis | [View](prompts/english/project-types/database-sql-prompt.md) |
 | **General Software** | Cross-language | Python, JS, Go, Java, C# | [View](prompts/english/project-types/general-software-development-prompt.md) |
-
-### 🌍 Language Support
-
-| Language | Status | Prompts | Link |
-|----------|--------|---------|------|
-| English | ✅ Complete | 19 agent + 8 project | [Index](prompts/english/INDEX.md) |
-| Türkçe | 🔄 In Progress | 7 prompts | [Index](prompts/turkish/INDEX.md) |
 
 ---
 
@@ -103,11 +96,20 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Full-Stack App (modern) | Agent System + Full-Stack Development |
 | Complex Multi-Step Task | Agent System + Prompt Chaining |
 | Code Review | Agent System + Code Review |
+| Security Check | Agent System + Security Audit |
+| Reduce Tech Debt | Agent System + Refactoring |
+| Write Tests | Agent System + Testing |
+| Write Docs | Agent System + Documentation |
+| Optimize Speed | Agent System + Performance |
+| Git Workflow | Agent System + Git & VCS |
+| Cross-Cutting Integrity | Agent System + Integration Guardian |
 | React / Vue App | Foundation + Web Development |
 | REST API | Foundation + API Development |
 | ML Model | Foundation + Data Science & ML |
 | Mobile App | Foundation + Mobile |
 | DevOps / Infra | Foundation + DevOps & CI/CD |
+| Database Design | Foundation + Database & SQL |
+| General Software | Foundation + General Software |
 
 ---
 
@@ -115,16 +117,12 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 
 ```
 prompts/
-├── english/
-│   ├── agents/          # Agent-optimized prompts (19 files)
-│   ├── base/            # Foundation prompt
-│   ├── project-types/   # Domain-specific prompts (7 files)
-│   ├── examples/        # Real-world usage examples
-│   └── workflows/       # APEI methodology guide
-├── turkish/
-│   ├── agents/          # Türkçe agent prompts (6 files)
-│   ├── base/            # Türkçe foundation prompt
-│   └── INDEX.md
+└── english/
+    ├── agents/          # Agent-optimized prompts (19 files)
+    ├── base/            # Foundation prompt
+    ├── project-types/   # Domain-specific prompts (7 files)
+    ├── examples/        # Real-world usage examples
+    └── workflows/       # APEI methodology guide
 ```
 
 ## Resources
@@ -134,7 +132,9 @@ prompts/
 | [QUICK-START.md](QUICK-START.md) | 30-second setup guide |
 | [USAGE.md](USAGE.md) | Detailed examples & advanced usage |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
+| [CHANGELOG.md](CHANGELOG.md) | Version history |
 | [Agent Index](prompts/english/agents/INDEX.md) | Full agent prompt catalog |
+| [Prompt Index](prompts/english/INDEX.md) | All prompts organized by category |
 | [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) | APEI methodology deep-dive |
 
 ## Customization
@@ -145,7 +145,7 @@ All prompts are MIT-licensed templates. Adapt for your stack, conventions, and t
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Key areas: new languages, new project types, prompt improvements, examples.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Key areas: new project types, prompt improvements, examples.
 
 ## License
 
