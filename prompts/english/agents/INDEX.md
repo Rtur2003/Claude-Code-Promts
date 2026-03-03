@@ -17,7 +17,7 @@
 | 9 | **Documentation** | CLEAR protocol, API docs | ~2.5K | [View](documentation-prompt.md) |
 | 10 | **Performance** | MEASURE protocol, profiling | ~3K | [View](performance-optimization-prompt.md) |
 | 11 | **Git & VCS** | BRANCH protocol, commits | ~2.5K | [View](git-version-control-prompt.md) |
-| 12 | **Integration Guardian** | i18n, tokens, contracts, a11y | ~0.5K | [View](integration-guardian-prompt.md) |
+| 12 | **Integration Guardian** | i18n, tokens, contracts, a11y | ~2.5K | [View](integration-guardian-prompt.md) |
 | 13 | **Claude Code Modes** ⭐ | Mode transitions, /think, /ultrathink | ~2.5K | [View](claude-code-modes-prompt.md) |
 | 14 | **Claude Code Tokens** | Token optimization, SAVE protocol | ~2.5K | [View](claude-code-token-optimization-prompt.md) |
 | 15 | **Claude Code Workflow** | CLAUDE.md, hooks, permissions, MCP | ~3K | [View](claude-code-workflow-prompt.md) |
