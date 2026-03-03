@@ -96,11 +96,20 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Full-Stack App (modern) | Agent System + Full-Stack Development |
 | Complex Multi-Step Task | Agent System + Prompt Chaining |
 | Code Review | Agent System + Code Review |
+| Security Check | Agent System + Security Audit |
+| Reduce Tech Debt | Agent System + Refactoring |
+| Write Tests | Agent System + Testing |
+| Write Docs | Agent System + Documentation |
+| Optimize Speed | Agent System + Performance |
+| Git Workflow | Agent System + Git & VCS |
+| Cross-Cutting Integrity | Agent System + Integration Guardian |
 | React / Vue App | Foundation + Web Development |
 | REST API | Foundation + API Development |
 | ML Model | Foundation + Data Science & ML |
 | Mobile App | Foundation + Mobile |
 | DevOps / Infra | Foundation + DevOps & CI/CD |
+| Database Design | Foundation + Database & SQL |
+| General Software | Foundation + General Software |
 
 ---
 

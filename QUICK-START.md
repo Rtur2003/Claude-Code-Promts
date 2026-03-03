@@ -13,6 +13,10 @@
 | Security check | Agent System + **Security Audit** | [View](prompts/english/agents/security-audit-prompt.md) |
 | Code improvement | Agent System + **Refactoring** | [View](prompts/english/agents/refactoring-prompt.md) |
 | Test design | Agent System + **Testing** | [View](prompts/english/agents/testing-strategies-prompt.md) |
+| Technical writing | Agent System + **Documentation** | [View](prompts/english/agents/documentation-prompt.md) |
+| Optimize performance | Agent System + **Performance** | [View](prompts/english/agents/performance-optimization-prompt.md) |
+| Git workflow | Agent System + **Git & VCS** | [View](prompts/english/agents/git-version-control-prompt.md) |
+| System integrity | Agent System + **Integration Guardian** | [View](prompts/english/agents/integration-guardian-prompt.md) |
 | Minimal context | **Quick Reference** only | [View](prompts/english/agents/agent-quick-reference.md) |
 
 ### Claude Code-Specific
@@ -43,6 +47,7 @@
 | iOS / Android app | Foundation + **Mobile** | [View](prompts/english/project-types/mobile-development-prompt.md) |
 | DevOps / Infra | Foundation + **DevOps** | [View](prompts/english/project-types/devops-cicd-prompt.md) |
 | Database design | Foundation + **Database** | [View](prompts/english/project-types/database-sql-prompt.md) |
+| General software | Foundation + **General Software** | [View](prompts/english/project-types/general-software-development-prompt.md) |
 | Full-stack app | Foundation + Web + API | — |
 
 ---
