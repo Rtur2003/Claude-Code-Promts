@@ -51,13 +51,6 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Database & SQL** | Data layer | PostgreSQL, MySQL, Redis | [View](prompts/english/project-types/database-sql-prompt.md) |
 | **General Software** | Cross-language | Python, JS, Go, Java, C# | [View](prompts/english/project-types/general-software-development-prompt.md) |
 
-### 🌍 Language Support
-
-| Language | Status | Prompts | Link |
-|----------|--------|---------|------|
-| English | ✅ Complete | 19 agent + 8 project | [Index](prompts/english/INDEX.md) |
-| Türkçe | 🔄 In Progress | 7 prompts | [Index](prompts/turkish/INDEX.md) |
-
 ---
 
 ## Quick Start
@@ -115,16 +108,12 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 
 ```
 prompts/
-├── english/
-│   ├── agents/          # Agent-optimized prompts (19 files)
-│   ├── base/            # Foundation prompt
-│   ├── project-types/   # Domain-specific prompts (7 files)
-│   ├── examples/        # Real-world usage examples
-│   └── workflows/       # APEI methodology guide
-├── turkish/
-│   ├── agents/          # Türkçe agent prompts (6 files)
-│   ├── base/            # Türkçe foundation prompt
-│   └── INDEX.md
+└── english/
+    ├── agents/          # Agent-optimized prompts (19 files)
+    ├── base/            # Foundation prompt
+    ├── project-types/   # Domain-specific prompts (7 files)
+    ├── examples/        # Real-world usage examples
+    └── workflows/       # APEI methodology guide
 ```
 
 ## Resources
@@ -134,7 +123,9 @@ prompts/
 | [QUICK-START.md](QUICK-START.md) | 30-second setup guide |
 | [USAGE.md](USAGE.md) | Detailed examples & advanced usage |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
+| [CHANGELOG.md](CHANGELOG.md) | Version history |
 | [Agent Index](prompts/english/agents/INDEX.md) | Full agent prompt catalog |
+| [Prompt Index](prompts/english/INDEX.md) | All prompts organized by category |
 | [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) | APEI methodology deep-dive |
 
 ## Customization
@@ -145,7 +136,7 @@ All prompts are MIT-licensed templates. Adapt for your stack, conventions, and t
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Key areas: new languages, new project types, prompt improvements, examples.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Key areas: new project types, prompt improvements, examples.
 
 ## License
 

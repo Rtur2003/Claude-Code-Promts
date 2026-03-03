@@ -88,12 +88,3 @@ Use with Foundation prompt for interactive sessions.
 | Type Safety E2E | — | — | ○ | — | — | — | — | ✓ | — |
 
 ✓ = Full  ○ = Partial  — = Not covered
-
----
-
-## Language Support
-
-| Language | Status | Link |
-|----------|--------|------|
-| English | ✅ Complete | This index |
-| Türkçe | 🔄 In Progress | [Turkish Index](../turkish/INDEX.md) |

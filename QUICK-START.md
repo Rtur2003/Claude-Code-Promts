@@ -45,18 +45,6 @@
 | Database design | Foundation + **Database** | [View](prompts/english/project-types/database-sql-prompt.md) |
 | Full-stack app | Foundation + Web + API | — |
 
-### Türkçe
-
-| Prompt | Dosya |
-|--------|-------|
-| Agent Sistem | [View](prompts/turkish/agents/claude-agent-system-prompt-tr.md) |
-| Temel Prompt | [View](prompts/turkish/base/claude-foundation-prompt-tr.md) |
-| Kod İnceleme | [View](prompts/turkish/agents/code-review-prompt-tr.md) |
-| Hata Analizi | [View](prompts/turkish/agents/error-analysis-prompt-tr.md) |
-| Claude Code Modları ⭐ | [View](prompts/turkish/agents/claude-code-modes-prompt-tr.md) |
-| Claude Code Token | [View](prompts/turkish/agents/claude-code-token-optimization-prompt-tr.md) |
-| Claude Code İş Akışı | [View](prompts/turkish/agents/claude-code-workflow-prompt-tr.md) |
-
 ---
 
 ## 2. Copy & Paste
@@ -93,7 +81,7 @@ All prompts follow this cycle automatically.
 
 - [README.md](README.md) — Full catalog & overview
 - [USAGE.md](USAGE.md) — Detailed examples
+- [CHANGELOG.md](CHANGELOG.md) — Version history
 - [Agent Index](prompts/english/agents/INDEX.md) — All agent prompts
-- [English Index](prompts/english/INDEX.md) — All English prompts
-- [Türkçe Index](prompts/turkish/INDEX.md) — Turkish prompts
+- [Prompt Index](prompts/english/INDEX.md) — All prompts by category
 - [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) — APEI deep-dive

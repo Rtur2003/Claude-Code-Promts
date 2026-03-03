@@ -4,7 +4,6 @@
 
 | Type | Description |
 |------|-------------|
-| **New Languages** | Translate prompts (Turkish, Spanish, German, etc.) |
 | **New Project Types** | Game dev, blockchain, embedded systems, etc. |
 | **New Agent Types** | Architecture review, accessibility audit, etc. |
 | **Improvements** | Better practices, clearer instructions, examples |
@@ -22,13 +21,12 @@ git checkout -b feature/your-feature-name
 
 ```
 prompts/
-├── english/
-│   ├── agents/           # Agent-optimized prompts
-│   ├── base/             # Foundation prompts
-│   ├── project-types/    # Domain-specific prompts
-│   ├── examples/         # Usage examples
-│   └── workflows/        # Process guides
-└── [language]/           # Non-English prompts
+└── english/
+    ├── agents/           # Agent-optimized prompts
+    ├── base/             # Foundation prompts
+    ├── project-types/    # Domain-specific prompts
+    ├── examples/         # Usage examples
+    └── workflows/        # Process guides
 ```
 
 ## Naming Convention
@@ -83,13 +81,6 @@ update: enhance code review checklist  # Updates
 2. Push and create PR with clear description
 3. Address review feedback
 4. Merge after approval
-
-## Adding a New Language
-
-1. Create `prompts/[language-code]/` with same structure as `english/`
-2. Translate prompts maintaining technical accuracy
-3. Add INDEX.md for the language
-4. Update main README language table
 
 ## License
 
