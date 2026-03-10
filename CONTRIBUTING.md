@@ -4,8 +4,8 @@
 
 | Type | Description |
 |------|-------------|
-| **New Project Types** | Game dev, blockchain, embedded systems, etc. |
-| **New Agent Types** | Architecture review, accessibility audit, etc. |
+| **New Project Types** | Desktop apps, data engineering, etc. |
+| **New Agent Types** | Specialized agent prompts with protocol acronyms |
 | **New Examples** | Real-world walkthroughs demonstrating APEI cycle |
 | **Improvements** | Better practices, clearer instructions, examples |
 | **Bug Fixes** | Typos, broken links, formatting issues |
@@ -23,11 +23,11 @@ git checkout -b feature/your-feature-name
 ```
 prompts/
 └── english/
-    ├── agents/           # Agent-optimized prompts (23 files)
+    ├── agents/           # Agent-optimized prompts (28 files)
     ├── base/             # Foundation prompts
-    ├── project-types/    # Domain-specific prompts (9 files)
-    ├── examples/         # Usage examples (5 files)
-    └── workflows/        # Process guides (2 files)
+    ├── project-types/    # Domain-specific prompts (11 files)
+    ├── examples/         # Usage examples (7 files)
+    └── workflows/        # Process guides (3 files)
 ```
 
 ## Naming Convention

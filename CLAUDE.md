@@ -20,12 +20,12 @@
 └── prompts/
     └── english/
         ├── INDEX.md           # All prompts organized by category
-        ├── agents/            # Agent-optimized prompts (autonomous AI)
+        ├── agents/            # Agent-optimized prompts (28 files)
         │   └── INDEX.md
         ├── base/              # Foundation prompt (universal best practices)
-        ├── project-types/     # Domain-specific prompts (web, API, ML, mobile, etc.)
-        ├── examples/          # Real-world usage examples
-        └── workflows/         # APEI methodology guide
+        ├── project-types/     # Domain-specific prompts (11 files: web, API, ML, mobile, blockchain, desktop, etc.)
+        ├── examples/          # Real-world usage examples (7 files)
+        └── workflows/         # APEI methodology, prompt selection & troubleshooting guides
 ```
 
 ## File Naming Conventions

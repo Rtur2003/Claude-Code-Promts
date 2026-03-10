@@ -20,6 +20,7 @@
 | Accessibility check | Agent System + **Accessibility Audit** | [View](prompts/english/agents/accessibility-audit-prompt.md) |
 | Migration/upgrade | Agent System + **Migration & Upgrade** | [View](prompts/english/agents/migration-upgrade-prompt.md) |
 | Set up monitoring | Agent System + **Monitoring & Observability** | [View](prompts/english/agents/monitoring-observability-prompt.md) |
+| Production debugging | Agent System + **Debugging & Troubleshooting** | [View](prompts/english/agents/debugging-troubleshooting-prompt.md) |
 | Minimal context | **Quick Reference** only | [View](prompts/english/agents/agent-quick-reference.md) |
 
 ### Claude Code-Specific
@@ -39,6 +40,10 @@
 | Modern full-stack app | **Full-Stack Development** | [View](prompts/english/agents/fullstack-development-prompt.md) |
 | Complex multi-step tasks | **Prompt Chaining** | [View](prompts/english/agents/prompt-chaining-prompt.md) |
 | Add AI/LLM features | **AI & LLM Integration** | [View](prompts/english/agents/ai-llm-integration-prompt.md) |
+| API design / GraphQL | **API Design & GraphQL** | [View](prompts/english/agents/api-design-graphql-prompt.md) |
+| Cloud deployment | **Cloud & Infrastructure** | [View](prompts/english/agents/cloud-infrastructure-prompt.md) |
+| Data pipelines | **Data Engineering** | [View](prompts/english/agents/data-engineering-prompt.md) |
+| Compliance audit | **Compliance & Governance** | [View](prompts/english/agents/compliance-governance-prompt.md) |
 
 ### Interactive Sessions
 
@@ -54,6 +59,8 @@
 | General software | Foundation + **General Software** | [View](prompts/english/project-types/general-software-development-prompt.md) |
 | Game development | Foundation + **Game Dev** | [View](prompts/english/project-types/game-development-prompt.md) |
 | Embedded / IoT | Foundation + **Embedded & IoT** | [View](prompts/english/project-types/embedded-iot-prompt.md) |
+| Smart contracts | Foundation + **Blockchain & Web3** | [View](prompts/english/project-types/blockchain-web3-prompt.md) |
+| Desktop app | Foundation + **Desktop Apps** | [View](prompts/english/project-types/desktop-development-prompt.md) |
 | Full-stack app | Foundation + Web + API | — |
 
 ---
@@ -98,3 +105,4 @@ All prompts follow this cycle automatically.
 - [Prompt Index](prompts/english/INDEX.md) — All prompts by category
 - [Prompt Selector](prompts/english/workflows/prompt-selector-guide.md) — Decision tree for choosing prompts
 - [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) — APEI deep-dive
+- [Troubleshooting Guide](prompts/english/workflows/troubleshooting-guide.md) — Issue diagnosis flowchart

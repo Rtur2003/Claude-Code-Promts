@@ -13,16 +13,17 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Project Workflow** | Full lifecycle management | ~2.5K | [View](prompts/english/agents/project-workflow-prompt.md) |
 | **Quick Reference** | Cheat sheet (minimal) | ~0.8K | [View](prompts/english/agents/agent-quick-reference.md) |
 | **Code Review** | Systematic PR review | ~2K | [View](prompts/english/agents/code-review-prompt.md) |
-| **Security Audit** | Vulnerability detection | ~2.5K | [View](prompts/english/agents/security-audit-prompt.md) |
+| **Security Audit** | Vulnerability detection + cloud security | ~3.5K | [View](prompts/english/agents/security-audit-prompt.md) |
 | **Refactoring** | Code improvement | ~2.5K | [View](prompts/english/agents/refactoring-prompt.md) |
-| **Testing** | Test design & TDD | ~3K | [View](prompts/english/agents/testing-strategies-prompt.md) |
+| **Testing** | Test design, TDD, chaos & contract testing | ~4K | [View](prompts/english/agents/testing-strategies-prompt.md) |
 | **Documentation** | Technical writing | ~2.5K | [View](prompts/english/agents/documentation-prompt.md) |
-| **Performance** | Optimization & profiling | ~3K | [View](prompts/english/agents/performance-optimization-prompt.md) |
+| **Performance** | Optimization, profiling, CDN & edge | ~3.5K | [View](prompts/english/agents/performance-optimization-prompt.md) |
 | **Git & VCS** | Branching & commits | ~2.5K | [View](prompts/english/agents/git-version-control-prompt.md) |
 | **Integration Guardian** | System integrity | ~3.5K | [View](prompts/english/agents/integration-guardian-prompt.md) |
 | **Accessibility Audit** | WCAG 2.2 compliance | ~3K | [View](prompts/english/agents/accessibility-audit-prompt.md) |
 | **Migration & Upgrade** | Framework & DB migrations | ~2.5K | [View](prompts/english/agents/migration-upgrade-prompt.md) |
 | **Monitoring & Observability** | Logs, metrics, traces | ~3K | [View](prompts/english/agents/monitoring-observability-prompt.md) |
+| **Debugging & Troubleshooting** | Production debugging & incident response | ~3.5K | [View](prompts/english/agents/debugging-troubleshooting-prompt.md) |
 
 ### 🎯 Claude Code-Specific Prompts
 
@@ -37,25 +38,31 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Prompt | Purpose | Tokens | File |
 |--------|---------|--------|------|
 | **Technology Stack** ⭐ | Library discovery, modern tools, hidden gems | ~4K | [View](prompts/english/agents/technology-stack-prompt.md) |
-| **Architecture Patterns** | System design, microservices, DDD, CQRS | ~3.5K | [View](prompts/english/agents/architecture-patterns-prompt.md) |
-| **Full-Stack Development** | Next.js/Nuxt/SvelteKit, end-to-end type safety | ~3.5K | [View](prompts/english/agents/fullstack-development-prompt.md) |
+| **Architecture Patterns** | System design, event sourcing, saga, serverless | ~4.5K | [View](prompts/english/agents/architecture-patterns-prompt.md) |
+| **Full-Stack Development** | Next.js/Nuxt/SvelteKit, WebSocket, background jobs | ~4.5K | [View](prompts/english/agents/fullstack-development-prompt.md) |
 | **Prompt Chaining** | Multi-step workflows, context management | ~3K | [View](prompts/english/agents/prompt-chaining-prompt.md) |
 | **AI & LLM Integration** | RAG, vector DBs, AI agents, safety | ~3.5K | [View](prompts/english/agents/ai-llm-integration-prompt.md) |
+| **API Design & GraphQL** | Schema-first, DataLoader, caching, contracts | ~4K | [View](prompts/english/agents/api-design-graphql-prompt.md) |
+| **Cloud & Infrastructure** | IaC, multi-region, K8s, cost optimization | ~4K | [View](prompts/english/agents/cloud-infrastructure-prompt.md) |
+| **Data Engineering** | Pipelines, dbt, streaming, data quality | ~4K | [View](prompts/english/agents/data-engineering-prompt.md) |
+| **Compliance & Governance** | GDPR, HIPAA, SOC 2, threat modeling | ~3.5K | [View](prompts/english/agents/compliance-governance-prompt.md) |
 
 ### 📋 Foundation & Project Prompts (Interactive Sessions)
 
 | Prompt | Purpose | Technologies | File |
 |--------|---------|-------------|------|
 | **Foundation** ⭐ | Universal best practices | Any | [View](prompts/english/base/claude-foundation-prompt.md) |
-| **Web Development** | Frontend apps | React, Vue, Angular, CSS | [View](prompts/english/project-types/web-development-prompt.md) |
-| **API Development** | Backend services | REST, GraphQL, Node, Go | [View](prompts/english/project-types/api-development-prompt.md) |
-| **Data Science & ML** | ML pipelines | Python, pandas, PyTorch | [View](prompts/english/project-types/data-science-ml-prompt.md) |
+| **Web Development** | Frontend apps + SEO + a11y | React, Vue, Angular, CSS | [View](prompts/english/project-types/web-development-prompt.md) |
+| **API Development** | Backend services + idempotency | REST, GraphQL, Node, Go | [View](prompts/english/project-types/api-development-prompt.md) |
+| **Data Science & ML** | ML pipelines + MLOps | Python, pandas, PyTorch | [View](prompts/english/project-types/data-science-ml-prompt.md) |
 | **Mobile** | Mobile apps | iOS, Android, Flutter, RN | [View](prompts/english/project-types/mobile-development-prompt.md) |
 | **DevOps & CI/CD** | Infrastructure | K8s, Docker, Terraform | [View](prompts/english/project-types/devops-cicd-prompt.md) |
 | **Database & SQL** | Data layer | PostgreSQL, MySQL, Redis | [View](prompts/english/project-types/database-sql-prompt.md) |
 | **General Software** | Cross-language | Python, JS, Go, Java, C# | [View](prompts/english/project-types/general-software-development-prompt.md) |
 | **Game Development** | Game engines | Unity, Unreal, Godot | [View](prompts/english/project-types/game-development-prompt.md) |
 | **Embedded & IoT** | Hardware/firmware | C, C++, Rust, FreeRTOS | [View](prompts/english/project-types/embedded-iot-prompt.md) |
+| **Blockchain & Web3** | Smart contracts & dApps | Solidity, Rust, Foundry | [View](prompts/english/project-types/blockchain-web3-prompt.md) |
+| **Desktop Apps** | Cross-platform desktop | Tauri, Electron, Qt | [View](prompts/english/project-types/desktop-development-prompt.md) |
 
 ---
 
@@ -95,21 +102,26 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Claude Code Setup | Agent System + Workflow & Config |
 | Claude Code Planning | Agent System + Mode Transitions |
 | Token-Efficient Session | Agent System + Token Optimization |
-| Debug / Fix Bugs | Agent System + Error Analysis |
+| Debug / Fix Bugs | Agent System + Debugging & Troubleshooting |
+| Production Incident | Agent System + Debugging + Monitoring |
 | New Project | Agent System + Project Workflow |
 | Choose Best Tools | Agent System + Technology Stack |
 | System Architecture | Agent System + Architecture Patterns |
 | Full-Stack App (modern) | Agent System + Full-Stack Development |
+| API Design (GraphQL) | Agent System + API Design & GraphQL |
 | Complex Multi-Step Task | Agent System + Prompt Chaining |
 | Add AI/LLM Features | Agent System + AI & LLM Integration |
 | Code Review | Agent System + Code Review |
 | Security Check | Agent System + Security Audit |
+| Compliance Audit | Agent System + Compliance & Governance |
 | Accessibility Check | Agent System + Accessibility Audit |
 | Reduce Tech Debt | Agent System + Refactoring |
 | Framework/DB Migration | Agent System + Migration & Upgrade |
 | Write Tests | Agent System + Testing |
 | Write Docs | Agent System + Documentation |
 | Optimize Speed | Agent System + Performance |
+| Cloud Deployment | Agent System + Cloud & Infrastructure |
+| Data Pipelines | Agent System + Data Engineering |
 | Set Up Monitoring | Agent System + Monitoring & Observability |
 | Git Workflow | Agent System + Git & VCS |
 | Cross-Cutting Integrity | Agent System + Integration Guardian |
@@ -122,6 +134,8 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | General Software | Foundation + General Software |
 | Game Development | Foundation + Game Development |
 | Embedded / IoT | Foundation + Embedded & IoT |
+| Smart Contracts | Foundation + Blockchain & Web3 |
+| Desktop App | Foundation + Desktop Apps |
 
 ---
 
@@ -130,11 +144,11 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 ```
 prompts/
 └── english/
-    ├── agents/          # Agent-optimized prompts (23 files)
+    ├── agents/          # Agent-optimized prompts (28 files)
     ├── base/            # Foundation prompt
-    ├── project-types/   # Domain-specific prompts (9 files)
-    ├── examples/        # Real-world usage examples (5 files)
-    └── workflows/       # APEI methodology & prompt selection guides
+    ├── project-types/   # Domain-specific prompts (11 files)
+    ├── examples/        # Real-world usage examples (7 files)
+    └── workflows/       # APEI methodology, prompt selection & troubleshooting guides
 ```
 
 ## Resources
@@ -150,6 +164,7 @@ prompts/
 | [Prompt Index](prompts/english/INDEX.md) | All prompts organized by category |
 | [Prompt Selector](prompts/english/workflows/prompt-selector-guide.md) | Decision tree for choosing prompts |
 | [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) | APEI methodology deep-dive |
+| [Troubleshooting Guide](prompts/english/workflows/troubleshooting-guide.md) | Issue diagnosis & resolution flowchart |
 
 ## Customization
 
