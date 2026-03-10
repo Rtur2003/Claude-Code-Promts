@@ -26,12 +26,16 @@
 | AI agent, performance | Agent System + Performance |
 | AI agent, git workflow | Agent System + Git & VCS |
 | AI agent, integration | Agent System + Integration Guardian |
+| AI agent, accessibility | Agent System + Accessibility Audit |
+| AI agent, migration | Agent System + Migration & Upgrade |
+| AI agent, monitoring | Agent System + Monitoring & Observability |
 | Claude Code, mode planning | Agent System + Claude Code Modes |
 | Claude Code, token efficiency | Agent System + Claude Code Tokens |
 | Claude Code, project setup | Agent System + Claude Code Workflow |
 | Choose tools/libraries | Agent System + Technology Stack |
 | System architecture | Agent System + Architecture Patterns |
 | Full-stack development | Agent System + Full-Stack Development |
+| AI/LLM integration | Agent System + AI & LLM Integration |
 | Complex multi-step project | Agent System + Prompt Chaining |
 | Interactive, React app | Foundation + Web Development |
 | Interactive, REST API | Foundation + API Development |
@@ -41,6 +45,8 @@
 | Interactive, infra | Foundation + DevOps & CI/CD |
 | Interactive, database | Foundation + Database & SQL |
 | Interactive, general | Foundation + General Software |
+| Interactive, game dev | Foundation + Game Development |
+| Interactive, embedded/IoT | Foundation + Embedded & IoT |
 
 ### 3. Apply
 
@@ -144,6 +150,7 @@ For team customization, append to any prompt:
 
 ## Next Steps
 
+- [Prompt Selector](prompts/english/workflows/prompt-selector-guide.md) — Find the right prompt for your task
 - [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) — APEI cycle deep-dive
 - [Agent Index](prompts/english/agents/INDEX.md) — All agent prompts
 - [Examples](prompts/english/examples/) — More real-world examples

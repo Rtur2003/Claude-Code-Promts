@@ -27,6 +27,10 @@ Optimized for autonomous AI coding agents (Claude Code, GitHub Copilot, etc.).
 | 17 | **Architecture Patterns** | System design, DDD, CQRS | ~3.5K | [View](agents/architecture-patterns-prompt.md) |
 | 18 | **Full-Stack Development** | End-to-end type-safe full-stack | ~3.5K | [View](agents/fullstack-development-prompt.md) |
 | 19 | **Prompt Chaining** | Multi-step workflows | ~3K | [View](agents/prompt-chaining-prompt.md) |
+| 20 | **AI & LLM Integration** | RAG, agents, AI safety | ~3.5K | [View](agents/ai-llm-integration-prompt.md) |
+| 21 | **Accessibility Audit** | WCAG 2.2, a11y testing | ~3K | [View](agents/accessibility-audit-prompt.md) |
+| 22 | **Migration & Upgrade** | Framework & DB migrations | ~2.5K | [View](agents/migration-upgrade-prompt.md) |
+| 23 | **Monitoring & Observability** | Logs, metrics, traces | ~3K | [View](agents/monitoring-observability-prompt.md) |
 
 → [Full Agent Index](agents/INDEX.md)
 
@@ -54,6 +58,7 @@ Use with Foundation prompt for interactive sessions.
 | **Database & SQL** | PostgreSQL, MySQL, Redis, indexing | [View](project-types/database-sql-prompt.md) |
 | **General Software** | Python, JS, Go, Java, C# | [View](project-types/general-software-development-prompt.md) |
 | **Game Development** | Unity, Unreal, Godot, ECS, Multiplayer | [View](project-types/game-development-prompt.md) |
+| **Embedded & IoT** | C, C++, Rust, FreeRTOS, MQTT, TinyML | [View](project-types/embedded-iot-prompt.md) |
 
 ---
 
@@ -63,29 +68,35 @@ Use with Foundation prompt for interactive sessions.
 |----------|-------------|------|
 | REST API Example | Building an API step-by-step | [View](examples/rest-api-example.md) |
 | Debugging Example | Real-world debugging walkthrough | [View](examples/debugging-example.md) |
+| Full-Stack App Example | Next.js + tRPC + Prisma end-to-end | [View](examples/fullstack-app-example.md) |
+| Security Audit Example | Vulnerability assessment walkthrough | [View](examples/security-audit-example.md) |
+| Refactoring Example | Legacy code improvement walkthrough | [View](examples/refactoring-example.md) |
 | Workflow Guide | APEI methodology deep-dive | [View](workflows/iterative-development-guide.md) |
+| Prompt Selector | Decision tree for choosing prompts | [View](workflows/prompt-selector-guide.md) |
 
 ---
 
 ## Feature Matrix
 
-| Feature | Foundation | Web | API | Data/ML | Mobile | DevOps | Database | Full-Stack | Arch |
-|---------|:---------:|:---:|:---:|:-------:|:------:|:------:|:--------:|:----------:|:----:|
-| APEI Cycle | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Commit Standards | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
-| Error Analysis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
-| Testing | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
-| Component Architecture | — | ✓ | — | — | ✓ | — | — | ✓ | ✓ |
-| Responsive / A11y | — | ✓ | — | — | ✓ | — | — | ○ | — |
-| REST / GraphQL Design | — | — | ✓ | — | — | — | — | ✓ | — |
-| Auth Patterns | — | — | ✓ | — | ✓ | — | — | ✓ | — |
-| DB Optimization | — | — | ✓ | ○ | — | — | ✓ | ✓ | — |
-| ML Pipeline | — | — | — | ✓ | — | — | — | — | — |
-| CI/CD Pipelines | — | — | — | — | — | ✓ | — | ○ | — |
-| Containers / K8s | — | — | — | — | — | ✓ | — | — | ✓ |
-| Platform-Specific | — | — | — | — | ✓ | — | — | — | — |
-| Modern Tooling | — | ✓ | ✓ | — | — | — | — | ✓ | — |
-| System Design | — | — | — | — | — | — | — | — | ✓ |
-| Type Safety E2E | — | — | ○ | — | — | — | — | ✓ | — |
+| Feature | Foundation | Web | API | Data/ML | Mobile | DevOps | Database | Game | IoT | Full-Stack | Arch |
+|---------|:---------:|:---:|:---:|:-------:|:------:|:------:|:--------:|:----:|:---:|:----------:|:----:|
+| APEI Cycle | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Commit Standards | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
+| Error Analysis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
+| Testing | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — |
+| Component Architecture | — | ✓ | — | — | ✓ | — | — | ✓ | — | ✓ | ✓ |
+| Responsive / A11y | — | ✓ | — | — | ✓ | — | — | ○ | — | ○ | — |
+| REST / GraphQL Design | — | — | ✓ | — | — | — | — | — | ○ | ✓ | — |
+| Auth Patterns | — | — | ✓ | — | ✓ | — | — | ○ | ✓ | ✓ | — |
+| DB Optimization | — | — | ✓ | ○ | — | — | ✓ | — | — | ✓ | — |
+| ML Pipeline | — | — | — | ✓ | — | — | — | — | ○ | — | — |
+| CI/CD Pipelines | — | — | — | — | — | ✓ | — | — | ✓ | ○ | — |
+| Containers / K8s | — | — | — | — | — | ✓ | — | — | — | — | ✓ |
+| Platform-Specific | — | — | — | — | ✓ | — | — | ✓ | ✓ | — | — |
+| Modern Tooling | — | ✓ | ✓ | — | — | — | — | ✓ | — | ✓ | — |
+| System Design | — | — | — | — | — | — | — | — | ✓ | — | ✓ |
+| Type Safety E2E | — | — | ○ | — | — | — | — | — | — | ✓ | — |
+| Real-Time / Networking | — | — | ○ | — | — | — | — | ✓ | ✓ | ○ | — |
+| Hardware Integration | — | — | — | — | — | — | — | — | ✓ | — | — |
 
 ✓ = Full  ○ = Partial  — = Not covered
