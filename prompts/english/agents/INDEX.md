@@ -25,6 +25,10 @@
 | 17 | **Architecture Patterns** | System design, microservices, DDD, CQRS | ~3.5K | [View](architecture-patterns-prompt.md) |
 | 18 | **Full-Stack Development** | Next.js/Nuxt/SvelteKit, end-to-end type safety | ~3.5K | [View](fullstack-development-prompt.md) |
 | 19 | **Prompt Chaining** | Multi-step workflows, context management | ~3K | [View](prompt-chaining-prompt.md) |
+| 20 | **AI & LLM Integration** | AUGMENT protocol, RAG, agents, AI safety | ~3.5K | [View](ai-llm-integration-prompt.md) |
+| 21 | **Accessibility Audit** | ACCESS protocol, WCAG 2.2, a11y testing | ~3K | [View](accessibility-audit-prompt.md) |
+| 22 | **Migration & Upgrade** | MIGRATE protocol, framework & DB migrations | ~2.5K | [View](migration-upgrade-prompt.md) |
+| 23 | **Monitoring & Observability** | OBSERVE protocol, logs, metrics, traces | ~3K | [View](monitoring-observability-prompt.md) |
 
 ---
 
@@ -65,6 +69,10 @@ Combine Agent System + specialist prompt:
 | System architecture | Architecture Patterns |
 | Full-stack app | Full-Stack Development |
 | Complex multi-step task | Prompt Chaining |
+| AI/LLM features | AI & LLM Integration |
+| Accessibility check | Accessibility Audit |
+| Framework/DB migration | Migration & Upgrade |
+| Monitoring & alerting | Monitoring & Observability |
 
 ### Option 3: Minimal Context
 Use **Quick Reference** alone when token budget is tight (< 2K).

@@ -13,6 +13,8 @@
 | 5 | **DevOps & CI/CD** | Kubernetes, Docker, Terraform | [View](devops-cicd-prompt.md) |
 | 6 | **Database & SQL** | PostgreSQL, MySQL, Redis, indexing | [View](database-sql-prompt.md) |
 | 7 | **General Software** | Python, JS, Go, Java, C# | [View](general-software-development-prompt.md) |
+| 8 | **Game Development** | Unity, Unreal, Godot, ECS, Multiplayer | [View](game-development-prompt.md) |
+| 9 | **Embedded Systems & IoT** | C, C++, Rust, FreeRTOS, MQTT, TinyML | [View](embedded-iot-prompt.md) |
 
 ---
 
@@ -40,4 +42,6 @@ Foundation + Web Development + API Development
 | DevOps / Infra | Foundation + DevOps & CI/CD |
 | Database design | Foundation + Database & SQL |
 | General software | Foundation + General Software |
+| Game development | Foundation + Game Development |
+| Embedded / IoT | Foundation + Embedded Systems & IoT |
 | Full-stack app | Foundation + Web + API |

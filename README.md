@@ -20,6 +20,9 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Performance** | Optimization & profiling | ~3K | [View](prompts/english/agents/performance-optimization-prompt.md) |
 | **Git & VCS** | Branching & commits | ~2.5K | [View](prompts/english/agents/git-version-control-prompt.md) |
 | **Integration Guardian** | System integrity | ~3.5K | [View](prompts/english/agents/integration-guardian-prompt.md) |
+| **Accessibility Audit** | WCAG 2.2 compliance | ~3K | [View](prompts/english/agents/accessibility-audit-prompt.md) |
+| **Migration & Upgrade** | Framework & DB migrations | ~2.5K | [View](prompts/english/agents/migration-upgrade-prompt.md) |
+| **Monitoring & Observability** | Logs, metrics, traces | ~3K | [View](prompts/english/agents/monitoring-observability-prompt.md) |
 
 ### 🎯 Claude Code-Specific Prompts
 
@@ -37,6 +40,7 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Architecture Patterns** | System design, microservices, DDD, CQRS | ~3.5K | [View](prompts/english/agents/architecture-patterns-prompt.md) |
 | **Full-Stack Development** | Next.js/Nuxt/SvelteKit, end-to-end type safety | ~3.5K | [View](prompts/english/agents/fullstack-development-prompt.md) |
 | **Prompt Chaining** | Multi-step workflows, context management | ~3K | [View](prompts/english/agents/prompt-chaining-prompt.md) |
+| **AI & LLM Integration** | RAG, vector DBs, AI agents, safety | ~3.5K | [View](prompts/english/agents/ai-llm-integration-prompt.md) |
 
 ### 📋 Foundation & Project Prompts (Interactive Sessions)
 
@@ -50,6 +54,8 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **DevOps & CI/CD** | Infrastructure | K8s, Docker, Terraform | [View](prompts/english/project-types/devops-cicd-prompt.md) |
 | **Database & SQL** | Data layer | PostgreSQL, MySQL, Redis | [View](prompts/english/project-types/database-sql-prompt.md) |
 | **General Software** | Cross-language | Python, JS, Go, Java, C# | [View](prompts/english/project-types/general-software-development-prompt.md) |
+| **Game Development** | Game engines | Unity, Unreal, Godot | [View](prompts/english/project-types/game-development-prompt.md) |
+| **Embedded & IoT** | Hardware/firmware | C, C++, Rust, FreeRTOS | [View](prompts/english/project-types/embedded-iot-prompt.md) |
 
 ---
 
@@ -95,12 +101,16 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | System Architecture | Agent System + Architecture Patterns |
 | Full-Stack App (modern) | Agent System + Full-Stack Development |
 | Complex Multi-Step Task | Agent System + Prompt Chaining |
+| Add AI/LLM Features | Agent System + AI & LLM Integration |
 | Code Review | Agent System + Code Review |
 | Security Check | Agent System + Security Audit |
+| Accessibility Check | Agent System + Accessibility Audit |
 | Reduce Tech Debt | Agent System + Refactoring |
+| Framework/DB Migration | Agent System + Migration & Upgrade |
 | Write Tests | Agent System + Testing |
 | Write Docs | Agent System + Documentation |
 | Optimize Speed | Agent System + Performance |
+| Set Up Monitoring | Agent System + Monitoring & Observability |
 | Git Workflow | Agent System + Git & VCS |
 | Cross-Cutting Integrity | Agent System + Integration Guardian |
 | React / Vue App | Foundation + Web Development |
@@ -110,6 +120,8 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | DevOps / Infra | Foundation + DevOps & CI/CD |
 | Database Design | Foundation + Database & SQL |
 | General Software | Foundation + General Software |
+| Game Development | Foundation + Game Development |
+| Embedded / IoT | Foundation + Embedded & IoT |
 
 ---
 
@@ -118,11 +130,11 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 ```
 prompts/
 └── english/
-    ├── agents/          # Agent-optimized prompts (19 files)
+    ├── agents/          # Agent-optimized prompts (23 files)
     ├── base/            # Foundation prompt
-    ├── project-types/   # Domain-specific prompts (7 files)
-    ├── examples/        # Real-world usage examples
-    └── workflows/       # APEI methodology guide
+    ├── project-types/   # Domain-specific prompts (9 files)
+    ├── examples/        # Real-world usage examples (5 files)
+    └── workflows/       # APEI methodology & prompt selection guides
 ```
 
 ## Resources
@@ -133,8 +145,10 @@ prompts/
 | [USAGE.md](USAGE.md) | Detailed examples & advanced usage |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
 | [CHANGELOG.md](CHANGELOG.md) | Version history |
+| [CLAUDE.md](CLAUDE.md) | AI agent configuration for this repo |
 | [Agent Index](prompts/english/agents/INDEX.md) | Full agent prompt catalog |
 | [Prompt Index](prompts/english/INDEX.md) | All prompts organized by category |
+| [Prompt Selector](prompts/english/workflows/prompt-selector-guide.md) | Decision tree for choosing prompts |
 | [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) | APEI methodology deep-dive |
 
 ## Customization
