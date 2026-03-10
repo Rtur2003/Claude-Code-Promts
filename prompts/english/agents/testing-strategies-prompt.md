@@ -667,22 +667,211 @@ def test_create_user(db_session):
     assert saved_user is not None
 ```
 
+## Contract Testing
+
+### API Contract Tests (Pact)
+```typescript
+import { PactV3, MatchersV3 } from '@pact-foundation/pact';
+
+const provider = new PactV3({
+  consumer: 'order-frontend',
+  provider: 'order-api',
+});
+
+describe('Order API Contract', () => {
+  it('should create an order', async () => {
+    provider
+      .given('products exist in catalog')
+      .uponReceiving('a request to create an order')
+      .withRequest({
+        method: 'POST',
+        path: '/api/orders',
+        headers: { 'Content-Type': 'application/json' },
+        body: {
+          items: MatchersV3.eachLike({ productId: '123', quantity: 1 }),
+        },
+      })
+      .willRespondWith({
+        status: 201,
+        body: MatchersV3.like({
+          id: MatchersV3.uuid(),
+          status: 'pending',
+          total: MatchersV3.decimal(29.99),
+          items: MatchersV3.eachLike({
+            productId: MatchersV3.string('123'),
+            quantity: MatchersV3.integer(1),
+          }),
+        }),
+      });
+
+    await provider.executeTest(async (mockServer) => {
+      const result = await createOrder(mockServer.url, {
+        items: [{ productId: '123', quantity: 1 }],
+      });
+      expect(result.status).toBe('pending');
+    });
+  });
+});
+```
+
+## Property-Based Testing
+
+### Hypothesis (Python)
+```python
+from hypothesis import given, strategies as st, assume
+
+@given(
+    a=st.integers(min_value=-1000, max_value=1000),
+    b=st.integers(min_value=-1000, max_value=1000),
+)
+def test_addition_is_commutative(a, b):
+    assert add(a, b) == add(b, a)
+
+@given(
+    a=st.integers(min_value=1, max_value=1000),
+    b=st.integers(min_value=1, max_value=1000),
+)
+def test_division_inverse(a, b):
+    assume(b != 0)
+    result = divide(a, b)
+    assert abs(result * b - a) < 0.001
+
+# Generate complex data structures
+@given(
+    users=st.lists(
+        st.fixed_dictionaries({
+            'name': st.text(min_size=1, max_size=100),
+            'age': st.integers(min_value=0, max_value=150),
+            'email': st.emails(),
+        }),
+        min_size=1,
+        max_size=50,
+    )
+)
+def test_user_serialization_roundtrip(users):
+    serialized = serialize_users(users)
+    deserialized = deserialize_users(serialized)
+    assert deserialized == users
+```
+
+### fast-check (TypeScript)
+```typescript
+import fc from 'fast-check';
+
+describe('Sort function properties', () => {
+  it('should maintain array length', () => {
+    fc.assert(
+      fc.property(fc.array(fc.integer()), (arr) => {
+        const sorted = mySort([...arr]);
+        return sorted.length === arr.length;
+      })
+    );
+  });
+
+  it('should be idempotent', () => {
+    fc.assert(
+      fc.property(fc.array(fc.integer()), (arr) => {
+        const once = mySort([...arr]);
+        const twice = mySort([...once]);
+        return JSON.stringify(once) === JSON.stringify(twice);
+      })
+    );
+  });
+
+  it('should produce ordered output', () => {
+    fc.assert(
+      fc.property(fc.array(fc.integer()), (arr) => {
+        const sorted = mySort([...arr]);
+        for (let i = 1; i < sorted.length; i++) {
+          if (sorted[i] < sorted[i - 1]) return false;
+        }
+        return true;
+      })
+    );
+  });
+});
+```
+
+## Chaos Testing
+
+### Chaos Engineering Principles
+```typescript
+// Simulate failures in tests
+class ChaosMonkey {
+  async injectLatency(service: string, delayMs: number): Promise<void> {
+    // Add artificial delay to service calls
+    const originalFetch = global.fetch;
+    global.fetch = async (url, options) => {
+      if (url.toString().includes(service)) {
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+      }
+      return originalFetch(url, options);
+    };
+  }
+
+  async injectError(service: string, errorRate: number): Promise<void> {
+    // Randomly fail a percentage of requests
+    const originalFetch = global.fetch;
+    global.fetch = async (url, options) => {
+      if (url.toString().includes(service) && Math.random() < errorRate) {
+        throw new Error(`Chaos: ${service} unavailable`);
+      }
+      return originalFetch(url, options);
+    };
+  }
+}
+
+// Use in integration tests
+describe('System resilience', () => {
+  const chaos = new ChaosMonkey();
+
+  it('should handle payment service latency', async () => {
+    await chaos.injectLatency('payment-service', 5000);
+    
+    const result = await createOrder({ items: [{ id: '1', qty: 1 }] });
+    
+    // System should timeout gracefully, not hang
+    expect(result.status).toBe('pending_payment');
+    expect(result.retryAfter).toBeDefined();
+  });
+
+  it('should handle database failures gracefully', async () => {
+    await chaos.injectError('database', 0.5); // 50% failure rate
+    
+    const results = await Promise.allSettled(
+      Array.from({ length: 10 }, () => fetchUser('user-1'))
+    );
+    
+    // At least some should succeed (circuit breaker + retry)
+    const successes = results.filter(r => r.status === 'fulfilled');
+    expect(successes.length).toBeGreaterThan(0);
+  });
+});
+```
+
+## Testing Anti-Patterns
+
+| Anti-Pattern | Problem | Solution |
+|-------------|---------|----------|
+| **Flaky tests** | Random failures erode trust | Fix immediately or quarantine |
+| **Slow tests** | Developers skip them | Keep unit tests < 10ms each |
+| **Brittle tests** | Break on implementation changes | Test behavior, not implementation |
+| **Test duplication** | Same logic tested multiple ways | Choose the right test level |
+| **Missing edge cases** | Bugs in boundary conditions | Use property-based testing |
+| **No test data strategy** | Tests depend on shared data | Factories + isolated test data |
+| **Ignoring test failures** | "It's always been like that" | Zero tolerance for failures |
+
 ---
 
 ## Remember
 
-> **Tests are documentation that runs. Write them for the developer who comes after you.**
-
-Testing principles:
-1. **Test behavior, not implementation**: Tests should verify what, not how
-2. **One assertion per test**: Tests should have a single reason to fail
-3. **Readable tests**: Tests are documentation - make them clear
-4. **Fast tests**: Slow tests don't get run
-5. **Independent tests**: Tests should not depend on each other
-
-Every test should:
-- Be deterministic (same result every time)
-- Be self-contained (no external dependencies)
-- Be fast (milliseconds, not seconds)
-- Be meaningful (test real behavior)
-- Fail for the right reason
+```
+✦ TEST BEHAVIOR: Verify what, not how — tests should survive refactoring
+✦ TEST PYRAMID: Many unit, some integration, few E2E — balance speed and confidence
+✦ CONTRACT TESTS: Verify API agreements between services — catch breaking changes
+✦ PROPERTY TESTS: Generate thousands of cases — find edge cases humans miss
+✦ CHAOS TESTS: Break things intentionally — prove resilience before production does
+✦ FAST TESTS: Slow tests don't get run — keep the feedback loop tight
+✦ DETERMINISTIC: Same input, same result, every time — flaky tests are bugs
+✦ MEANINGFUL: Every test should have a clear reason to exist
+```

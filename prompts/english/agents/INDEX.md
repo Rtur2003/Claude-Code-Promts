@@ -11,24 +11,29 @@
 | 3 | **Project Workflow** | End-to-end project lifecycle | ~2.5K | [View](project-workflow-prompt.md) |
 | 4 | **Quick Reference** | Cheat sheet (minimal tokens) | ~0.8K | [View](agent-quick-reference.md) |
 | 5 | **Code Review** | Systematic PR review | ~2K | [View](code-review-prompt.md) |
-| 6 | **Security Audit** | Vulnerability detection (OWASP) | ~2.5K | [View](security-audit-prompt.md) |
+| 6 | **Security Audit** | Vulnerability detection, cloud security, supply chain | ~3.5K | [View](security-audit-prompt.md) |
 | 7 | **Refactoring** | Code smell detection & SAFE protocol | ~2.5K | [View](refactoring-prompt.md) |
-| 8 | **Testing** | TEST protocol, TDD, coverage | ~3K | [View](testing-strategies-prompt.md) |
+| 8 | **Testing** | TEST protocol, TDD, contract & chaos testing | ~4K | [View](testing-strategies-prompt.md) |
 | 9 | **Documentation** | CLEAR protocol, API docs | ~2.5K | [View](documentation-prompt.md) |
-| 10 | **Performance** | MEASURE protocol, profiling | ~3K | [View](performance-optimization-prompt.md) |
+| 10 | **Performance** | MEASURE protocol, profiling, CDN & edge | ~3.5K | [View](performance-optimization-prompt.md) |
 | 11 | **Git & VCS** | BRANCH protocol, commits | ~2.5K | [View](git-version-control-prompt.md) |
 | 12 | **Integration Guardian** | i18n, tokens, contracts, a11y | ~3.5K | [View](integration-guardian-prompt.md) |
 | 13 | **Claude Code Modes** ⭐ | Mode transitions, /think, /ultrathink | ~2.5K | [View](claude-code-modes-prompt.md) |
 | 14 | **Claude Code Tokens** | Token optimization, SAVE protocol | ~2.5K | [View](claude-code-token-optimization-prompt.md) |
 | 15 | **Claude Code Workflow** | CLAUDE.md, hooks, permissions, MCP | ~3K | [View](claude-code-workflow-prompt.md) |
 | 16 | **Technology Stack** ⭐ | Library discovery, modern tools, hidden gems | ~4K | [View](technology-stack-prompt.md) |
-| 17 | **Architecture Patterns** | System design, microservices, DDD, CQRS | ~3.5K | [View](architecture-patterns-prompt.md) |
-| 18 | **Full-Stack Development** | Next.js/Nuxt/SvelteKit, end-to-end type safety | ~3.5K | [View](fullstack-development-prompt.md) |
+| 17 | **Architecture Patterns** | System design, event sourcing, saga, serverless | ~4.5K | [View](architecture-patterns-prompt.md) |
+| 18 | **Full-Stack Development** | Next.js/Nuxt/SvelteKit, WebSocket, background jobs | ~4.5K | [View](fullstack-development-prompt.md) |
 | 19 | **Prompt Chaining** | Multi-step workflows, context management | ~3K | [View](prompt-chaining-prompt.md) |
 | 20 | **AI & LLM Integration** | AUGMENT protocol, RAG, agents, AI safety | ~3.5K | [View](ai-llm-integration-prompt.md) |
 | 21 | **Accessibility Audit** | ACCESS protocol, WCAG 2.2, a11y testing | ~3K | [View](accessibility-audit-prompt.md) |
 | 22 | **Migration & Upgrade** | MIGRATE protocol, framework & DB migrations | ~2.5K | [View](migration-upgrade-prompt.md) |
 | 23 | **Monitoring & Observability** | OBSERVE protocol, logs, metrics, traces | ~3K | [View](monitoring-observability-prompt.md) |
+| 24 | **API Design & GraphQL** | SCHEMA protocol, DataLoader, caching, contracts | ~4K | [View](api-design-graphql-prompt.md) |
+| 25 | **Cloud & Infrastructure** | CLOUD protocol, IaC, multi-region, K8s, cost | ~4K | [View](cloud-infrastructure-prompt.md) |
+| 26 | **Data Engineering** | PIPELINE protocol, dbt, streaming, data quality | ~4K | [View](data-engineering-prompt.md) |
+| 27 | **Compliance & Governance** | GOVERN protocol, GDPR, HIPAA, SOC 2, STRIDE | ~3.5K | [View](compliance-governance-prompt.md) |
+| 28 | **Debugging & Troubleshooting** | DEBUG protocol, production debugging, incidents | ~3.5K | [View](debugging-troubleshooting-prompt.md) |
 
 ---
 
@@ -55,10 +60,12 @@ Combine Agent System + specialist prompt:
 
 | Task | Combine With |
 |------|-------------|
-| Debugging | Error Analysis |
+| Debugging | Error Analysis or Debugging & Troubleshooting |
+| Production incident | Debugging & Troubleshooting |
 | New project | Project Workflow |
 | PR review | Code Review |
 | Security check | Security Audit |
+| Compliance audit | Compliance & Governance |
 | Tech debt | Refactoring |
 | Test coverage | Testing |
 | Writing docs | Documentation |
@@ -68,6 +75,9 @@ Combine Agent System + specialist prompt:
 | Tool/library selection | Technology Stack |
 | System architecture | Architecture Patterns |
 | Full-stack app | Full-Stack Development |
+| API design | API Design & GraphQL |
+| Cloud deployment | Cloud & Infrastructure |
+| Data pipelines | Data Engineering |
 | Complex multi-step task | Prompt Chaining |
 | AI/LLM features | AI & LLM Integration |
 | Accessibility check | Accessibility Audit |

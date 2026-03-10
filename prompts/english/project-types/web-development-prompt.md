@@ -323,3 +323,118 @@ Bundle Size Targets:
 - Per-route JS: < 50KB (compressed)
 - Total CSS: < 50KB (with Tailwind purge)
 ```
+
+### SEO & Meta Tags
+
+```html
+<!-- Essential meta tags for SEO -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Title — Site Name</title>
+  <meta name="description" content="Compelling 150-160 char description" />
+  
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:title" content="Page Title" />
+  <meta property="og:description" content="Description for social sharing" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <meta property="og:url" content="https://example.com/page" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Page Title" />
+  <meta name="twitter:description" content="Description" />
+  <meta name="twitter:image" content="https://example.com/twitter-image.jpg" />
+  
+  <!-- Canonical URL (prevent duplicate content) -->
+  <link rel="canonical" href="https://example.com/page" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Article Title",
+    "author": { "@type": "Person", "name": "Author Name" },
+    "datePublished": "2024-01-15",
+    "image": "https://example.com/image.jpg"
+  }
+  </script>
+</head>
+```
+
+### Font & Image Optimization
+
+```html
+<!-- Font optimization — preload critical fonts -->
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+
+<style>
+  /* Use font-display: swap for visible text during font load */
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/inter-var.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+  
+  /* System font stack fallback */
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                 Roboto, Oxygen, Ubuntu, sans-serif;
+  }
+</style>
+
+<!-- Image optimization with Next.js -->
+<!-- Automatic WebP/AVIF, responsive sizes, lazy loading -->
+<Image
+  src="/hero.jpg"
+  alt="Descriptive alt text"
+  width={1200}
+  height={600}
+  priority          /* Above-the-fold: disable lazy loading */
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+/>
+
+<!-- Native lazy loading for non-framework projects -->
+<img 
+  src="photo.jpg" 
+  alt="Description" 
+  loading="lazy" 
+  decoding="async"
+  width="800" 
+  height="600"
+/>
+```
+
+### Accessibility Quick Wins
+
+```html
+<!-- Skip navigation link -->
+<a href="#main-content" class="sr-only focus:not-sr-only">Skip to content</a>
+
+<!-- Semantic HTML -->
+<nav aria-label="Main navigation">...</nav>
+<main id="main-content">...</main>
+<aside aria-label="Related articles">...</aside>
+
+<!-- Color contrast: minimum 4.5:1 for normal text, 3:1 for large text -->
+<!-- Focus indicators: visible and clear -->
+<style>
+  :focus-visible {
+    outline: 3px solid #4f46e5;
+    outline-offset: 2px;
+  }
+</style>
+
+<!-- ARIA labels for icon-only buttons -->
+<button aria-label="Close dialog">
+  <svg>...</svg>
+</button>
+
+<!-- Live regions for dynamic content -->
+<div aria-live="polite" aria-atomic="true">
+  {statusMessage}
+</div>
+```

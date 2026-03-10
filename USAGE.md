@@ -29,6 +29,11 @@
 | AI agent, accessibility | Agent System + Accessibility Audit |
 | AI agent, migration | Agent System + Migration & Upgrade |
 | AI agent, monitoring | Agent System + Monitoring & Observability |
+| AI agent, production debugging | Agent System + Debugging & Troubleshooting |
+| AI agent, API design | Agent System + API Design & GraphQL |
+| AI agent, cloud deploy | Agent System + Cloud & Infrastructure |
+| AI agent, data pipelines | Agent System + Data Engineering |
+| AI agent, compliance | Agent System + Compliance & Governance |
 | Claude Code, mode planning | Agent System + Claude Code Modes |
 | Claude Code, token efficiency | Agent System + Claude Code Tokens |
 | Claude Code, project setup | Agent System + Claude Code Workflow |
@@ -47,6 +52,8 @@
 | Interactive, general | Foundation + General Software |
 | Interactive, game dev | Foundation + Game Development |
 | Interactive, embedded/IoT | Foundation + Embedded & IoT |
+| Interactive, blockchain | Foundation + Blockchain & Web3 |
+| Interactive, desktop app | Foundation + Desktop Apps |
 
 ### 3. Apply
 

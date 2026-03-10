@@ -9,6 +9,8 @@ Real-world scenarios demonstrating prompt usage.
 | [Full-Stack App](fullstack-app-example.md) | Building a Next.js + tRPC + Prisma todo app | Foundation + Web Dev + API Dev |
 | [Security Audit](security-audit-example.md) | Auditing a Node.js/Express API for vulnerabilities | Agent System + Security Audit |
 | [Refactoring](refactoring-example.md) | Decomposing legacy middleware into clean modules | Agent System + Refactoring |
+| [Cloud Infrastructure](cloud-infrastructure-example.md) | Deploying with Terraform + K8s on AWS | Agent System + Cloud & Infrastructure |
+| [AI Agent](ai-agent-example.md) | Building an AI-powered code review agent | Agent System + AI & LLM Integration |
 
 ## Using Examples
 

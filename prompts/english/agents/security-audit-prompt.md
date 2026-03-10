@@ -449,22 +449,79 @@ eslint --plugin security . # JavaScript
 grep -r "eval\|exec\|system\|shell_exec" --include="*.py" --include="*.js" --include="*.php"
 ```
 
+## Cloud Security Assessment
+
+### IAM & Access Control
+```bash
+# AWS — Check for overly permissive policies
+aws iam list-policies --scope Local --query 'Policies[*].[PolicyName,Arn]' --output table
+aws iam get-account-authorization-details --filter LocalManagedPolicy | grep '"Effect": "Allow"' -A 2 | grep '"Action": "\*"'
+
+# Check for access keys older than 90 days
+aws iam list-users --query 'Users[*].UserName' --output text | while read user; do
+  aws iam list-access-keys --user-name "$user" --query 'AccessKeyMetadata[?Status==`Active`].[UserName,AccessKeyId,CreateDate]' --output text
+done
+```
+
+### Cloud Security Checklist
+| Area | Check | Severity |
+|------|-------|----------|
+| **IAM** | No wildcard (*) permissions | Critical |
+| **IAM** | MFA enabled for all human users | Critical |
+| **IAM** | Access keys rotated every 90 days | High |
+| **Storage** | S3 buckets not publicly accessible | Critical |
+| **Storage** | Encryption at rest enabled | High |
+| **Network** | Security groups restrict inbound | High |
+| **Network** | VPC flow logs enabled | Medium |
+| **Secrets** | No hardcoded credentials in code | Critical |
+| **Secrets** | Secrets Manager/Vault for all secrets | High |
+| **Logging** | CloudTrail enabled in all regions | High |
+| **Compute** | Container images scanned for CVEs | High |
+| **Database** | Not publicly accessible | Critical |
+| **Database** | Encrypted in transit and at rest | High |
+
+### Supply Chain Security
+```yaml
+# GitHub Actions — Pin actions to commit SHA (not tags)
+# BAD — Tag can be moved to malicious commit
+- uses: actions/checkout@v4
+
+# GOOD — Pinned to specific commit SHA
+- uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+
+# Verify dependency integrity
+# npm — Use lockfile and verify signatures
+npm ci --ignore-scripts  # Install from lockfile, skip scripts
+npm audit signatures     # Verify package provenance
+
+# Container images — Use digest instead of tag
+# BAD
+FROM node:20-alpine
+# GOOD
+FROM node:20-alpine@sha256:abc123...
+```
+
+### Zero Trust Architecture Principles
+```
+1. Never trust, always verify — Authenticate every request
+2. Least privilege access — Minimum permissions needed
+3. Micro-segmentation — Network isolation between services
+4. Encrypt everything — TLS 1.3 in transit, AES-256 at rest
+5. Continuous monitoring — Log and alert on anomalies
+6. Assume breach — Design for containment, not prevention
+```
+
 ---
 
 ## Remember
 
-> **Security is not a feature, it's a requirement. Every vulnerability is a potential breach.**
-
-Security audit priorities:
-1. **Authentication/Authorization**: Can attackers bypass access controls?
-2. **Injection**: Can attackers inject malicious code?
-3. **Data Protection**: Is sensitive data properly protected?
-4. **Dependencies**: Are there known vulnerabilities?
-5. **Configuration**: Is the system properly hardened?
-
-Every audit should:
-- Find vulnerabilities before attackers do
-- Prioritize by risk and impact
-- Provide clear remediation guidance
-- Track fixes to completion
-- Improve overall security posture
+```
+✦ SECURITY IS A REQUIREMENT: Not a feature — every vulnerability is a potential breach
+✦ DEFENSE IN DEPTH: Layer security controls — never rely on a single mechanism
+✦ SUPPLY CHAIN: Pin dependencies, verify signatures, scan containers
+✦ CLOUD SECURITY: IAM least privilege, encrypt everything, no public access
+✦ ZERO TRUST: Never trust, always verify — authenticate every request
+✦ SHIFT LEFT: Security testing in CI/CD, not just before release
+✦ INCIDENT READY: Have a response plan before you need one
+✦ TRACK TO COMPLETION: Finding vulnerabilities is useless without fixing them
+```

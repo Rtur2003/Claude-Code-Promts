@@ -529,3 +529,121 @@ In data science, iteration is key:
 - Simple, interpretable model > Black box with marginally better performance
 
 Data science is 80% data preparation, 20% modeling.
+
+---
+
+## MLOps & Production ML
+
+### Model Monitoring
+
+```python
+# Detect data drift in production
+from scipy import stats
+import numpy as np
+
+def detect_drift(reference: np.ndarray, current: np.ndarray, threshold=0.05) -> dict:
+    """Kolmogorov-Smirnov test for distribution drift."""
+    statistic, p_value = stats.ks_2samp(reference, current)
+    return {
+        "statistic": statistic,
+        "p_value": p_value,
+        "drift_detected": p_value < threshold,
+        "severity": "high" if p_value < 0.01 else "medium" if p_value < threshold else "none",
+    }
+
+# Monitor prediction distribution
+def monitor_predictions(model, X_new, X_train_sample):
+    train_preds = model.predict(X_train_sample)
+    new_preds = model.predict(X_new)
+    
+    drift = detect_drift(train_preds, new_preds)
+    if drift["drift_detected"]:
+        alert(f"Prediction drift detected: KS={drift['statistic']:.3f}, p={drift['p_value']:.4f}")
+```
+
+### Model Explainability
+
+```python
+import shap
+
+# SHAP values for model interpretability
+explainer = shap.TreeExplainer(model)
+shap_values = explainer.shap_values(X_test)
+
+# Summary plot — which features matter most
+shap.summary_plot(shap_values, X_test, feature_names=feature_names)
+
+# Force plot — explain a single prediction
+shap.force_plot(explainer.expected_value, shap_values[0], X_test.iloc[0])
+
+# LIME for individual predictions
+from lime.lime_tabular import LimeTabularExplainer
+
+lime_explainer = LimeTabularExplainer(
+    X_train.values,
+    feature_names=feature_names,
+    class_names=['negative', 'positive'],
+    mode='classification',
+)
+
+explanation = lime_explainer.explain_instance(X_test.iloc[0].values, model.predict_proba)
+explanation.show_in_notebook()
+```
+
+### Experiment Tracking with MLflow
+
+```python
+import mlflow
+import mlflow.sklearn
+
+mlflow.set_experiment("customer-churn-prediction")
+
+with mlflow.start_run(run_name="xgboost-v2"):
+    # Log parameters
+    mlflow.log_params({
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+    })
+    
+    # Train model
+    model = XGBClassifier(**params)
+    model.fit(X_train, y_train)
+    
+    # Log metrics
+    predictions = model.predict(X_test)
+    mlflow.log_metrics({
+        "accuracy": accuracy_score(y_test, predictions),
+        "precision": precision_score(y_test, predictions),
+        "recall": recall_score(y_test, predictions),
+        "f1": f1_score(y_test, predictions),
+        "auc_roc": roc_auc_score(y_test, model.predict_proba(X_test)[:, 1]),
+    })
+    
+    # Log model
+    mlflow.sklearn.log_model(model, "model")
+    
+    # Log feature importance plot
+    mlflow.log_figure(plot_feature_importance(model, feature_names), "feature_importance.png")
+```
+
+### Model Registry & Deployment
+
+```python
+# Register model in MLflow registry
+model_uri = f"runs:/{run.info.run_id}/model"
+model_version = mlflow.register_model(model_uri, "churn-predictor")
+
+# Promote to production
+client = mlflow.tracking.MlflowClient()
+client.transition_model_version_stage(
+    name="churn-predictor",
+    version=model_version.version,
+    stage="Production",
+)
+
+# Load production model for inference
+model = mlflow.pyfunc.load_model("models:/churn-predictor/Production")
+predictions = model.predict(new_data)
+```

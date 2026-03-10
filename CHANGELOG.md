@@ -7,33 +7,53 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
-- **Accessibility Audit prompt** — ACCESS protocol for WCAG 2.2 compliance testing
-- **Migration & Upgrade prompt** — MIGRATE protocol for framework, database, and dependency migrations
-- **Monitoring & Observability prompt** — OBSERVE protocol for logs, metrics, traces, and alerting
-- **AI & LLM Integration prompt** — AUGMENT protocol for RAG, vector DBs, AI agents, and safety
-- **Game Development prompt** — Unity, Unreal, Godot, ECS, multiplayer patterns
-- **Embedded Systems & IoT prompt** — C, C++, Rust, FreeRTOS, MQTT, TinyML, safety-critical
-- **Full-Stack App example** — Next.js + tRPC + Prisma end-to-end walkthrough
-- **Security Audit example** — Node.js/Express vulnerability assessment walkthrough
-- **Refactoring example** — Legacy code improvement with before/after metrics
-- **Prompt Selector Guide** — Interactive decision tree for choosing the right prompt combination
-- **CLAUDE.md** — AI agent configuration for working on this repository
+- **API Design & GraphQL prompt** — SCHEMA protocol for schema-first design, DataLoader, caching, contract testing
+- **Cloud & Infrastructure prompt** — CLOUD protocol for IaC, multi-region, K8s, cost optimization
+- **Data Engineering prompt** — PIPELINE protocol for dbt, streaming, data quality, Apache Airflow
+- **Compliance & Governance prompt** — GOVERN protocol for GDPR, HIPAA, SOC 2, PCI DSS, STRIDE threat modeling
+- **Debugging & Troubleshooting prompt** — DEBUG protocol for production debugging, profiling, incident response
+- **Blockchain & Web3 project-type prompt** — Solidity, Rust, Foundry, smart contract security, gas optimization
+- **Desktop Application project-type prompt** — Tauri, Electron, Qt, native integration, auto-update
+- **Cloud Infrastructure example** — Terraform + K8s on AWS real-world deployment walkthrough
+- **AI Agent example** — Building an AI-powered code review agent with Claude API
+- **Troubleshooting Guide** — Systematic issue diagnosis decision flowchart with common patterns
+- Accessibility Audit prompt — ACCESS protocol for WCAG 2.2 compliance testing
+- Migration & Upgrade prompt — MIGRATE protocol for framework, database, and dependency migrations
+- Monitoring & Observability prompt — OBSERVE protocol for logs, metrics, traces, and alerting
+- AI & LLM Integration prompt — AUGMENT protocol for RAG, vector DBs, AI agents, and safety
+- Game Development prompt — Unity, Unreal, Godot, ECS, multiplayer patterns
+- Embedded Systems & IoT prompt — C, C++, Rust, FreeRTOS, MQTT, TinyML, safety-critical
+- Full-Stack App example — Next.js + tRPC + Prisma end-to-end walkthrough
+- Security Audit example — Node.js/Express vulnerability assessment walkthrough
+- Refactoring example — Legacy code improvement with before/after metrics
+- Prompt Selector Guide — Interactive decision tree for choosing the right prompt combination
+- CLAUDE.md — AI agent configuration for working on this repository
 - LICENSE file (MIT)
 - CHANGELOG.md for version tracking
-- Improved .gitignore with comprehensive patterns from Git & VCS prompt best practices
+
+### Enhanced
+- **Security Audit prompt** — Added cloud security assessment, supply chain security, zero trust architecture
+- **Architecture Patterns prompt** — Added serverless architecture, event sourcing deep dive, saga pattern, data consistency patterns
+- **Testing Strategies prompt** — Added contract testing (Pact), property-based testing (Hypothesis, fast-check), chaos testing, anti-patterns table
+- **Performance Optimization prompt** — Added GraphQL N+1 prevention, memory profiling (Node.js + Python), CDN/edge optimization, Cloudflare Workers
+- **Full-Stack Development prompt** — Added WebSocket/SSE real-time patterns, Socket.io integration, BullMQ background jobs
+- **API Development prompt** — Added idempotency keys, cursor-based pagination, webhook delivery with retries
+- **Data Science & ML prompt** — Added MLOps section with model monitoring (drift detection), SHAP/LIME explainability, MLflow experiment tracking, model registry
+- **Web Development prompt** — Added SEO/meta tags (Open Graph, JSON-LD), font optimization (preload, swap), image optimization (WebP, lazy loading), accessibility quick wins
 
 ### Changed
-- Updated README.md with 4 new agent prompts, 2 new project types, expanded combinations table
+- Updated README.md with all new prompts, expanded combinations table (36 combinations), updated architecture section
 - Updated QUICK-START.md with all new prompts and resources
 - Updated USAGE.md with new scenarios for all new prompts
 - Updated CONTRIBUTING.md with new file counts and contribution types
-- Updated all INDEX.md files with new prompt entries and feature matrix
-- Made repository fully English-only and global (removed language-specific content)
-- Expanded feature matrix to include Game and IoT columns
-- Agent prompt count: 19 → 23
-- Project type prompt count: 7 → 9
-- Example count: 2 → 5
-- Total prompt files: 26 → 32
+- Updated all INDEX.md files with new prompt entries and expanded feature matrix
+- Made repository fully English-only and global
+- Expanded feature matrix to include Blockchain and Desktop columns
+- Agent prompt count: 23 → 28
+- Project type prompt count: 9 → 11
+- Example count: 5 → 7
+- Workflow guide count: 2 → 3
+- Total prompt files: 32 → 39
 
 ### Removed
 - Turkish translations directory (repository is now English-only for global accessibility)
