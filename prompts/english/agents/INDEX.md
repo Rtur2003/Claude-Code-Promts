@@ -25,6 +25,7 @@
 | 17 | **Architecture Patterns** | System design, microservices, DDD, CQRS | ~3.5K | [View](architecture-patterns-prompt.md) |
 | 18 | **Full-Stack Development** | Next.js/Nuxt/SvelteKit, end-to-end type safety | ~3.5K | [View](fullstack-development-prompt.md) |
 | 19 | **Prompt Chaining** | Multi-step workflows, context management | ~3K | [View](prompt-chaining-prompt.md) |
+| 20 | **AI & LLM Integration** | AUGMENT protocol, RAG, agents, AI safety | ~3.5K | [View](ai-llm-integration-prompt.md) |
 
 ---
 
@@ -65,6 +66,7 @@ Combine Agent System + specialist prompt:
 | System architecture | Architecture Patterns |
 | Full-stack app | Full-Stack Development |
 | Complex multi-step task | Prompt Chaining |
+| AI/LLM features | AI & LLM Integration |
 
 ### Option 3: Minimal Context
 Use **Quick Reference** alone when token budget is tight (< 2K).
