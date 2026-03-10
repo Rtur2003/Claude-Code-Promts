@@ -571,22 +571,149 @@ app.get('/api/heavy-operation', async (req, res) => {
 - [ ] Load balancing optimized
 ```
 
+## GraphQL Performance
+
+### N+1 Query Prevention
+```typescript
+// Without DataLoader — N+1 queries
+// Query: { users { posts { comments } } }
+// 1 query for users + N queries for posts + N*M queries for comments
+
+// With DataLoader — Batched queries
+import DataLoader from 'dataloader';
+
+const postLoader = new DataLoader(async (userIds: string[]) => {
+  const posts = await db.post.findMany({
+    where: { authorId: { in: [...userIds] } },
+  });
+  const postsByUser = new Map<string, Post[]>();
+  posts.forEach(post => {
+    const existing = postsByUser.get(post.authorId) || [];
+    postsByUser.set(post.authorId, [...existing, post]);
+  });
+  return userIds.map(id => postsByUser.get(id) || []);
+});
+
+// Result: 1 query for users + 1 batched query for all posts
+```
+
+### Query Complexity Analysis
+```typescript
+// Prevent expensive queries from crushing your server
+import { createComplexityRule } from 'graphql-query-complexity';
+
+const complexityRule = createComplexityRule({
+  maximumComplexity: 1000,
+  estimators: [
+    // List fields cost more (multiplied by count)
+    fieldExtensionsEstimator(),
+    // Simple field cost
+    simpleEstimator({ defaultComplexity: 1 }),
+  ],
+  onComplete: (complexity) => {
+    console.log(`Query complexity: ${complexity}`);
+  },
+});
+```
+
+## Memory Profiling Deep Dive
+
+### Node.js Memory Analysis
+```bash
+# Generate heap snapshot
+node --inspect app.js
+# Open chrome://inspect → Take heap snapshot
+
+# Continuous memory monitoring
+node --max-old-space-size=4096 --expose-gc app.js
+
+# Detect memory leaks with clinic.js
+npx clinic heapprofile -- node app.js
+npx clinic flame -- node app.js
+```
+
+### Python Memory Profiling
+```python
+# Line-by-line memory usage
+from memory_profiler import profile
+
+@profile
+def process_large_dataset():
+    data = load_data()           # +500 MB
+    filtered = filter_data(data)  # +200 MB  
+    results = transform(filtered) # +100 MB
+    del data, filtered            # -700 MB
+    return results
+
+# Object reference tracking
+import objgraph
+objgraph.show_most_common_types(limit=10)
+objgraph.show_growth(limit=10)  # Objects that increased since last call
+```
+
+## CDN & Edge Optimization
+
+### CDN Configuration Best Practices
+```nginx
+# Cache-Control headers for different content types
+location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff2)$ {
+    expires 1y;
+    add_header Cache-Control "public, immutable";
+    add_header Vary "Accept-Encoding";
+}
+
+location /api/ {
+    add_header Cache-Control "no-store, no-cache, must-revalidate";
+    add_header Vary "Authorization, Accept";
+}
+
+# Brotli compression (better than gzip for text)
+brotli on;
+brotli_comp_level 6;
+brotli_types text/html text/css application/javascript application/json;
+```
+
+### Edge Computing with Workers
+```typescript
+// Cloudflare Workers — process at the edge
+export default {
+  async fetch(request: Request): Promise<Response> {
+    const url = new URL(request.url);
+    
+    // Edge-side caching
+    const cacheKey = new Request(url.toString(), request);
+    const cache = caches.default;
+    
+    let response = await cache.match(cacheKey);
+    if (response) return response;
+    
+    // Fetch from origin
+    response = await fetch(request);
+    
+    // Cache successful GET responses for 5 minutes
+    if (response.ok && request.method === 'GET') {
+      const cached = new Response(response.body, response);
+      cached.headers.set('Cache-Control', 'public, max-age=300');
+      await cache.put(cacheKey, cached.clone());
+      return cached;
+    }
+    
+    return response;
+  },
+};
+```
+
 ---
 
 ## Remember
 
-> **Measure first, optimize second. Premature optimization is the root of all evil.**
-
-Performance principles:
-1. **Measure**: Don't guess, profile
-2. **Prioritize**: Fix highest impact first
-3. **Iterate**: Small changes, measure again
-4. **Automate**: Performance tests in CI/CD
-5. **Monitor**: Continuous observation in production
-
-Every optimization should:
-- Have measurable impact
-- Not sacrifice code quality
-- Be documented
-- Be protected by tests
-- Be monitored for regression
+```
+✦ MEASURE FIRST: Don't guess where the bottleneck is — profile with real data
+✦ PRIORITIZE: Fix the highest-impact issue first — 80/20 rule applies
+✦ BATCH & CACHE: DataLoader for N+1, Redis for hot data, CDN for static assets
+✦ MEMORY: Track heap growth, find leaks early — they only get worse
+✦ EDGE: Push computation closer to users — CDN, edge workers, edge databases
+✦ COMPRESS: Brotli > gzip, WebP > PNG, lazy load everything below the fold
+✦ AUTOMATE: Performance budgets in CI/CD — catch regressions before production
+✦ MONITOR: Real user metrics (RUM) reveal what synthetic tests miss
+```

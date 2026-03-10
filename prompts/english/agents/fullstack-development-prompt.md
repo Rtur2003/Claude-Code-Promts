@@ -396,15 +396,159 @@ const { data } = trpc.users.list.useQuery({ page: 1 });
 - [ ] Monitoring alerts configured
 ```
 
+## WebSocket & Real-Time Patterns
+
+### Server-Sent Events (Simple Real-Time)
+```typescript
+// Server — SSE endpoint (lightweight alternative to WebSocket)
+app.get('/api/events', (req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive',
+  });
+
+  const sendEvent = (event: string, data: unknown) => {
+    res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
+  };
+
+  // Subscribe to updates
+  const unsubscribe = eventBus.subscribe('task:updated', (task) => {
+    sendEvent('task-update', task);
+  });
+
+  req.on('close', () => {
+    unsubscribe();
+    res.end();
+  });
+});
+
+// Client — EventSource API
+const events = new EventSource('/api/events');
+events.addEventListener('task-update', (e) => {
+  const task = JSON.parse(e.data);
+  updateTaskInUI(task);
+});
+```
+
+### WebSocket with Socket.io
+```typescript
+// Server
+import { Server } from 'socket.io';
+
+const io = new Server(server, {
+  cors: { origin: process.env.CLIENT_URL },
+  connectionStateRecovery: {
+    maxDisconnectionDuration: 2 * 60 * 1000, // 2 minutes
+  },
+});
+
+// Authentication middleware
+io.use(async (socket, next) => {
+  const token = socket.handshake.auth.token;
+  try {
+    const user = await verifyToken(token);
+    socket.data.user = user;
+    next();
+  } catch (err) {
+    next(new Error('Authentication failed'));
+  }
+});
+
+io.on('connection', (socket) => {
+  // Join user-specific room
+  socket.join(`user:${socket.data.user.id}`);
+  
+  // Join project rooms
+  socket.on('join:project', async (projectId) => {
+    const hasAccess = await checkProjectAccess(socket.data.user.id, projectId);
+    if (hasAccess) socket.join(`project:${projectId}`);
+  });
+  
+  // Broadcast updates to project members
+  socket.on('task:update', async (data) => {
+    const task = await updateTask(data);
+    io.to(`project:${task.projectId}`).emit('task:updated', task);
+  });
+});
+
+// Client (React hook)
+function useSocket(projectId: string) {
+  const [socket, setSocket] = useState<Socket | null>(null);
+
+  useEffect(() => {
+    const s = io(process.env.NEXT_PUBLIC_WS_URL!, {
+      auth: { token: getAuthToken() },
+    });
+    s.emit('join:project', projectId);
+    setSocket(s);
+    return () => { s.disconnect(); };
+  }, [projectId]);
+
+  return socket;
+}
+```
+
+## Background Jobs & Task Queues
+
+### BullMQ (Node.js)
+```typescript
+import { Queue, Worker } from 'bullmq';
+
+// Producer — Add jobs to queue
+const emailQueue = new Queue('emails', {
+  connection: { host: 'redis', port: 6379 },
+  defaultJobOptions: {
+    attempts: 3,
+    backoff: { type: 'exponential', delay: 2000 },
+    removeOnComplete: { count: 1000 },
+    removeOnFail: { count: 5000 },
+  },
+});
+
+await emailQueue.add('welcome-email', {
+  to: user.email,
+  template: 'welcome',
+  data: { name: user.name },
+});
+
+// Scheduled/recurring jobs
+await emailQueue.add('daily-digest', { type: 'digest' }, {
+  repeat: { pattern: '0 9 * * *' }, // Every day at 9 AM
+});
+
+// Consumer — Process jobs
+const worker = new Worker('emails', async (job) => {
+  switch (job.name) {
+    case 'welcome-email':
+      await sendEmail(job.data);
+      break;
+    case 'daily-digest':
+      await generateAndSendDigest();
+      break;
+  }
+}, {
+  connection: { host: 'redis', port: 6379 },
+  concurrency: 5,
+  limiter: { max: 10, duration: 1000 }, // 10 jobs/second
+});
+
+worker.on('failed', (job, error) => {
+  logger.error(`Job ${job?.id} failed:`, error);
+});
+```
+
 ---
 
 ## Remember
 
-> **Full-stack development is about reducing the distance between idea and working product.**
-
-Priorities:
-1. **Type safety end-to-end**: Catch errors at compile time
-2. **Convention over configuration**: Use framework defaults
-3. **Ship fast, iterate**: Get feedback early
-4. **Shared validation**: Same rules on client and server
-5. **Progressive enhancement**: Works without JS, better with it
+```
+✦ TYPE SAFETY END-TO-END: Catch errors at compile time — tRPC, Zod, Prisma
+✦ REAL-TIME: SSE for simple updates, WebSocket for bidirectional communication
+✦ BACKGROUND JOBS: Never process long tasks in request handlers — use queues
+✦ CONVENTION OVER CONFIG: Use framework defaults — Next.js, Nuxt, SvelteKit
+✦ SHARED VALIDATION: Same Zod schemas on client and server — single source of truth
+✦ PROGRESSIVE ENHANCEMENT: Works without JS, better with it
+✦ SHIP FAST: Get feedback early — iterate based on real usage
+✦ PRODUCTION READY: Health checks, monitoring, graceful shutdown, auto-scaling
+```

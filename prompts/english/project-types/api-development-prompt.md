@@ -570,3 +570,94 @@ Managed:
 ├── Supabase Auth: Built into Supabase, GoTrue-based
 └── WorkOS: Enterprise SSO, directory sync, SCIM
 ```
+
+### Idempotency for Safe Retries
+
+```typescript
+// Idempotency key middleware — prevents duplicate operations
+import { Redis } from 'ioredis';
+const redis = new Redis();
+
+async function idempotencyMiddleware(req, res, next) {
+  const key = req.headers['idempotency-key'];
+  if (!key) return next();
+  
+  const cacheKey = `idempotency:${req.method}:${req.path}:${key}`;
+  const cached = await redis.get(cacheKey);
+  
+  if (cached) {
+    const { status, body } = JSON.parse(cached);
+    return res.status(status).json(body);
+  }
+  
+  const originalJson = res.json.bind(res);
+  res.json = (body) => {
+    redis.setex(cacheKey, 86400, JSON.stringify({ status: res.statusCode, body }));
+    return originalJson(body);
+  };
+  next();
+}
+```
+
+### Cursor-Based Pagination
+
+```typescript
+// Cursor pagination — reliable for real-time data
+async function paginatedList(cursor?: string, limit = 20) {
+  const where = cursor ? { id: { gt: decodeCursor(cursor) } } : {};
+  
+  const items = await db.item.findMany({
+    where,
+    take: limit + 1,
+    orderBy: { id: 'asc' },
+  });
+  
+  const hasNextPage = items.length > limit;
+  const edges = items.slice(0, limit);
+  
+  return {
+    edges: edges.map(item => ({
+      node: item,
+      cursor: encodeCursor(item.id),
+    })),
+    pageInfo: {
+      hasNextPage,
+      endCursor: edges.at(-1) ? encodeCursor(edges.at(-1).id) : null,
+    },
+  };
+}
+```
+
+### Webhook Delivery with Retries
+
+```typescript
+// Reliable webhook delivery with exponential backoff
+async function deliverWebhook(url: string, payload: object, secret: string): Promise<boolean> {
+  const body = JSON.stringify(payload);
+  const signature = crypto.createHmac('sha256', secret).update(body).digest('hex');
+  
+  const backoffMs = [0, 1000, 5000, 30000, 300000];
+  
+  for (let attempt = 0; attempt < 5; attempt++) {
+    if (attempt > 0) await sleep(backoffMs[attempt]);
+    
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Webhook-Signature': `sha256=${signature}`,
+        },
+        body,
+        signal: AbortSignal.timeout(10000),
+      });
+      
+      if (response.ok) return true;
+      if (response.status < 500) return false; // Client error, don't retry
+    } catch (error) {
+      if (attempt === 4) throw error;
+    }
+  }
+  return false;
+}
+```

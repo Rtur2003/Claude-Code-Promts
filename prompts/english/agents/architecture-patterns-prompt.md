@@ -378,15 +378,129 @@ Use this when making significant architecture decisions:
 | **Anemic domain model** | Logic in services, not entities | Move logic to domain objects |
 | **Over-engineering** | Complex for simple problem | Match architecture to scale |
 
+## Serverless Architecture
+
+### When to Use Serverless
+| Use Case | Serverless Fit | Alternative |
+|----------|---------------|-------------|
+| Variable traffic (0 to spike) | ✅ Excellent | - |
+| Long-running processes (>15 min) | ❌ Poor | Containers/ECS |
+| Low-latency (<50ms cold start) | ⚠️ Depends | Always-on containers |
+| Event-driven processing | ✅ Excellent | - |
+| Cost-sensitive, low traffic | ✅ Excellent | - |
+| High-throughput, steady load | ⚠️ Expensive | Reserved instances |
+
+### Serverless Patterns
+```
+Event Sources → Functions → Integrations
+
+┌──────────┐    ┌──────────┐    ┌──────────┐
+│ API GW   │───→│ Lambda   │───→│ DynamoDB │
+│ S3 Event │    │ Function │    │ SQS      │
+│ SQS      │    │          │    │ S3       │
+│ Schedule  │    │          │    │ SNS      │
+│ EventBridge│   │          │    │ Step Fn  │
+└──────────┘    └──────────┘    └──────────┘
+```
+
+## Event Sourcing & CQRS Deep Dive
+
+### Event Sourcing Implementation
+```typescript
+// Events as the source of truth
+interface DomainEvent {
+  eventId: string;
+  aggregateId: string;
+  eventType: string;
+  version: number;
+  timestamp: Date;
+  data: Record<string, unknown>;
+}
+
+// Event store — append-only
+class EventStore {
+  async append(aggregateId: string, events: DomainEvent[], expectedVersion: number): Promise<void> {
+    // Optimistic concurrency check
+    const currentVersion = await this.getVersion(aggregateId);
+    if (currentVersion !== expectedVersion) {
+      throw new ConcurrencyError(`Expected version ${expectedVersion}, got ${currentVersion}`);
+    }
+    await this.db.insert('events', events);
+  }
+  
+  async getEvents(aggregateId: string, fromVersion?: number): Promise<DomainEvent[]> {
+    return this.db.query(
+      'SELECT * FROM events WHERE aggregate_id = ? AND version >= ? ORDER BY version',
+      [aggregateId, fromVersion || 0]
+    );
+  }
+}
+
+// Rebuild state from events
+class OrderAggregate {
+  private state: OrderState = { status: 'new', items: [], total: 0 };
+  
+  static fromEvents(events: DomainEvent[]): OrderAggregate {
+    const order = new OrderAggregate();
+    for (const event of events) {
+      order.apply(event);
+    }
+    return order;
+  }
+  
+  private apply(event: DomainEvent): void {
+    switch (event.eventType) {
+      case 'OrderCreated':
+        this.state = { ...this.state, status: 'created', ...event.data };
+        break;
+      case 'ItemAdded':
+        this.state.items.push(event.data.item);
+        this.state.total += event.data.item.price;
+        break;
+      case 'OrderCompleted':
+        this.state.status = 'completed';
+        break;
+    }
+  }
+}
+```
+
+### Saga Pattern (Distributed Transactions)
+```
+Order Saga — Choreography:
+
+┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
+│  Order   │───→│ Payment  │───→│ Inventory│───→│ Shipping │
+│  Service │    │ Service  │    │ Service  │    │ Service  │
+└──────────┘    └──────────┘    └──────────┘    └──────────┘
+     │               │               │               │
+     │  OrderCreated  │ PaymentOK     │ Reserved      │ Shipped
+     │               │               │               │
+     │← ─ ─ ─ ─ ─ ─ ┤← ─ ─ ─ ─ ─ ─┤← ─ ─ ─ ─ ─ ─┤
+     │  (compensate)  │  (refund)     │  (release)    │
+     
+Compensation = Reverse each step on failure
+```
+
+### Data Consistency Patterns
+| Pattern | Consistency | Performance | Use Case |
+|---------|------------|-------------|----------|
+| **Strong (2PC)** | Immediate | Slow | Financial transactions |
+| **Eventual (Saga)** | Delayed | Fast | E-commerce orders |
+| **CQRS** | Read lag | Very fast reads | Analytics, dashboards |
+| **Outbox** | Reliable | Medium | Event publishing |
+
 ---
 
 ## Remember
 
-> **Architecture is about trade-offs. There are no silver bullets, only trade-offs you can live with.**
-
-Architecture priorities:
-1. **Solve the current problem**: Don't architect for imaginary scale
-2. **Keep it simple**: Complexity is a liability
-3. **Make it evolvable**: Design for change, not perfection
-4. **Measure before optimizing**: Profile, don't guess
-5. **Document decisions**: Future you will thank you (ADRs)
+```
+✦ TRADE-OFFS: Architecture is about trade-offs — there are no silver bullets
+✦ START SIMPLE: Don't architect for imaginary scale — grow as needed
+✦ EVOLVE: Design for change, not perfection — modularize boundaries
+✦ DOCUMENT: ADRs capture why, not just what — future you will thank you
+✦ EVENT SOURCING: Events are facts — they tell the full story of your system
+✦ SAGA PATTERN: Compensating transactions for distributed consistency
+✦ SERVERLESS: Pay-per-use is powerful but understand cold starts and limits
+✦ MEASURE: Profile before optimizing — data beats intuition
+```
