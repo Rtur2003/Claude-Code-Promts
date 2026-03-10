@@ -53,6 +53,7 @@ Use with Foundation prompt for interactive sessions.
 | **DevOps & CI/CD** | Kubernetes, Docker, Terraform | [View](project-types/devops-cicd-prompt.md) |
 | **Database & SQL** | PostgreSQL, MySQL, Redis, indexing | [View](project-types/database-sql-prompt.md) |
 | **General Software** | Python, JS, Go, Java, C# | [View](project-types/general-software-development-prompt.md) |
+| **Game Development** | Unity, Unreal, Godot, ECS, Multiplayer | [View](project-types/game-development-prompt.md) |
 
 ---
 
