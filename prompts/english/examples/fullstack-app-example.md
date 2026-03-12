@@ -532,4 +532,4 @@ Closes #12
 
 - [Web Development Prompt](../project-types/web-development-prompt.md)
 - [API Development Prompt](../project-types/api-development-prompt.md)
-- [Agent System Prompt](../agents/agent-system-prompt.md)
+- [Agent System Prompt](../agents/claude-agent-system-prompt.md)
