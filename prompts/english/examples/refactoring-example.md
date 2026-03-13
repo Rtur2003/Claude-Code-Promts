@@ -532,5 +532,5 @@ Closes #34
 ## Related Prompts
 
 - [Refactoring Prompt](../agents/refactoring-prompt.md)
-- [Agent System Prompt](../agents/agent-system-prompt.md)
+- [Agent System Prompt](../agents/claude-agent-system-prompt.md)
 - [Testing Strategies Prompt](../agents/testing-strategies-prompt.md)

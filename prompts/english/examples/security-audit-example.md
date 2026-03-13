@@ -466,5 +466,5 @@ Closes #89
 ## Related Prompts
 
 - [Security Audit Prompt](../agents/security-audit-prompt.md)
-- [Agent System Prompt](../agents/agent-system-prompt.md)
+- [Agent System Prompt](../agents/claude-agent-system-prompt.md)
 - [API Development Prompt](../project-types/api-development-prompt.md)
