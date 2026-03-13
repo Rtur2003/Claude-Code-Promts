@@ -34,6 +34,8 @@
 | 26 | **Data Engineering** | PIPELINE protocol, dbt, streaming, data quality | ~4K | [View](data-engineering-prompt.md) |
 | 27 | **Compliance & Governance** | GOVERN protocol, GDPR, HIPAA, SOC 2, STRIDE | ~3.5K | [View](compliance-governance-prompt.md) |
 | 28 | **Debugging & Troubleshooting** | DEBUG protocol, production debugging, incidents | ~3.5K | [View](debugging-troubleshooting-prompt.md) |
+| 29 | **Multi-Agent Orchestration** | ORCHESTRATE protocol, agent coordination, parallel execution | ~4K | [View](multi-agent-orchestration-prompt.md) |
+| 30 | **Monorepo & Complex Projects** | SCALE protocol, multi-package, cross-cutting concerns | ~4.5K | [View](monorepo-complex-projects-prompt.md) |
 
 ---
 
@@ -83,6 +85,8 @@ Combine Agent System + specialist prompt:
 | Accessibility check | Accessibility Audit |
 | Framework/DB migration | Migration & Upgrade |
 | Monitoring & alerting | Monitoring & Observability |
+| Multi-agent coordination | Multi-Agent Orchestration |
+| Monorepo / complex project | Monorepo & Complex Projects |
 
 ### Option 3: Minimal Context
 Use **Quick Reference** alone when token budget is tight (< 2K).

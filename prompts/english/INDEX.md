@@ -36,6 +36,8 @@ Optimized for autonomous AI coding agents (Claude Code, GitHub Copilot, etc.).
 | 26 | **Data Engineering** | Pipelines, dbt, streaming, quality | ~4K | [View](agents/data-engineering-prompt.md) |
 | 27 | **Compliance & Governance** | GDPR, HIPAA, SOC 2, STRIDE | ~3.5K | [View](agents/compliance-governance-prompt.md) |
 | 28 | **Debugging & Troubleshooting** | Production debugging, incidents | ~3.5K | [View](agents/debugging-troubleshooting-prompt.md) |
+| 29 | **Multi-Agent Orchestration** | Agent coordination, parallel execution | ~4K | [View](agents/multi-agent-orchestration-prompt.md) |
+| 30 | **Monorepo & Complex Projects** | Multi-package, cross-cutting concerns | ~4.5K | [View](agents/monorepo-complex-projects-prompt.md) |
 
 → [Full Agent Index](agents/INDEX.md)
 
@@ -83,6 +85,7 @@ Use with Foundation prompt for interactive sessions.
 | Workflow Guide | APEI methodology deep-dive | [View](workflows/iterative-development-guide.md) |
 | Prompt Selector | Decision tree for choosing prompts | [View](workflows/prompt-selector-guide.md) |
 | Troubleshooting Guide | Issue diagnosis & resolution flowchart | [View](workflows/troubleshooting-guide.md) |
+| Claude Code Setup Guide | `.claude/` directory, CLAUDE.md hierarchy, prompt placement | [View](workflows/claude-code-setup-guide.md) |
 
 ---
 

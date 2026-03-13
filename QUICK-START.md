@@ -44,6 +44,8 @@
 | Cloud deployment | **Cloud & Infrastructure** | [View](prompts/english/agents/cloud-infrastructure-prompt.md) |
 | Data pipelines | **Data Engineering** | [View](prompts/english/agents/data-engineering-prompt.md) |
 | Compliance audit | **Compliance & Governance** | [View](prompts/english/agents/compliance-governance-prompt.md) |
+| Multi-agent coordination | **Multi-Agent Orchestration** | [View](prompts/english/agents/multi-agent-orchestration-prompt.md) |
+| Monorepo / complex project | **Monorepo & Complex Projects** | [View](prompts/english/agents/monorepo-complex-projects-prompt.md) |
 
 ### Interactive Sessions
 
@@ -106,3 +108,4 @@ All prompts follow this cycle automatically.
 - [Prompt Selector](prompts/english/workflows/prompt-selector-guide.md) — Decision tree for choosing prompts
 - [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) — APEI deep-dive
 - [Troubleshooting Guide](prompts/english/workflows/troubleshooting-guide.md) — Issue diagnosis flowchart
+- [Claude Code Setup Guide](prompts/english/workflows/claude-code-setup-guide.md) — `.claude/` directory, CLAUDE.md hierarchy, prompt placement

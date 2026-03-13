@@ -7,6 +7,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- **Multi-Agent Orchestration prompt** — ORCHESTRATE protocol for coordinating multiple Claude Code sessions, agent specialization, shared state management, conflict resolution, and parallel execution patterns (Hub & Spoke, Pipeline, Swarm, Review Loop topologies)
+- **Monorepo & Complex Projects prompt** — SCALE protocol for Turborepo/Nx/pnpm workspaces, hierarchical CLAUDE.md strategies, cross-package dependency management, microservices architecture, and CI/CD optimization for multi-package builds
+- **Claude Code Setup Guide** — Complete guide for `.claude/` directory structure, `settings.json` specification, custom slash commands (`.claude/commands/`), CLAUDE.md hierarchy design, prompt placement strategies (single prompt, custom commands, layered, team shared), multi-prompt composition patterns, conflict matrix, real-world setup examples (solo dev, team of 5, enterprise monorepo)
+
+### Enhanced
+- **README.md** — Added new prompts to catalog, expanded Common Combinations table with multi-agent and monorepo entries, updated repository structure counts, added Setup Guide to resources
+- **QUICK-START.md** — Added multi-agent orchestration and monorepo prompts to architecture section, added setup guide reference
+- **USAGE.md** — Added multi-agent and monorepo scenarios to prompt selection table
+- **Agent Index** — Updated catalog to 30 prompts, added orchestration and monorepo entries
+- **Prompt Index** — Added new prompts and setup guide to catalog
+
+### Changed
+- Agent prompt count: 28 → 30
+- Workflow guide count: 3 → 4
+- Total prompt files: 39 → 41
+
+---
+
+### Added
 - **API Design & GraphQL prompt** — SCHEMA protocol for schema-first design, DataLoader, caching, contract testing
 - **Cloud & Infrastructure prompt** — CLOUD protocol for IaC, multi-region, K8s, cost optimization
 - **Data Engineering prompt** — PIPELINE protocol for dbt, streaming, data quality, Apache Airflow

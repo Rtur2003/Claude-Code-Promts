@@ -34,6 +34,8 @@
 | AI agent, cloud deploy | Agent System + Cloud & Infrastructure |
 | AI agent, data pipelines | Agent System + Data Engineering |
 | AI agent, compliance | Agent System + Compliance & Governance |
+| AI agent, multi-agent | Agent System + Multi-Agent Orchestration |
+| AI agent, monorepo | Agent System + Monorepo & Complex Projects |
 | Claude Code, mode planning | Agent System + Claude Code Modes |
 | Claude Code, token efficiency | Agent System + Claude Code Tokens |
 | Claude Code, project setup | Agent System + Claude Code Workflow |
