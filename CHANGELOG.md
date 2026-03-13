@@ -7,21 +7,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- **Error Handling & Resilience prompt** — RESILIENCE protocol for circuit breakers, retry with exponential backoff, bulkhead isolation, timeout patterns, graceful degradation strategies, Result pattern, structured error logging, and error taxonomy
+- **Developer Experience & Tooling prompt** — DX protocol for ESLint/Prettier/Ruff configuration, Git hooks (Husky + lint-staged), VS Code shared settings, Makefile automation, onboarding checklists, CI/CD DX integration, and DX metrics scoring
+- **Performance Optimization example** — E-commerce API optimization walkthrough demonstrating DB profiling with EXPLAIN ANALYZE, composite indexing, N+1 elimination with LATERAL JOIN, Redis caching with stale-while-revalidate, and cursor-based pagination (3.5s → 3ms)
+- **Best Practices & Customization Guide** — Prompt composition patterns (single, base+specialist, layered, monorepo), team customization templates, token budget optimization, effectiveness metrics, language-specific customizations (TypeScript, Python, Go, Rust), troubleshooting guide for prompt issues
 - **Multi-Agent Orchestration prompt** — ORCHESTRATE protocol for coordinating multiple Claude Code sessions, agent specialization, shared state management, conflict resolution, and parallel execution patterns (Hub & Spoke, Pipeline, Swarm, Review Loop topologies)
 - **Monorepo & Complex Projects prompt** — SCALE protocol for Turborepo/Nx/pnpm workspaces, hierarchical CLAUDE.md strategies, cross-package dependency management, microservices architecture, and CI/CD optimization for multi-package builds
 - **Claude Code Setup Guide** — Complete guide for `.claude/` directory structure, `settings.json` specification, custom slash commands (`.claude/commands/`), CLAUDE.md hierarchy design, prompt placement strategies (single prompt, custom commands, layered, team shared), multi-prompt composition patterns, conflict matrix, real-world setup examples (solo dev, team of 5, enterprise monorepo)
 
 ### Enhanced
-- **README.md** — Added new prompts to catalog, expanded Common Combinations table with multi-agent and monorepo entries, updated repository structure counts, added Setup Guide to resources
-- **QUICK-START.md** — Added multi-agent orchestration and monorepo prompts to architecture section, added setup guide reference
-- **USAGE.md** — Added multi-agent and monorepo scenarios to prompt selection table
-- **Agent Index** — Updated catalog to 30 prompts, added orchestration and monorepo entries
-- **Prompt Index** — Added new prompts and setup guide to catalog
+- **README.md** — Added new prompts to catalog, expanded Common Combinations table with error handling, DX, and resilience entries, updated repository structure counts, added Best Practices Guide to resources
+- **QUICK-START.md** — Added error handling, developer experience, and best practices prompts to architecture section, added best practices guide reference
+- **USAGE.md** — Added error handling and developer experience scenarios to prompt selection table
+- **Agent Index** — Updated catalog to 32 prompts, added error handling, DX entries and task combinations
+- **Prompt Index** — Added new prompts, performance example, and best practices guide to catalog
+- **CONTRIBUTING.md** — Fixed outdated file counts to reflect current repository state
 
 ### Changed
-- Agent prompt count: 28 → 30
-- Workflow guide count: 3 → 4
-- Total prompt files: 39 → 41
+- Agent prompt count: 30 → 32
+- Workflow guide count: 4 → 5
+- Example count: 7 → 8
+- Total prompt files: 41 → 44
 
 ---
 

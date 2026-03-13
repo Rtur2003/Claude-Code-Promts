@@ -46,6 +46,8 @@
 | Compliance audit | **Compliance & Governance** | [View](prompts/english/agents/compliance-governance-prompt.md) |
 | Multi-agent coordination | **Multi-Agent Orchestration** | [View](prompts/english/agents/multi-agent-orchestration-prompt.md) |
 | Monorepo / complex project | **Monorepo & Complex Projects** | [View](prompts/english/agents/monorepo-complex-projects-prompt.md) |
+| Error handling / resilience | **Error Handling & Resilience** | [View](prompts/english/agents/error-handling-resilience-prompt.md) |
+| Developer experience / tooling | **Developer Experience & Tooling** | [View](prompts/english/agents/developer-experience-tooling-prompt.md) |
 
 ### Interactive Sessions
 
@@ -109,3 +111,4 @@ All prompts follow this cycle automatically.
 - [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) — APEI deep-dive
 - [Troubleshooting Guide](prompts/english/workflows/troubleshooting-guide.md) — Issue diagnosis flowchart
 - [Claude Code Setup Guide](prompts/english/workflows/claude-code-setup-guide.md) — `.claude/` directory, CLAUDE.md hierarchy, prompt placement
+- [Best Practices Guide](prompts/english/workflows/best-practices-customization-guide.md) — Prompt customization & team standards

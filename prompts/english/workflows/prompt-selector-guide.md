@@ -81,6 +81,8 @@ Find the right prompt combination in seconds. This guide walks you through selec
 | Write documentation | Agent System + **Documentation** | Foundation + domain prompt |
 | Manage Git workflow | Agent System + **Git & VCS** | Foundation + domain prompt |
 | Set up CI/CD | Agent System + **Integration Guardian** | Foundation + **DevOps** |
+| Design error handling | Agent System + **Error Handling & Resilience** | Foundation + domain prompt |
+| Improve developer experience | Agent System + **Developer Experience & Tooling** | Foundation + domain prompt |
 
 ### Claude Code–Specific
 
@@ -129,6 +131,8 @@ Which prompts pair well together, and which are redundant?
 | Migration & Upgrade | Testing | Validate upgrades don't break things |
 | Documentation | Code Review | Ensure docs match the code |
 | Monitoring | Performance | Monitor what you've optimized |
+| Error Handling & Resilience | Testing | Test failure scenarios with chaos testing |
+| Developer Experience | Code Review | Consistent tooling + review standards |
 
 ### Redundant Combinations (⚠️ Avoid)
 

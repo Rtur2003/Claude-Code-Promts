@@ -48,6 +48,8 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Compliance & Governance** | GDPR, HIPAA, SOC 2, threat modeling | ~3.5K | [View](prompts/english/agents/compliance-governance-prompt.md) |
 | **Multi-Agent Orchestration** | Agent coordination, parallel execution, shared state | ~4K | [View](prompts/english/agents/multi-agent-orchestration-prompt.md) |
 | **Monorepo & Complex Projects** | Multi-package architecture, cross-cutting concerns | ~4.5K | [View](prompts/english/agents/monorepo-complex-projects-prompt.md) |
+| **Error Handling & Resilience** | Circuit breakers, retry patterns, graceful degradation | ~4K | [View](prompts/english/agents/error-handling-resilience-prompt.md) |
+| **Developer Experience & Tooling** | ESLint, Prettier, Git hooks, DX metrics, onboarding | ~3.5K | [View](prompts/english/agents/developer-experience-tooling-prompt.md) |
 
 ### 📋 Foundation & Project Prompts (Interactive Sessions)
 
@@ -138,6 +140,8 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Cross-Cutting Integrity | Agent System + Integration Guardian |
 | Multi-Agent Teamwork | Agent System + Multi-Agent Orchestration |
 | Monorepo Architecture | Agent System + Monorepo & Complex Projects |
+| Error Handling | Agent System + Error Handling & Resilience |
+| Improve Developer Experience | Agent System + Developer Experience & Tooling |
 | Full Claude Code Setup | Agent System + Workflow + Modes + Token Optimization |
 | React / Vue App | Foundation + Web Development |
 | REST API | Foundation + API Development |
@@ -158,11 +162,11 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 ```
 prompts/
 └── english/
-    ├── agents/          # Agent-optimized prompts (30 files)
+    ├── agents/          # Agent-optimized prompts (32 files)
     ├── base/            # Foundation prompt
     ├── project-types/   # Domain-specific prompts (11 files)
-    ├── examples/        # Real-world usage examples (7 files)
-    └── workflows/       # APEI methodology, prompt selection, troubleshooting & setup guides
+    ├── examples/        # Real-world usage examples (8 files)
+    └── workflows/       # APEI methodology, prompt selection, troubleshooting, setup & best practices guides
 ```
 
 ## Resources
@@ -180,6 +184,7 @@ prompts/
 | [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) | APEI methodology deep-dive |
 | [Troubleshooting Guide](prompts/english/workflows/troubleshooting-guide.md) | Issue diagnosis & resolution flowchart |
 | [Claude Code Setup Guide](prompts/english/workflows/claude-code-setup-guide.md) | `.claude/` directory, CLAUDE.md hierarchy, prompt placement |
+| [Best Practices Guide](prompts/english/workflows/best-practices-customization-guide.md) | Prompt customization, team standards, measuring effectiveness |
 
 ## Customization
 

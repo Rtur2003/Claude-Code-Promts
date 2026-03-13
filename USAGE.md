@@ -36,6 +36,8 @@
 | AI agent, compliance | Agent System + Compliance & Governance |
 | AI agent, multi-agent | Agent System + Multi-Agent Orchestration |
 | AI agent, monorepo | Agent System + Monorepo & Complex Projects |
+| AI agent, error handling | Agent System + Error Handling & Resilience |
+| AI agent, DX / tooling | Agent System + Developer Experience & Tooling |
 | Claude Code, mode planning | Agent System + Claude Code Modes |
 | Claude Code, token efficiency | Agent System + Claude Code Tokens |
 | Claude Code, project setup | Agent System + Claude Code Workflow |

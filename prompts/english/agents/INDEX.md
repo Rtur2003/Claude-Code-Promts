@@ -36,6 +36,8 @@
 | 28 | **Debugging & Troubleshooting** | DEBUG protocol, production debugging, incidents | ~3.5K | [View](debugging-troubleshooting-prompt.md) |
 | 29 | **Multi-Agent Orchestration** | ORCHESTRATE protocol, agent coordination, parallel execution | ~4K | [View](multi-agent-orchestration-prompt.md) |
 | 30 | **Monorepo & Complex Projects** | SCALE protocol, multi-package, cross-cutting concerns | ~4.5K | [View](monorepo-complex-projects-prompt.md) |
+| 31 | **Error Handling & Resilience** | RESILIENCE protocol, circuit breakers, retry, graceful degradation | ~4K | [View](error-handling-resilience-prompt.md) |
+| 32 | **Developer Experience & Tooling** | DX protocol, ESLint, Prettier, Git hooks, onboarding | ~3.5K | [View](developer-experience-tooling-prompt.md) |
 
 ---
 
@@ -87,6 +89,8 @@ Combine Agent System + specialist prompt:
 | Monitoring & alerting | Monitoring & Observability |
 | Multi-agent coordination | Multi-Agent Orchestration |
 | Monorepo / complex project | Monorepo & Complex Projects |
+| Error handling & resilience | Error Handling & Resilience |
+| Developer tooling & DX | Developer Experience & Tooling |
 
 ### Option 3: Minimal Context
 Use **Quick Reference** alone when token budget is tight (< 2K).
