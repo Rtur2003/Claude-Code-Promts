@@ -36,6 +36,12 @@ Optimized for autonomous AI coding agents (Claude Code, GitHub Copilot, etc.).
 | 26 | **Data Engineering** | Pipelines, dbt, streaming, quality | ~4K | [View](agents/data-engineering-prompt.md) |
 | 27 | **Compliance & Governance** | GDPR, HIPAA, SOC 2, STRIDE | ~3.5K | [View](agents/compliance-governance-prompt.md) |
 | 28 | **Debugging & Troubleshooting** | Production debugging, incidents | ~3.5K | [View](agents/debugging-troubleshooting-prompt.md) |
+| 29 | **Multi-Agent Orchestration** | Agent coordination, parallel execution | ~4K | [View](agents/multi-agent-orchestration-prompt.md) |
+| 30 | **Monorepo & Complex Projects** | Multi-package, cross-cutting concerns | ~4.5K | [View](agents/monorepo-complex-projects-prompt.md) |
+| 31 | **Error Handling & Resilience** | Circuit breakers, retry, graceful degradation | ~4K | [View](agents/error-handling-resilience-prompt.md) |
+| 32 | **Developer Experience & Tooling** | ESLint, Prettier, Git hooks, DX metrics | ~3.5K | [View](agents/developer-experience-tooling-prompt.md) |
+| 33 | **Database Design & Optimization** | Schema design, indexing, query tuning | ~4K | [View](agents/database-optimization-prompt.md) |
+| 34 | **UI/UX & Design Systems** | Design tokens, components, a11y, theming | ~4.5K | [View](agents/ui-design-systems-prompt.md) |
 
 → [Full Agent Index](agents/INDEX.md)
 
@@ -80,9 +86,14 @@ Use with Foundation prompt for interactive sessions.
 | Refactoring Example | Legacy code improvement walkthrough | [View](examples/refactoring-example.md) |
 | Cloud Infrastructure Example | Terraform + K8s deployment walkthrough | [View](examples/cloud-infrastructure-example.md) |
 | AI Agent Example | Building an AI-powered code review agent | [View](examples/ai-agent-example.md) |
+| Performance Optimization Example | E-commerce API optimization walkthrough | [View](examples/performance-optimization-example.md) |
+| Testing Strategies Example | Adding tests to an untested Express API | [View](examples/testing-strategies-example.md) |
+| Migration & Upgrade Example | Express.js to NestJS zero-downtime migration | [View](examples/migration-upgrade-example.md) |
 | Workflow Guide | APEI methodology deep-dive | [View](workflows/iterative-development-guide.md) |
 | Prompt Selector | Decision tree for choosing prompts | [View](workflows/prompt-selector-guide.md) |
 | Troubleshooting Guide | Issue diagnosis & resolution flowchart | [View](workflows/troubleshooting-guide.md) |
+| Claude Code Setup Guide | `.claude/` directory, CLAUDE.md hierarchy, prompt placement | [View](workflows/claude-code-setup-guide.md) |
+| Best Practices Guide | Prompt customization, team standards, measuring effectiveness | [View](workflows/best-practices-customization-guide.md) |
 
 ---
 

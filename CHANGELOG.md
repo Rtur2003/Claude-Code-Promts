@@ -7,6 +7,37 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- **Database Design & Optimization prompt** — QUERY protocol for schema design, normalization decisions, composite indexing strategy, EXPLAIN ANALYZE workflow, N+1 detection, connection pooling, zero-downtime migration patterns, and performance monitoring queries
+- **UI/UX & Design Systems prompt** — DESIGN protocol for design token hierarchy (global → alias → component), variant-driven components (CVA), compound component pattern, accessibility by default (WCAG 2.2), responsive patterns, Storybook documentation, theme system with dark mode, and visual regression testing
+- **Testing Strategies example** — Legacy Express API walkthrough: 0% → 84% coverage with Vitest, test factories, database isolation, integration tests with supertest, concurrent race condition testing, CI pipeline with coverage gates
+- **Migration & Upgrade example** — Express.js → NestJS zero-downtime migration using Strangler Fig pattern, reverse proxy routing, comparison testing, auth guard migration (fixing silent token passthrough bug), DTOs with class-validator
+- **Error Handling & Resilience prompt** — RESILIENCE protocol for circuit breakers, retry with exponential backoff, bulkhead isolation, timeout patterns, graceful degradation strategies, Result pattern, structured error logging, and error taxonomy
+- **Developer Experience & Tooling prompt** — DX protocol for ESLint/Prettier/Ruff configuration, Git hooks (Husky + lint-staged), VS Code shared settings, Makefile automation, onboarding checklists, CI/CD DX integration, and DX metrics scoring
+- **Performance Optimization example** — E-commerce API optimization walkthrough demonstrating DB profiling with EXPLAIN ANALYZE, composite indexing, N+1 elimination with LATERAL JOIN, Redis caching with stale-while-revalidate, and cursor-based pagination (3.5s → 3ms)
+- **Best Practices & Customization Guide** — Prompt composition patterns (single, base+specialist, layered, monorepo), team customization templates, token budget optimization, effectiveness metrics, language-specific customizations (TypeScript, Python, Go, Rust), troubleshooting guide for prompt issues
+- **Multi-Agent Orchestration prompt** — ORCHESTRATE protocol for coordinating multiple Claude Code sessions, agent specialization, shared state management, conflict resolution, and parallel execution patterns (Hub & Spoke, Pipeline, Swarm, Review Loop topologies)
+- **Monorepo & Complex Projects prompt** — SCALE protocol for Turborepo/Nx/pnpm workspaces, hierarchical CLAUDE.md strategies, cross-package dependency management, microservices architecture, and CI/CD optimization for multi-package builds
+- **Claude Code Setup Guide** — Complete guide for `.claude/` directory structure, `settings.json` specification, custom slash commands (`.claude/commands/`), CLAUDE.md hierarchy design, prompt placement strategies (single prompt, custom commands, layered, team shared), multi-prompt composition patterns, conflict matrix, real-world setup examples (solo dev, team of 5, enterprise monorepo)
+
+### Enhanced
+- **README.md** — Added new prompts to catalog, expanded Common Combinations table with database, design system, error handling, DX, and resilience entries, updated repository structure counts
+- **QUICK-START.md** — Added database optimization, UI/UX design systems, error handling, developer experience prompts to selector
+- **USAGE.md** — Added database optimization, design system, error handling and developer experience scenarios
+- **Agent Index** — Updated catalog to 34 prompts with database and UI/UX entries
+- **Prompt Index** — Added all new prompts and examples to catalog
+- **Examples README** — Added testing strategies and migration examples
+- **CONTRIBUTING.md** — Updated file counts to reflect current repository state
+- **CLAUDE.md** — Updated repository structure counts
+
+### Changed
+- Agent prompt count: 30 → 34
+- Workflow guide count: 4 → 5
+- Example count: 7 → 10
+- Total prompt files: 41 → 48
+
+---
+
+### Added
 - **API Design & GraphQL prompt** — SCHEMA protocol for schema-first design, DataLoader, caching, contract testing
 - **Cloud & Infrastructure prompt** — CLOUD protocol for IaC, multi-region, K8s, cost optimization
 - **Data Engineering prompt** — PIPELINE protocol for dbt, streaming, data quality, Apache Airflow

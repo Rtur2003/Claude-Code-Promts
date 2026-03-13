@@ -46,6 +46,12 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Cloud & Infrastructure** | IaC, multi-region, K8s, cost optimization | ~4K | [View](prompts/english/agents/cloud-infrastructure-prompt.md) |
 | **Data Engineering** | Pipelines, dbt, streaming, data quality | ~4K | [View](prompts/english/agents/data-engineering-prompt.md) |
 | **Compliance & Governance** | GDPR, HIPAA, SOC 2, threat modeling | ~3.5K | [View](prompts/english/agents/compliance-governance-prompt.md) |
+| **Multi-Agent Orchestration** | Agent coordination, parallel execution, shared state | ~4K | [View](prompts/english/agents/multi-agent-orchestration-prompt.md) |
+| **Monorepo & Complex Projects** | Multi-package architecture, cross-cutting concerns | ~4.5K | [View](prompts/english/agents/monorepo-complex-projects-prompt.md) |
+| **Error Handling & Resilience** | Circuit breakers, retry patterns, graceful degradation | ~4K | [View](prompts/english/agents/error-handling-resilience-prompt.md) |
+| **Developer Experience & Tooling** | ESLint, Prettier, Git hooks, DX metrics, onboarding | ~3.5K | [View](prompts/english/agents/developer-experience-tooling-prompt.md) |
+| **Database Design & Optimization** | Schema design, indexing, query tuning, migrations | ~4K | [View](prompts/english/agents/database-optimization-prompt.md) |
+| **UI/UX & Design Systems** | Design tokens, components, a11y, theming, Storybook | ~4.5K | [View](prompts/english/agents/ui-design-systems-prompt.md) |
 
 ### 📋 Foundation & Project Prompts (Interactive Sessions)
 
@@ -67,6 +73,15 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 ---
 
 ## Quick Start
+
+### For Claude Code (Native Integration)
+
+```
+1. Create CLAUDE.md in your project root
+2. Paste content from prompts/english/agents/claude-agent-system-prompt.md into CLAUDE.md
+3. Create .claude/commands/ for task-specific prompts
+4. See the full setup guide: prompts/english/workflows/claude-code-setup-guide.md
+```
 
 ### For AI Agents (Claude Code, Copilot)
 
@@ -125,6 +140,13 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Set Up Monitoring | Agent System + Monitoring & Observability |
 | Git Workflow | Agent System + Git & VCS |
 | Cross-Cutting Integrity | Agent System + Integration Guardian |
+| Multi-Agent Teamwork | Agent System + Multi-Agent Orchestration |
+| Monorepo Architecture | Agent System + Monorepo & Complex Projects |
+| Error Handling | Agent System + Error Handling & Resilience |
+| Improve Developer Experience | Agent System + Developer Experience & Tooling |
+| Database Optimization | Agent System + Database Design & Optimization |
+| Build Design System | Agent System + UI/UX & Design Systems |
+| Full Claude Code Setup | Agent System + Workflow + Modes + Token Optimization |
 | React / Vue App | Foundation + Web Development |
 | REST API | Foundation + API Development |
 | ML Model | Foundation + Data Science & ML |
@@ -144,11 +166,11 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 ```
 prompts/
 └── english/
-    ├── agents/          # Agent-optimized prompts (28 files)
+    ├── agents/          # Agent-optimized prompts (34 files)
     ├── base/            # Foundation prompt
     ├── project-types/   # Domain-specific prompts (11 files)
-    ├── examples/        # Real-world usage examples (7 files)
-    └── workflows/       # APEI methodology, prompt selection & troubleshooting guides
+    ├── examples/        # Real-world usage examples (10 files)
+    └── workflows/       # APEI methodology, prompt selection, troubleshooting, setup & best practices guides
 ```
 
 ## Resources
@@ -165,6 +187,8 @@ prompts/
 | [Prompt Selector](prompts/english/workflows/prompt-selector-guide.md) | Decision tree for choosing prompts |
 | [Workflow Guide](prompts/english/workflows/iterative-development-guide.md) | APEI methodology deep-dive |
 | [Troubleshooting Guide](prompts/english/workflows/troubleshooting-guide.md) | Issue diagnosis & resolution flowchart |
+| [Claude Code Setup Guide](prompts/english/workflows/claude-code-setup-guide.md) | `.claude/` directory, CLAUDE.md hierarchy, prompt placement |
+| [Best Practices Guide](prompts/english/workflows/best-practices-customization-guide.md) | Prompt customization, team standards, measuring effectiveness |
 
 ## Customization
 
