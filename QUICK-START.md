@@ -48,6 +48,8 @@
 | Monorepo / complex project | **Monorepo & Complex Projects** | [View](prompts/english/agents/monorepo-complex-projects-prompt.md) |
 | Error handling / resilience | **Error Handling & Resilience** | [View](prompts/english/agents/error-handling-resilience-prompt.md) |
 | Developer experience / tooling | **Developer Experience & Tooling** | [View](prompts/english/agents/developer-experience-tooling-prompt.md) |
+| Database design / optimization | **Database Design & Optimization** | [View](prompts/english/agents/database-optimization-prompt.md) |
+| UI components / design system | **UI/UX & Design Systems** | [View](prompts/english/agents/ui-design-systems-prompt.md) |
 
 ### Interactive Sessions
 

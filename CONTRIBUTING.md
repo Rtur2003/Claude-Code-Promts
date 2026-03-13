@@ -23,10 +23,10 @@ git checkout -b feature/your-feature-name
 ```
 prompts/
 └── english/
-    ├── agents/           # Agent-optimized prompts (32 files)
+    ├── agents/           # Agent-optimized prompts (34 files)
     ├── base/             # Foundation prompts
     ├── project-types/    # Domain-specific prompts (11 files)
-    ├── examples/         # Usage examples (8 files)
+    ├── examples/         # Usage examples (10 files)
     └── workflows/        # Process guides (5 files)
 ```
 

@@ -50,6 +50,8 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | **Monorepo & Complex Projects** | Multi-package architecture, cross-cutting concerns | ~4.5K | [View](prompts/english/agents/monorepo-complex-projects-prompt.md) |
 | **Error Handling & Resilience** | Circuit breakers, retry patterns, graceful degradation | ~4K | [View](prompts/english/agents/error-handling-resilience-prompt.md) |
 | **Developer Experience & Tooling** | ESLint, Prettier, Git hooks, DX metrics, onboarding | ~3.5K | [View](prompts/english/agents/developer-experience-tooling-prompt.md) |
+| **Database Design & Optimization** | Schema design, indexing, query tuning, migrations | ~4K | [View](prompts/english/agents/database-optimization-prompt.md) |
+| **UI/UX & Design Systems** | Design tokens, components, a11y, theming, Storybook | ~4.5K | [View](prompts/english/agents/ui-design-systems-prompt.md) |
 
 ### 📋 Foundation & Project Prompts (Interactive Sessions)
 
@@ -142,6 +144,8 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 | Monorepo Architecture | Agent System + Monorepo & Complex Projects |
 | Error Handling | Agent System + Error Handling & Resilience |
 | Improve Developer Experience | Agent System + Developer Experience & Tooling |
+| Database Optimization | Agent System + Database Design & Optimization |
+| Build Design System | Agent System + UI/UX & Design Systems |
 | Full Claude Code Setup | Agent System + Workflow + Modes + Token Optimization |
 | React / Vue App | Foundation + Web Development |
 | REST API | Foundation + API Development |
@@ -162,10 +166,10 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 ```
 prompts/
 └── english/
-    ├── agents/          # Agent-optimized prompts (32 files)
+    ├── agents/          # Agent-optimized prompts (34 files)
     ├── base/            # Foundation prompt
     ├── project-types/   # Domain-specific prompts (11 files)
-    ├── examples/        # Real-world usage examples (8 files)
+    ├── examples/        # Real-world usage examples (10 files)
     └── workflows/       # APEI methodology, prompt selection, troubleshooting, setup & best practices guides
 ```
 

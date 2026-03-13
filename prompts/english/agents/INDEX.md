@@ -38,6 +38,8 @@
 | 30 | **Monorepo & Complex Projects** | SCALE protocol, multi-package, cross-cutting concerns | ~4.5K | [View](monorepo-complex-projects-prompt.md) |
 | 31 | **Error Handling & Resilience** | RESILIENCE protocol, circuit breakers, retry, graceful degradation | ~4K | [View](error-handling-resilience-prompt.md) |
 | 32 | **Developer Experience & Tooling** | DX protocol, ESLint, Prettier, Git hooks, onboarding | ~3.5K | [View](developer-experience-tooling-prompt.md) |
+| 33 | **Database Design & Optimization** | QUERY protocol, schema design, indexing, query tuning | ~4K | [View](database-optimization-prompt.md) |
+| 34 | **UI/UX & Design Systems** | DESIGN protocol, tokens, components, a11y, theming | ~4.5K | [View](ui-design-systems-prompt.md) |
 
 ---
 
@@ -91,6 +93,8 @@ Combine Agent System + specialist prompt:
 | Monorepo / complex project | Monorepo & Complex Projects |
 | Error handling & resilience | Error Handling & Resilience |
 | Developer tooling & DX | Developer Experience & Tooling |
+| Database design & optimization | Database Design & Optimization |
+| UI components & design system | UI/UX & Design Systems |
 
 ### Option 3: Minimal Context
 Use **Quick Reference** alone when token budget is tight (< 2K).

@@ -38,6 +38,8 @@
 | AI agent, monorepo | Agent System + Monorepo & Complex Projects |
 | AI agent, error handling | Agent System + Error Handling & Resilience |
 | AI agent, DX / tooling | Agent System + Developer Experience & Tooling |
+| AI agent, DB optimization | Agent System + Database Design & Optimization |
+| AI agent, design system | Agent System + UI/UX & Design Systems |
 | Claude Code, mode planning | Agent System + Claude Code Modes |
 | Claude Code, token efficiency | Agent System + Claude Code Tokens |
 | Claude Code, project setup | Agent System + Claude Code Workflow |

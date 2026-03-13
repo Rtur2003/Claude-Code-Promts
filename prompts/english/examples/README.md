@@ -12,6 +12,8 @@ Real-world scenarios demonstrating prompt usage.
 | [Cloud Infrastructure](cloud-infrastructure-example.md) | Deploying with Terraform + K8s on AWS | Agent System + Cloud & Infrastructure |
 | [AI Agent](ai-agent-example.md) | Building an AI-powered code review agent | Agent System + AI & LLM Integration |
 | [Performance Optimization](performance-optimization-example.md) | Optimizing a slow e-commerce API | Agent System + Performance Optimization |
+| [Testing Strategies](testing-strategies-example.md) | Adding tests to an untested Express API | Agent System + Testing Strategies |
+| [Migration & Upgrade](migration-upgrade-example.md) | Express.js to NestJS zero-downtime migration | Agent System + Migration & Upgrade |
 
 ## Using Examples
 
