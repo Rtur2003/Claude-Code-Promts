@@ -74,9 +74,9 @@ Production-ready system prompts for Claude AI and coding agents. Built on the **
 
 ```
 1. Create CLAUDE.md in your project root
-2. Paste content from claude-agent-system-prompt.md into CLAUDE.md
+2. Paste content from prompts/english/agents/claude-agent-system-prompt.md into CLAUDE.md
 3. Create .claude/commands/ for task-specific prompts
-4. See the full setup guide: workflows/claude-code-setup-guide.md
+4. See the full setup guide: prompts/english/workflows/claude-code-setup-guide.md
 ```
 
 ### For AI Agents (Claude Code, Copilot)

@@ -435,7 +435,7 @@ For small projects, embed the core prompt directly in your `CLAUDE.md`:
 # CLAUDE.md
 
 ## System Prompt
-[Paste the content of claude-agent-system-prompt.md here]
+[Paste the content of prompts/english/agents/claude-agent-system-prompt.md here]
 
 ## Project Overview
 [Your project-specific context]
