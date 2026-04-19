@@ -208,8 +208,6 @@ Common recommendation patterns:
 
 ### Progress Update
 ```markdown
-## Progress Update
-
 **Completed**
 - [x] Step N: [result]
 
