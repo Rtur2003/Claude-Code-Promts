@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 - **Primary documentation navigation** — Added `llms.txt` links in README and QUICK-START for faster agent/document discovery
+- **Internal example link hygiene** — Replaced non-existent markdown links in prompt examples with explicit example-path code literals to avoid broken internal references
 - **Contribution checklist** — Added `llms.txt` maintenance check when core navigation or prompt structure changes
 - **Outcome-first repository structure** — Reworked README, QUICK-START, USAGE, and prompt indexes around “Agent System first + one specialist” selection
 - **Agent catalog model** — Split active catalog from archived prompts and removed archived prompts from active listings

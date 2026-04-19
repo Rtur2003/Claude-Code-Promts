@@ -464,7 +464,7 @@ npm test
 
 ## API Documentation
 
-See [API.md](docs/API.md)
+See `docs/API.md` (example path).
 
 ## Contributing
 
