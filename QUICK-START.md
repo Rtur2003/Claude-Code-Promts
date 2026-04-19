@@ -12,6 +12,8 @@
 
 ## 2) Add One Specialist Only If Needed
 
+Need criteria: add a specialist only when Agent System alone cannot provide domain-specific protocols for your task.
+
 | Need | Add |
 |------|-----|
 | Architecture decisions | Architecture Patterns |

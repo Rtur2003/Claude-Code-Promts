@@ -2,7 +2,7 @@
 
 Production-ready prompt library for Claude AI and coding agents, built on the **APEI cycle**: Analyze → Plan → Execute → Iterate.
 
-**Repository default is English-only and remains enforced.**
+**Repository default is English-only and remains enforced to keep quality, tone, and contribution standards consistent across all prompts.**
 
 ---
 

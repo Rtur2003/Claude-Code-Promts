@@ -47,6 +47,10 @@ Each recommendation must end with one of:
 - A concrete tool
 - A concrete validation step
 
+Example:
+- Vague: "Improve performance and keep it reliable."
+- Outcome-focused: "Run EXPLAIN ANALYZE on the slow query, add a composite index on `(user_id, created_at)`, and verify p95 latency is below 120ms."
+
 ## Success Metrics
 
 - Fewer prompts in active catalog without capability loss
