@@ -24,7 +24,7 @@ Need criteria: add a specialist only when Agent System alone cannot provide doma
 
 ## 3) Use APEI Loop
 
-```
+```text
 ANALYZE → PLAN → EXECUTE → ITERATE
 ```
 

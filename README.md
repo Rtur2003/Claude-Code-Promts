@@ -112,7 +112,7 @@ Guide: [Portfolio Maintenance Guide](prompts/english/workflows/portfolio-mainten
 
 ## Repository Structure
 
-```
+```text
 prompts/
 └── english/
     ├── agents/          # Active agent prompts

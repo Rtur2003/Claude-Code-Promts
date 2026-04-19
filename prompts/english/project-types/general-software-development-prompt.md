@@ -116,7 +116,7 @@ try {
 - **Self-Validating**: Clear pass/fail
 - **Timely**: Written with or before code
 
-**Pattern: Arrange-Act-Assert**
+#### Pattern: Arrange-Act-Assert
 ```python
 def test_user_creation():
     # Arrange: Set up test conditions
@@ -593,7 +593,7 @@ db.insert_many(items)  # 1 query
 - Handle checked exceptions appropriately
 - Use Maven or Gradle for builds
 
-### C#
+### C\#
 - Follow .NET naming conventions
 - Use async/await for I/O operations
 - LINQ for collections

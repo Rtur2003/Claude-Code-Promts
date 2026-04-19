@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Prompt archive index** — Added `prompts/english/agents/archive/INDEX.md` with keep/merge/archive classification and rationale
 - **Portfolio Maintenance Guide** — Added `prompts/english/workflows/portfolio-maintenance-guide.md` with monthly + quarterly governance cadence
 - **Compatibility stubs for archived prompts** — Added deprecation redirect files for archived prompt paths
+- **Repository markdownlint baseline config** — Added `.markdownlint-cli2.jsonc` aligned with current repository Markdown conventions to reduce noisy lint failures on dense prompt docs
 
 ### Changed
 - **Primary documentation navigation** — Added `llms.txt` links in README and QUICK-START for faster agent/document discovery
@@ -18,6 +19,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Outcome-first repository structure** — Reworked README, QUICK-START, USAGE, and prompt indexes around “Agent System first + one specialist” selection
 - **Agent catalog model** — Split active catalog from archived prompts and removed archived prompts from active listings
 - **Contribution quality gates** — Added no-vague-advice rule and archive workflow to CONTRIBUTING and CLAUDE guidance
+- **Core docs code fences** — Added explicit `text` language tags to unlabeled fenced blocks in README and QUICK-START
+- **Lint compatibility tuning** — Adjusted markdownlint baseline for intentional prompt-document patterns (collapsible HTML sections and Makefile tabs in code blocks)
+- **Prompt formatting cleanup** — Fixed heading style issues in `general-software-development-prompt.md` (`Arrange-Act-Assert` heading and `C#` heading rendering)
 
 ### Removed
 - **Five prompts from active catalog** — Error Analysis, Project Workflow, Integration Guardian, Claude Code Token Optimization, and Prompt Chaining moved to archive
