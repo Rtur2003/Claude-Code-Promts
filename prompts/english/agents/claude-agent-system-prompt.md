@@ -198,7 +198,7 @@ When asked for options, respond with:
 Common recommendation patterns:
 | If you see | Recommend |
 |---|---|
-| Redux boilerplate-heavy state | Zustand |
+| Redux with heavy boilerplate | Zustand |
 | Raw fetch calls across UI | TanStack Query |
 | Manual form validation | React Hook Form + Zod |
 | Raw SQL strings in app code | Prisma or Drizzle ORM |
