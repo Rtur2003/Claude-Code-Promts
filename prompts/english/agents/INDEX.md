@@ -1,122 +1,53 @@
 # Agent Prompts Index
 
-> Optimized for autonomous AI coding agents — Claude Code, GitHub Copilot, etc.
+> Outcome-first catalog for autonomous AI coding agents.
 
-## Catalog
+## Core Rule
 
-| # | Prompt | Purpose | Tokens | File |
-|---|--------|---------|--------|------|
-| 1 | **Agent System** ⭐ | Core APEI operating system | ~1.5K | [View](claude-agent-system-prompt.md) |
-| 2 | **Error Analysis** | Debugging & root cause analysis | ~2K | [View](error-analysis-prompt.md) |
-| 3 | **Project Workflow** | End-to-end project lifecycle | ~2.5K | [View](project-workflow-prompt.md) |
-| 4 | **Quick Reference** | Cheat sheet (minimal tokens) | ~0.8K | [View](agent-quick-reference.md) |
-| 5 | **Code Review** | Systematic PR review | ~2K | [View](code-review-prompt.md) |
-| 6 | **Security Audit** | Vulnerability detection, cloud security, supply chain | ~3.5K | [View](security-audit-prompt.md) |
-| 7 | **Refactoring** | Code smell detection & SAFE protocol | ~2.5K | [View](refactoring-prompt.md) |
-| 8 | **Testing** | TEST protocol, TDD, contract & chaos testing | ~4K | [View](testing-strategies-prompt.md) |
-| 9 | **Documentation** | CLEAR protocol, API docs | ~2.5K | [View](documentation-prompt.md) |
-| 10 | **Performance** | MEASURE protocol, profiling, CDN & edge | ~3.5K | [View](performance-optimization-prompt.md) |
-| 11 | **Git & VCS** | BRANCH protocol, commits | ~2.5K | [View](git-version-control-prompt.md) |
-| 12 | **Integration Guardian** | i18n, tokens, contracts, a11y | ~3.5K | [View](integration-guardian-prompt.md) |
-| 13 | **Claude Code Modes** ⭐ | Mode transitions, /think, /ultrathink | ~2.5K | [View](claude-code-modes-prompt.md) |
-| 14 | **Claude Code Tokens** | Token optimization, SAVE protocol | ~2.5K | [View](claude-code-token-optimization-prompt.md) |
-| 15 | **Claude Code Workflow** | CLAUDE.md, hooks, permissions, MCP | ~3K | [View](claude-code-workflow-prompt.md) |
-| 16 | **Technology Stack** ⭐ | Library discovery, modern tools, hidden gems | ~4K | [View](technology-stack-prompt.md) |
-| 17 | **Architecture Patterns** | System design, event sourcing, saga, serverless | ~4.5K | [View](architecture-patterns-prompt.md) |
-| 18 | **Full-Stack Development** | Next.js/Nuxt/SvelteKit, WebSocket, background jobs | ~4.5K | [View](fullstack-development-prompt.md) |
-| 19 | **Prompt Chaining** | Multi-step workflows, context management | ~3K | [View](prompt-chaining-prompt.md) |
-| 20 | **AI & LLM Integration** | AUGMENT protocol, RAG, agents, AI safety | ~3.5K | [View](ai-llm-integration-prompt.md) |
-| 21 | **Accessibility Audit** | ACCESS protocol, WCAG 2.2, a11y testing | ~3K | [View](accessibility-audit-prompt.md) |
-| 22 | **Migration & Upgrade** | MIGRATE protocol, framework & DB migrations | ~2.5K | [View](migration-upgrade-prompt.md) |
-| 23 | **Monitoring & Observability** | OBSERVE protocol, logs, metrics, traces | ~3K | [View](monitoring-observability-prompt.md) |
-| 24 | **API Design & GraphQL** | SCHEMA protocol, DataLoader, caching, contracts | ~4K | [View](api-design-graphql-prompt.md) |
-| 25 | **Cloud & Infrastructure** | CLOUD protocol, IaC, multi-region, K8s, cost | ~4K | [View](cloud-infrastructure-prompt.md) |
-| 26 | **Data Engineering** | PIPELINE protocol, dbt, streaming, data quality | ~4K | [View](data-engineering-prompt.md) |
-| 27 | **Compliance & Governance** | GOVERN protocol, GDPR, HIPAA, SOC 2, STRIDE | ~3.5K | [View](compliance-governance-prompt.md) |
-| 28 | **Debugging & Troubleshooting** | DEBUG protocol, production debugging, incidents | ~3.5K | [View](debugging-troubleshooting-prompt.md) |
-| 29 | **Multi-Agent Orchestration** | ORCHESTRATE protocol, agent coordination, parallel execution | ~4K | [View](multi-agent-orchestration-prompt.md) |
-| 30 | **Monorepo & Complex Projects** | SCALE protocol, multi-package, cross-cutting concerns | ~4.5K | [View](monorepo-complex-projects-prompt.md) |
-| 31 | **Error Handling & Resilience** | RESILIENCE protocol, circuit breakers, retry, graceful degradation | ~4K | [View](error-handling-resilience-prompt.md) |
-| 32 | **Developer Experience & Tooling** | DX protocol, ESLint, Prettier, Git hooks, onboarding | ~3.5K | [View](developer-experience-tooling-prompt.md) |
-| 33 | **Database Design & Optimization** | QUERY protocol, schema design, indexing, query tuning | ~4K | [View](database-optimization-prompt.md) |
-| 34 | **UI/UX & Design Systems** | DESIGN protocol, tokens, components, a11y, theming | ~4.5K | [View](ui-design-systems-prompt.md) |
+Start with [Agent System](claude-agent-system-prompt.md). Add one specialist prompt only if required.
 
----
+## Active Catalog (Keep)
 
-## Claude Code-Specific
+| Prompt | Use when | Do not use when | File |
+|--------|----------|-----------------|------|
+| Agent System ⭐ | Any autonomous task | You only need minimal guidance | [View](claude-agent-system-prompt.md) |
+| Quick Reference | Token budget is extremely tight | You need specialist depth | [View](agent-quick-reference.md) |
+| Code Review | Reviewing a PR/change set | Writing a feature from scratch | [View](code-review-prompt.md) |
+| Security Audit | Security risk is material | No threat model is in scope | [View](security-audit-prompt.md) |
+| Refactoring | Reducing complexity safely | Active production incident | [View](refactoring-prompt.md) |
+| Testing | Building test strategy and coverage | You only need docs | [View](testing-strategies-prompt.md) |
+| Documentation | Producing high-quality docs | Root-cause debugging task | [View](documentation-prompt.md) |
+| Performance | Throughput/latency/cost bottlenecks | Core issue is correctness | [View](performance-optimization-prompt.md) |
+| Git & VCS | Branching/commit/release hygiene | App architecture decision | [View](git-version-control-prompt.md) |
+| Accessibility Audit | Accessibility and WCAG compliance | Backend-only systems task | [View](accessibility-audit-prompt.md) |
+| Migration & Upgrade | Framework/runtime/DB migration | Greenfield build | [View](migration-upgrade-prompt.md) |
+| Monitoring & Observability | Logs/metrics/traces/alerts | Pure content update | [View](monitoring-observability-prompt.md) |
+| Debugging & Troubleshooting | Incident/root-cause diagnostics | Net-new architecture design | [View](debugging-troubleshooting-prompt.md) |
+| Claude Code Modes ⭐ | Managing Claude Code thinking modes | Non-Claude context only | [View](claude-code-modes-prompt.md) |
+| Claude Code Workflow | CLAUDE.md/hooks/permissions/MCP | No Claude Code setup task | [View](claude-code-workflow-prompt.md) |
+| Technology Stack ⭐ | Tool/library selection | Stack already fixed | [View](technology-stack-prompt.md) |
+| Architecture Patterns | Architecture and trade-off design | Small local fix | [View](architecture-patterns-prompt.md) |
+| Full-Stack Development | End-to-end web app delivery | Narrow scoped layer-only task | [View](fullstack-development-prompt.md) |
+| AI & LLM Integration | RAG/vector/agent integration | No AI component exists | [View](ai-llm-integration-prompt.md) |
+| API Design & GraphQL | API contracts/schema decisions | UI-only work | [View](api-design-graphql-prompt.md) |
+| Cloud & Infrastructure | IaC/K8s/multi-region operations | Pure local utility task | [View](cloud-infrastructure-prompt.md) |
+| Data Engineering | Pipelines/streaming/data quality | Standard app CRUD only | [View](data-engineering-prompt.md) |
+| Compliance & Governance | Regulated scope and controls | Non-regulated prototype | [View](compliance-governance-prompt.md) |
+| Multi-Agent Orchestration | Coordinating parallel agents | Single-agent linear work | [View](multi-agent-orchestration-prompt.md) |
+| Monorepo & Complex Projects | Multi-package coordination | Small standalone repo | [View](monorepo-complex-projects-prompt.md) |
+| Error Handling & Resilience | Fault tolerance and reliability | Static content updates | [View](error-handling-resilience-prompt.md) |
+| Developer Experience & Tooling | Lint/hooks/dev workflow standards | Core feature implementation | [View](developer-experience-tooling-prompt.md) |
+| Database Design & Optimization | Schema/index/query optimization | No data layer scope | [View](database-optimization-prompt.md) |
+| UI/UX & Design Systems | Component systems/theming/a11y UI | Backend-only task | [View](ui-design-systems-prompt.md) |
 
-These prompts are designed specifically for Claude Code's native features:
+## Archived (Merge/Archive)
 
-| Task | Combine With |
-|------|-------------|
-| Mode planning | Claude Code Modes |
-| Token efficiency | Claude Code Tokens |
-| Project setup | Claude Code Workflow |
-| Full Claude Code setup | Modes + Tokens + Workflow |
+| Prompt | Status | Merged Into | File |
+|--------|--------|-------------|------|
+| Error Analysis | Archive | Debugging & Troubleshooting + Agent System | [View](archive/error-analysis-prompt.md) |
+| Project Workflow | Archive | Agent System + Technology Stack + Full-Stack Development | [View](archive/project-workflow-prompt.md) |
+| Integration Guardian | Archive | Code Review + Testing + Monitoring & Observability | [View](archive/integration-guardian-prompt.md) |
+| Claude Code Token Optimization | Archive | Claude Code Modes + Claude Code Workflow | [View](archive/claude-code-token-optimization-prompt.md) |
+| Prompt Chaining | Archive | Agent System + Multi-Agent Orchestration | [View](archive/prompt-chaining-prompt.md) |
 
----
-
-## Usage
-
-### Option 1: Full Agent Setup
-Use **Agent System Prompt** as base. It contains everything for autonomous operation.
-
-### Option 2: Task-Specific
-Combine Agent System + specialist prompt:
-
-| Task | Combine With |
-|------|-------------|
-| Debugging | Error Analysis or Debugging & Troubleshooting |
-| Production incident | Debugging & Troubleshooting |
-| New project | Project Workflow |
-| PR review | Code Review |
-| Security check | Security Audit |
-| Compliance audit | Compliance & Governance |
-| Tech debt | Refactoring |
-| Test coverage | Testing |
-| Writing docs | Documentation |
-| Slow code | Performance |
-| Git workflow | Git & VCS |
-| System integrity | Integration Guardian |
-| Tool/library selection | Technology Stack |
-| System architecture | Architecture Patterns |
-| Full-stack app | Full-Stack Development |
-| API design | API Design & GraphQL |
-| Cloud deployment | Cloud & Infrastructure |
-| Data pipelines | Data Engineering |
-| Complex multi-step task | Prompt Chaining |
-| AI/LLM features | AI & LLM Integration |
-| Accessibility check | Accessibility Audit |
-| Framework/DB migration | Migration & Upgrade |
-| Monitoring & alerting | Monitoring & Observability |
-| Multi-agent coordination | Multi-Agent Orchestration |
-| Monorepo / complex project | Monorepo & Complex Projects |
-| Error handling & resilience | Error Handling & Resilience |
-| Developer tooling & DX | Developer Experience & Tooling |
-| Database design & optimization | Database Design & Optimization |
-| UI components & design system | UI/UX & Design Systems |
-
-### Option 3: Minimal Context
-Use **Quick Reference** alone when token budget is tight (< 2K).
-
----
-
-## Token Budget Guide
-
-| Budget | Recommended |
-|--------|-------------|
-| < 2K tokens | Quick Reference only |
-| 2K–8K tokens | Agent System Prompt |
-| 8K+ tokens | Agent System + specialist + project-type |
-
----
-
-## Agent vs Traditional Prompts
-
-| Feature | Traditional | Agent |
-|---------|:-----------:|:-----:|
-| Token usage | Verbose | Optimized |
-| Structure | Descriptive | Action-oriented |
-| Execution | Manual guidance | Autonomous |
-| Error handling | Reactive | Proactive |
-| Workflow | Linear | Self-directing loops |
+See full rationale in [Archive Index](archive/INDEX.md).

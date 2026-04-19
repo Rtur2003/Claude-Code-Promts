@@ -375,6 +375,6 @@ Fixes #567
 
 ## Related Prompts
 
-- [Error Analysis Prompt](../agents/error-analysis-prompt.md)
+- [Debugging & Troubleshooting Prompt](../agents/debugging-troubleshooting-prompt.md)
 - [Performance Optimization Prompt](../agents/performance-optimization-prompt.md)
 - [Database Design Prompt](../project-types/database-sql-prompt.md)

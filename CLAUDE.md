@@ -20,12 +20,13 @@
 └── prompts/
     └── english/
         ├── INDEX.md           # All prompts organized by category
-        ├── agents/            # Agent-optimized prompts (34 files)
-        │   └── INDEX.md
+        ├── agents/            # Active agent prompts + compatibility stubs
+        │   ├── INDEX.md
+        │   └── archive/       # Archived prompts removed from active catalog
         ├── base/              # Foundation prompt (universal best practices)
         ├── project-types/     # Domain-specific prompts (11 files: web, API, ML, mobile, blockchain, desktop, etc.)
         ├── examples/          # Real-world usage examples (10 files)
-        └── workflows/         # APEI methodology, prompt selection, troubleshooting, setup & best practices guides
+        └── workflows/         # APEI methodology, prompt selection, troubleshooting, setup, and maintenance guides
 ```
 
 ## File Naming Conventions
@@ -108,6 +109,12 @@ No build system — this is a pure Markdown repository.
 2. Ensure all relative links still resolve
 3. Keep `CHANGELOG.md` updated for notable changes
 
+### Archive overlapping prompts
+1. Classify prompt as keep / merge / archive
+2. Move archived prompt to `prompts/english/agents/archive/`
+3. Add archive rationale in `prompts/english/agents/archive/INDEX.md`
+4. Update active catalogs (`README.md`, `prompts/english/agents/INDEX.md`, `prompts/english/INDEX.md`)
+
 ## Quality Checklist
 
 Before submitting changes:
@@ -119,6 +126,7 @@ Before submitting changes:
 - [ ] Follows existing naming conventions (`kebab-case-prompt.md`)
 - [ ] New prompts include Role, Protocol, Phases, and Remember sections
 - [ ] README.md catalog tables updated if adding new prompts
+- [ ] Recommendations are concrete (no vague advice)
 
 ## Commit Messages
 

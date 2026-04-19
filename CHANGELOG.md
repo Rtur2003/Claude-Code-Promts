@@ -7,6 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- **Prompt archive index** — Added `prompts/english/agents/archive/INDEX.md` with keep/merge/archive classification and rationale
+- **Portfolio Maintenance Guide** — Added `prompts/english/workflows/portfolio-maintenance-guide.md` with monthly + quarterly governance cadence
+- **Compatibility stubs for archived prompts** — Added deprecation redirect files for archived prompt paths
+
+### Changed
+- **Outcome-first repository structure** — Reworked README, QUICK-START, USAGE, and prompt indexes around “Agent System first + one specialist” selection
+- **Agent catalog model** — Split active catalog from archived prompts and removed archived prompts from active listings
+- **Contribution quality gates** — Added no-vague-advice rule and archive workflow to CONTRIBUTING and CLAUDE guidance
+
+### Removed
+- **Five prompts from active catalog** — Error Analysis, Project Workflow, Integration Guardian, Claude Code Token Optimization, and Prompt Chaining moved to archive
+
+### Added
 - **Database Design & Optimization prompt** — QUERY protocol for schema design, normalization decisions, composite indexing strategy, EXPLAIN ANALYZE workflow, N+1 detection, connection pooling, zero-downtime migration patterns, and performance monitoring queries
 - **UI/UX & Design Systems prompt** — DESIGN protocol for design token hierarchy (global → alias → component), variant-driven components (CVA), compound component pattern, accessibility by default (WCAG 2.2), responsive patterns, Storybook documentation, theme system with dark mode, and visual regression testing
 - **Testing Strategies example** — Legacy Express API walkthrough: 0% → 84% coverage with Vitest, test factories, database isolation, integration tests with supertest, concurrent race condition testing, CI pipeline with coverage gates
