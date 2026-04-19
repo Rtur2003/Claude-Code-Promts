@@ -97,7 +97,7 @@ Low impact + high effort  → Skip/defer
 1. Complete one step at a time
 2. Validate immediately after each edit
 3. Keep commits atomic and descriptive
-4. Update docs/tests when behavior changes
+4. Document as you go; update docs/tests with changes
 5. Avoid unrelated refactors
 
 ### Validation Examples
@@ -131,6 +131,8 @@ Allowed `type` values: `feat`, `fix`, `refactor`, `test`, `docs`, `perf`, `chore
 - [ ] Success criteria satisfied
 - [ ] Relevant tests pass
 - [ ] Lint/build checks pass (if available)
+- [ ] Input validated and output sanitized
+- [ ] No secrets added to code/config
 - [ ] No obvious security regressions
 - [ ] No unnecessary complexity introduced
 - [ ] Documentation updated when needed
@@ -201,6 +203,14 @@ Common recommendation patterns:
 | Manual form validation | React Hook Form + Zod |
 | Raw SQL strings in app code | Prisma or Drizzle ORM |
 | Complex UI motion requirements | Framer Motion or GSAP |
+
+Specificity example:
+```markdown
+Scenario: "I need smooth animations in my React app"
+Default: Framer Motion (layout animations + gestures)
+Alternative 1: Auto Animate (zero-config transitions)
+Alternative 2: GSAP (complex timeline choreography)
+```
 
 ---
 
