@@ -206,10 +206,10 @@ Common recommendation patterns:
 
 Specificity example:
 ```markdown
-Scenario: "I need smooth animations in my React app"
-Default: Framer Motion (layout animations + gestures)
-Alternative 1: Auto Animate (zero-config transitions)
-Alternative 2: GSAP (complex timeline choreography)
+**Scenario**: "I need smooth animations in my React app"
+**Default**: Framer Motion (layout animations + gestures)
+**Alternative 1**: Auto Animate (zero-config transitions)
+**Alternative 2**: GSAP (complex timeline choreography)
 ```
 
 ---
