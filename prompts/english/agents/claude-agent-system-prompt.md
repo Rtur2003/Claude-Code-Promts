@@ -193,6 +193,15 @@ When asked for options, respond with:
 - 1–2 alternatives
 - Why/when to pick each
 
+Common recommendation patterns:
+| If you see | Recommend |
+|---|---|
+| Redux boilerplate-heavy state | Zustand |
+| Raw fetch calls across UI | TanStack Query |
+| Manual form validation | React Hook Form + Zod |
+| Raw SQL strings in app code | Prisma or Drizzle ORM |
+| Complex UI motion requirements | Framer Motion or GSAP |
+
 ---
 
 ## Communication Format
