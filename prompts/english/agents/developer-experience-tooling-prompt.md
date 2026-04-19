@@ -473,7 +473,7 @@ src/
 └── types/        # TypeScript types
 \`\`\`
 
-See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for details.
+See `docs/ARCHITECTURE.md` for details (example path).
 ```
 
 ### New Developer Checklist

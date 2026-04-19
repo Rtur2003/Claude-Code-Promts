@@ -1,92 +1,63 @@
 # Contributing
 
+## Scope
+
+This repository is **English-only** and **Markdown-only**.
+
 ## How to Contribute
 
 | Type | Description |
 |------|-------------|
-| **New Project Types** | Desktop apps, data engineering, etc. |
-| **New Agent Types** | Specialized agent prompts with protocol acronyms |
-| **New Examples** | Real-world walkthroughs demonstrating APEI cycle |
-| **Improvements** | Better practices, clearer instructions, examples |
-| **Bug Fixes** | Typos, broken links, formatting issues |
+| New prompts | Agent, project-type, or workflow prompts |
+| Improvements | Better structure, clarity, outcome quality |
+| Examples | Real-world APEI walkthroughs |
+| Maintenance | Link fixes, catalog cleanup, archive actions |
 
-## Quick Setup
+## Prompt Quality Standard
 
-```bash
-git clone https://github.com/Rtur2003/Claude-Code-Promts.git
-cd Claude-Code-Promts
-git checkout -b feature/your-feature-name
-```
+Every prompt must contain:
+- `## Role`
+- `## Protocol / Core Loop`
+- `## Phases`
+- `## Remember` (final section)
 
-## File Structure
+### No Vague Advice Rule
 
-```
-prompts/
-└── english/
-    ├── agents/           # Agent-optimized prompts (34 files)
-    ├── base/             # Foundation prompts
-    ├── project-types/    # Domain-specific prompts (11 files)
-    ├── examples/         # Usage examples (10 files)
-    └── workflows/        # Process guides (5 files)
-```
+Every recommendation should end with a concrete:
+- decision, or
+- tool, or
+- validation step.
 
-## Naming Convention
+## Archive Workflow
 
-| Type | Format | Example |
-|------|--------|---------|
-| Prompts | `kebab-case-prompt.md` | `code-review-prompt.md` |
-| Guides | `kebab-case-guide.md` | `iterative-development-guide.md` |
-| Index | `INDEX.md` | `INDEX.md` |
+If a prompt is low-value or overlapping:
+1. Classify as keep / merge / archive
+2. Move to `prompts/english/agents/archive/`
+3. Update active indexes and README
+4. Add rationale to archive index
 
-## Prompt Template
+## Validation Before PR
 
-```markdown
-# Prompt Title
-
-> **Key Feature 1** | **Key Feature 2** | **Key Feature 3**
-
-## Role
-[Define what this prompt does]
-
-## Protocol / Core Loop
-[Main workflow]
-
-## Phases
-[Phase details with templates and checklists]
-
-## Remember
-[Key takeaways]
-```
-
-## Checklist Before Submitting
-
-- [ ] Content is accurate and follows best practices
 - [ ] Markdown renders correctly
 - [ ] No spelling or grammar errors
-- [ ] INDEX files updated
-- [ ] Links work correctly
-- [ ] Follows existing style
+- [ ] Internal relative links resolve
+- [ ] Hypothetical example paths are plain code literals (not Markdown links)
+- [ ] Catalog/index entries are updated
+- [ ] `llms.txt` is updated when primary navigation or core prompts change
+- [ ] No vague advice language
 
-## Commit Messages
+Optional local checks:
 
 ```bash
-feat: add security audit prompt       # New features
-fix: correct typo in API prompt        # Fixes
-docs: improve README examples          # Documentation
-update: enhance code review checklist  # Updates
+grep -r '\[.*\](.*\.md)' prompts/ | head
+npx markdownlint-cli2 '**/*.md'
 ```
 
-## Pull Request Process
+## Commit Message Style
 
-1. Create branch → make changes → commit
-2. Push and create PR with clear description
-3. Address review feedback
-4. Merge after approval
-
-## License
-
-Contributions are licensed under MIT License.
-
----
-
-Thank you for contributing! 🚀
+```text
+feat: add new prompt
+fix: correct catalog link
+docs: improve usage guidance
+update: archive overlapping prompt
+```

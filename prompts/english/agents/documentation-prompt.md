@@ -184,7 +184,7 @@ const result = await client.doSomething();
 
 ## API Reference
 
-See [API Documentation](docs/API.md)
+See `docs/API.md` (example path).
 
 ## Configuration
 
@@ -195,11 +195,11 @@ See [API Documentation](docs/API.md)
 
 ## Contributing
 
-See [Contributing Guide](CONTRIBUTING.md)
+See `CONTRIBUTING.md` (example path).
 
 ## License
 
-MIT License - see [LICENSE](LICENSE)
+MIT License — see `LICENSE`.
 ```
 
 ### API Documentation Template

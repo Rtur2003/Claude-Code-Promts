@@ -7,6 +7,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- **LLM-friendly repository index** — Added root `llms.txt` with concise start points, core prompt, governance files, key specialist prompts, and archive index
+- **Prompt archive index** — Added `prompts/english/agents/archive/INDEX.md` with keep/merge/archive classification and rationale
+- **Portfolio Maintenance Guide** — Added `prompts/english/workflows/portfolio-maintenance-guide.md` with monthly + quarterly governance cadence
+- **Compatibility stubs for archived prompts** — Added deprecation redirect files for archived prompt paths
+- **Repository markdownlint baseline config** — Added `.markdownlint-cli2.jsonc` aligned with current repository Markdown conventions to reduce noisy lint failures on dense prompt docs
+
+### Changed
+- **Primary documentation navigation** — Added `llms.txt` links in README and QUICK-START for faster agent/document discovery
+- **Internal example link hygiene** — Replaced non-existent markdown links in prompt examples with explicit example-path code literals to avoid broken internal references
+- **Contribution guidance for example paths** — Added a checklist rule in `CONTRIBUTING.md` to keep hypothetical paths as code literals instead of Markdown links
+- **Contribution checklist** — Added `llms.txt` maintenance check when core navigation or prompt structure changes
+- **Outcome-first repository structure** — Reworked README, QUICK-START, USAGE, and prompt indexes around “Agent System first + one specialist” selection
+- **Agent catalog model** — Split active catalog from archived prompts and removed archived prompts from active listings
+- **Contribution quality gates** — Added no-vague-advice rule and archive workflow to CONTRIBUTING and CLAUDE guidance
+- **Core docs code fences** — Added explicit `text` language tags to unlabeled fenced blocks in README and QUICK-START
+- **Lint compatibility tuning** — Adjusted markdownlint baseline for intentional prompt-document patterns (collapsible HTML sections and Makefile tabs in code blocks)
+- **Prompt formatting cleanup** — Fixed heading style issues in `general-software-development-prompt.md` (`Arrange-Act-Assert` heading and `C#` heading rendering)
+
+### Removed
+- **Five prompts from active catalog** — Error Analysis, Project Workflow, Integration Guardian, Claude Code Token Optimization, and Prompt Chaining moved to archive
+
+### Added
 - **Database Design & Optimization prompt** — QUERY protocol for schema design, normalization decisions, composite indexing strategy, EXPLAIN ANALYZE workflow, N+1 detection, connection pooling, zero-downtime migration patterns, and performance monitoring queries
 - **UI/UX & Design Systems prompt** — DESIGN protocol for design token hierarchy (global → alias → component), variant-driven components (CVA), compound component pattern, accessibility by default (WCAG 2.2), responsive patterns, Storybook documentation, theme system with dark mode, and visual regression testing
 - **Testing Strategies example** — Legacy Express API walkthrough: 0% → 84% coverage with Vitest, test factories, database isolation, integration tests with supertest, concurrent race condition testing, CI pipeline with coverage gates
