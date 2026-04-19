@@ -129,5 +129,6 @@ prompts/
 - [USAGE.md](USAGE.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [CHANGELOG.md](CHANGELOG.md)
+- [llms.txt](llms.txt)
 - [Agent Index](prompts/english/agents/INDEX.md)
 - [Prompt Index](prompts/english/INDEX.md)

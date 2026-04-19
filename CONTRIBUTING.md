@@ -42,6 +42,7 @@ If a prompt is low-value or overlapping:
 - [ ] No spelling or grammar errors
 - [ ] Internal relative links resolve
 - [ ] Catalog/index entries are updated
+- [ ] `llms.txt` is updated when primary navigation or core prompts change
 - [ ] No vague advice language
 
 Optional local checks:

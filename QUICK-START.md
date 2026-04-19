@@ -41,3 +41,4 @@ ANALYZE → PLAN → EXECUTE → ITERATE
 - [Active Agent Index](prompts/english/agents/INDEX.md)
 - [Archived Prompt Index](prompts/english/agents/archive/INDEX.md)
 - [Global Prompt Index](prompts/english/INDEX.md)
+- [LLM Index](llms.txt)

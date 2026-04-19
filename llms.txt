@@ -1,0 +1,29 @@
+# Claude Code Prompts — LLM Index
+
+This repository is English-only and Markdown-only prompt library content.
+
+## Start Here
+- README: ./README.md
+- Quick Start: ./QUICK-START.md
+- Usage: ./USAGE.md
+- Prompt Index: ./prompts/english/INDEX.md
+- Agent Index (active + archived): ./prompts/english/agents/INDEX.md
+
+## Core Prompt
+- Agent System (source of truth): ./prompts/english/agents/claude-agent-system-prompt.md
+
+## Key Governance
+- Contribution Rules: ./CONTRIBUTING.md
+- Portfolio Maintenance (90-day cycle): ./prompts/english/workflows/portfolio-maintenance-guide.md
+- Changelog: ./CHANGELOG.md
+
+## High-Value Specialist Prompts
+- Debugging & Troubleshooting: ./prompts/english/agents/debugging-troubleshooting-prompt.md
+- Security Audit: ./prompts/english/agents/security-audit-prompt.md
+- Architecture Patterns: ./prompts/english/agents/architecture-patterns-prompt.md
+- Multi-Agent Orchestration: ./prompts/english/agents/multi-agent-orchestration-prompt.md
+- Testing Strategies: ./prompts/english/agents/testing-strategies-prompt.md
+
+## Archive
+- Archive Index: ./prompts/english/agents/archive/INDEX.md
+
