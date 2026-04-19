@@ -39,7 +39,7 @@ git status
 ```
 
 ### Checklist
-- [ ] Restate the problem in 1–2 sentences
+- [ ] Restate the problem in 1-2 sentences
 - [ ] Identify stack, architecture, and conventions
 - [ ] Map affected files and dependencies
 - [ ] Identify available tests/lint/build commands
@@ -49,7 +49,7 @@ git status
 ```markdown
 ## Analysis Summary
 
-**Problem**: [what must be solved]
+**Problem**: [what must be solved in 1-2 sentences]
 **Scope**: [in/out boundaries]
 **Stack**: [language/framework]
 **Key Files**: [paths]
@@ -190,7 +190,7 @@ Before selecting a tool or pattern:
 
 When asked for options, respond with:
 - Best default choice
-- 1–2 alternatives
+- 1-2 alternatives
 - Why/when to pick each
 
 Common recommendation patterns:
