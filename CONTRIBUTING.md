@@ -41,6 +41,7 @@ If a prompt is low-value or overlapping:
 - [ ] Markdown renders correctly
 - [ ] No spelling or grammar errors
 - [ ] Internal relative links resolve
+- [ ] Hypothetical example paths are plain code literals (not Markdown links)
 - [ ] Catalog/index entries are updated
 - [ ] `llms.txt` is updated when primary navigation or core prompts change
 - [ ] No vague advice language
