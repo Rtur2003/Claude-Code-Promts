@@ -14,6 +14,8 @@ This repository is English-only and Markdown-only prompt library content.
 
 ## Key Governance
 - Contribution Rules: ./CONTRIBUTING.md
+- Prompt Selector (single source): ./prompts/english/workflows/prompt-selector-guide.md
+- Prompt Review Checklist: ./prompts/english/workflows/prompt-review-checklist.md
 - Portfolio Maintenance (90-day cycle): ./prompts/english/workflows/portfolio-maintenance-guide.md
 - Changelog: ./CHANGELOG.md
 
@@ -26,4 +28,3 @@ This repository is English-only and Markdown-only prompt library content.
 
 ## Archive
 - Archive Index: ./prompts/english/agents/archive/INDEX.md
-

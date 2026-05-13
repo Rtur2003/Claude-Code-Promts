@@ -28,6 +28,9 @@ Every recommendation should end with a concrete:
 - tool, or
 - validation step.
 
+Use this measurable checklist for prompt reviews:
+- [Prompt Review Checklist](prompts/english/workflows/prompt-review-checklist.md)
+
 ## Archive Workflow
 
 If a prompt is low-value or overlapping:
@@ -36,7 +39,9 @@ If a prompt is low-value or overlapping:
 3. Update active indexes and README
 4. Add rationale to archive index
 
-## Validation Before PR
+## Required PR Checklist
+
+Copy this checklist into your PR description and complete all items:
 
 - [ ] Markdown renders correctly
 - [ ] No spelling or grammar errors
@@ -45,6 +50,9 @@ If a prompt is low-value or overlapping:
 - [ ] Catalog/index entries are updated
 - [ ] `llms.txt` is updated when primary navigation or core prompts change
 - [ ] No vague advice language
+- [ ] Prompt changes pass `Role / Protocol / Phases / Remember` review checklist
+- [ ] Navigation consistency checked across `README.md`, `prompts/english/INDEX.md`, `prompts/english/agents/INDEX.md`, and `llms.txt`
+- [ ] Markdown lint passed: `npx markdownlint-cli2 '**/*.md'`
 
 Optional local checks:
 

@@ -6,6 +6,8 @@
 
 Start with [Agent System](claude-agent-system-prompt.md). Add one specialist prompt only if required.
 
+Decision tree source: [../workflows/prompt-selector-guide.md](../workflows/prompt-selector-guide.md)
+
 ## Active Catalog (Keep)
 
 | Prompt | Use when | Do not use when | File |

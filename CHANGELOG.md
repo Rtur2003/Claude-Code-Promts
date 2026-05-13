@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- **Prompt review checklist workflow** — Added `prompts/english/workflows/prompt-review-checklist.md` with measurable checks for `Role / Protocol / Phases / Remember` and no-vague-advice enforcement
+- **Task-to-outcome scenario example pack** — Added `prompts/english/examples/task-outcome-scenarios-example.md` with explicit `Input Task`, `Expected Output Format`, and `Success Criteria` templates for bug fix, refactor, security review, and migration
 - **LLM-friendly repository index** — Added root `llms.txt` with concise start points, core prompt, governance files, key specialist prompts, and archive index
 - **Prompt archive index** — Added `prompts/english/agents/archive/INDEX.md` with keep/merge/archive classification and rationale
 - **Portfolio Maintenance Guide** — Added `prompts/english/workflows/portfolio-maintenance-guide.md` with monthly + quarterly governance cadence
@@ -14,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Repository markdownlint baseline config** — Added `.markdownlint-cli2.jsonc` aligned with current repository Markdown conventions to reduce noisy lint failures on dense prompt docs
 
 ### Changed
+- **Single-source prompt selection** — Simplified `prompts/english/workflows/prompt-selector-guide.md` as the canonical decision tree and linked it from README, indexes, and quick-start
+- **Quick-start onboarding** — Updated `QUICK-START.md` with a 30-second copy-paste setup and three scenario flows (general, debugging, security)
+- **Contribution validation policy** — Converted PR validation guidance in `CONTRIBUTING.md` into a required checklist with link checks, markdown lint, and README/INDEX/llms consistency checks
+- **Portfolio governance rigor** — Strengthened `prompts/english/workflows/portfolio-maintenance-guide.md` with forced keep/merge/archive decisions and a concise rationale log template
 - **Primary documentation navigation** — Added `llms.txt` links in README and QUICK-START for faster agent/document discovery
 - **Internal example link hygiene** — Replaced non-existent markdown links in prompt examples with explicit example-path code literals to avoid broken internal references
 - **Contribution guidance for example paths** — Added a checklist rule in `CONTRIBUTING.md` to keep hypothetical paths as code literals instead of Markdown links

@@ -26,13 +26,9 @@ Production-ready prompt library for Claude AI and coding agents, built on the **
 
 ## One Decision Tree + Token Budget
 
-| If your context is... | Use this setup |
-|-----------------------|----------------|
-| < 2K tokens | Quick Reference only |
-| 2K–8K tokens | Agent System |
-| 8K+ tokens | Agent System + exactly one specialist prompt |
+Use the single-source selector here: [Prompt Selector Guide](prompts/english/workflows/prompt-selector-guide.md).
 
-Rule: start minimal, expand only if quality gates fail.
+Rule: start minimal, then add exactly one specialist only if quality gates fail.
 
 ---
 
@@ -99,6 +95,8 @@ Every active prompt must include:
 And must follow **No Vague Advice**:
 - each recommendation must end with a concrete decision, tool, or validation step.
 
+Use the measurable review checklist: [Prompt Review Checklist](prompts/english/workflows/prompt-review-checklist.md)
+
 ---
 
 ## 90-Day Improvement Cycle
@@ -132,3 +130,5 @@ prompts/
 - [llms.txt](llms.txt)
 - [Agent Index](prompts/english/agents/INDEX.md)
 - [Prompt Index](prompts/english/INDEX.md)
+- [Prompt Selector Guide](prompts/english/workflows/prompt-selector-guide.md)
+- [Prompt Review Checklist](prompts/english/workflows/prompt-review-checklist.md)
