@@ -51,3 +51,9 @@ Start with Analyze phase.
 
 Use the 90-day governance process to keep the prompt set lean:
 - [Portfolio Maintenance Guide](prompts/english/workflows/portfolio-maintenance-guide.md)
+- [Prompt Review Checklist](prompts/english/workflows/prompt-review-checklist.md)
+
+## Outcome-First Task Briefs
+
+For short, high-signal task specs, use:
+- [Task-to-Outcome Scenario Pack](prompts/english/examples/task-outcome-scenarios-example.md)

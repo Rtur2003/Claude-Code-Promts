@@ -30,6 +30,27 @@ Maintain a high-signal prompt portfolio that prioritizes execution outcomes over
 - [ ] Move archived prompts out of active catalog
 - [ ] Update README, prompt indexes, and quick-start mappings
 - [ ] Remove or merge low-value duplicate guidance
+- [ ] Enforce a forced decision for every prompt (no “undecided” status)
+
+## Forced Decision Rules (Quarterly)
+
+Every active prompt must end the quarterly review with exactly one decision:
+
+- **keep**: unique value and active usage
+- **merge**: overlapping guidance better combined with another active prompt
+- **archive**: low usage, low differentiation, or outdated scope
+
+If overlap is detected and no clear differentiation exists, default to **merge**.
+
+## Portfolio Decision Log Template
+
+Use concise, comparative rationale so decisions are traceable:
+
+| Prompt | Decision | Compare Against | One-line Rationale | Action |
+|--------|----------|-----------------|--------------------|--------|
+| `example-prompt.md` | keep | `other-prompt.md` | Higher signal for incident response with lower token cost | Keep in active index |
+| `legacy-prompt.md` | merge | `newer-prompt.md` | Duplicates workflow with weaker validation language | Merge and deprecate |
+| `old-prompt.md` | archive | `replacement-prompt.md` | Superseded by active prompt with clearer quality gate | Move to archive |
 
 ## Quality Gate (Mandatory)
 

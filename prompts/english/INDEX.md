@@ -2,6 +2,8 @@
 
 All prompts organized for fast, outcome-first selection.
 
+Selection logic source: [workflows/prompt-selector-guide.md](workflows/prompt-selector-guide.md)
+
 ## Agent Prompts
 
 - Active catalog: [agents/INDEX.md](agents/INDEX.md)
@@ -33,4 +35,5 @@ All prompts organized for fast, outcome-first selection.
 
 - Examples: [examples/](examples/)
 - Prompt selector: [workflows/prompt-selector-guide.md](workflows/prompt-selector-guide.md)
+- Prompt review checklist: [workflows/prompt-review-checklist.md](workflows/prompt-review-checklist.md)
 - Portfolio maintenance: [workflows/portfolio-maintenance-guide.md](workflows/portfolio-maintenance-guide.md)

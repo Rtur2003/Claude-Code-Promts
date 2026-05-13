@@ -14,9 +14,11 @@ Real-world scenarios demonstrating prompt usage.
 | [Performance Optimization](performance-optimization-example.md) | Optimizing a slow e-commerce API | Agent System + Performance Optimization |
 | [Testing Strategies](testing-strategies-example.md) | Adding tests to an untested Express API | Agent System + Testing Strategies |
 | [Migration & Upgrade](migration-upgrade-example.md) | Express.js to NestJS zero-downtime migration | Agent System + Migration & Upgrade |
+| [Task-to-Outcome Scenario Pack](task-outcome-scenarios-example.md) | Bug fix, refactor, security review, and migration templates | Agent System + specialist prompts |
 
 ## Using Examples
 
 1. Read the scenario
 2. Observe how the APEI cycle guides the process
 3. Apply the same approach to your projects
+4. For concise task briefs, use the Task-to-Outcome Scenario Pack format (`Input Task → Expected Output Format → Success Criteria`)
